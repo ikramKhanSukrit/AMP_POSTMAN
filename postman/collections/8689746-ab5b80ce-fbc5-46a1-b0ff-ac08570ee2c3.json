@@ -1,0 +1,4154 @@
+{
+	"info": {
+		"_postman_id": "8689746-ab5b80ce-fbc5-46a1-b0ff-ac08570ee2c3",
+		"name": "AMP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Auth",
+					"item": [
+						{
+							"name": "Login",
+							"id": "8689746-34819bb9-ae9f-4e65-a145-2f33fa4dcc70",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"superadmin@gmail.com\",\r\n    \"password\": \"ChangeMe123!\"\r\n}\r\n\r\n//\"email\": \"superadmin@gmail.com\", superadmin\r\n//\"password\": \"ChangeMe123!\"\r\n\r\n//\"email\": \"john.doe@example.com\", admin\r\n//\"password\": \"ChangeMe123!\"\r\n\r\n// email : product45@gmail.com\r\n// pass : 123456789",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/admin/auth/login",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"admin",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Change Password",
+							"id": "8689746-1010e64c-ef70-4f5b-b94d-1796fd65d36b",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {},
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OGMyOWQ5MTY0OTgxNDQ1MDU2MDkwZTYiLCJlbWFpbCI6InN1cGVyYWRtaW5AZ21haWwuY29tIiwicm9sZSI6InN1cGVyYWRtaW4iLCJtdXN0X2NoYW5nZV9wYXNzd29yZCI6ZmFsc2UsImlhdCI6MTc1Nzc0NDkxMiwiZXhwIjoxNzU3ODMxMzEyfQ.dPly4e7IiOBVESuR75HDr1sd05xx_nOrxL49m424-3E",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"oldPassword\": \"ChangeMe123!\",\r\n  \"newPassword\": \"ChangeMe123!\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://car-rental.sukrit.work/api/v1/admin/auth/change-password",
+									"protocol": "https",
+									"host": [
+										"car-rental",
+										"sukrit",
+										"work"
+									],
+									"path": [
+										"api",
+										"v1",
+										"admin",
+										"auth",
+										"change-password"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Register",
+							"id": "8689746-82bb5289-ece2-42f9-aade-d375266dc7dd",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OTA0NTc3Y2VlMDExMTE3YmIwZDFjNmMiLCJyb2xlIjoic3VwZXJhZG1pbiIsImlhdCI6MTc2MjI1NTcyMSwiZXhwIjoxNzYyMzQyMTIxfQ.qJkmQbXfXkloJYQ53_zHEVtCPWA85EBCwkb4eQtzvBY",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OGMyOWQ5MTY0OTgxNDQ1MDU2MDkwZTYiLCJlbWFpbCI6InN1cGVyYWRtaW5AZ21haWwuY29tIiwicm9sZSI6InN1cGVyYWRtaW4iLCJtdXN0X2NoYW5nZV9wYXNzd29yZCI6ZmFsc2UsImlhdCI6MTc1Nzc0NDkxMiwiZXhwIjoxNzU3ODMxMzEyfQ.dPly4e7IiOBVESuR75HDr1sd05xx_nOrxL49m424-3E",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"abyz5@gmail.com\",\r\n  \"password\": \"123456789\",\r\n  \"first_name\": \"AB\",\r\n  \"last_name\": \"yz\",\r\n  \"phone\": 1234567890,\r\n  \"role\": \"superadmin\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3001/admin/auth/register",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"admin",
+										"auth",
+										"register"
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "8689746-03a6422d-f266-43db-9845-1eeae8edcd0a",
+									"name": "Register",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OGMyOWQ5MTY0OTgxNDQ1MDU2MDkwZTYiLCJlbWFpbCI6InN1cGVyYWRtaW5AZ21haWwuY29tIiwicm9sZSI6InN1cGVyYWRtaW4iLCJtdXN0X2NoYW5nZV9wYXNzd29yZCI6ZmFsc2UsImlhdCI6MTc1Nzc0NDkxMiwiZXhwIjoxNzU3ODMxMzEyfQ.dPly4e7IiOBVESuR75HDr1sd05xx_nOrxL49m424-3E",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"email\": \"abyz5@gmail.com\",\r\n  \"password\": \"123456789\",\r\n  \"first_name\": \"AB\",\r\n  \"last_name\": \"yz\",\r\n  \"phone\": 1234567890,\r\n  \"role\": \"6904577cee011117bb0d1b5f\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:3001/admin/auth/register",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3001",
+											"path": [
+												"admin",
+												"auth",
+												"register"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "Text",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "468"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"1d4-dJFx4FIXtWEQJ/6FiUhPDC1pmkw\""
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 03 Nov 2025 12:41:03 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": true,\n    \"statusCode\": 200,\n    \"message\": \"Account created successfully\",\n    \"result\": {\n        \"email\": \"abyz5@gmail.com\",\n        \"first_name\": \"AB\",\n        \"last_name\": \"yz\",\n        \"phone\": \"1234567890\",\n        \"role\": \"6904577cee011117bb0d1b5f\",\n        \"status\": \"active\",\n        \"failed_login_attempts\": 0,\n        \"must_change_password\": true,\n        \"assigned_teams\": [],\n        \"permissions\": [],\n        \"created_by\": \"6904577cee011117bb0d1c6c\",\n        \"_id\": \"6908a2df656ff58e78b7b253\",\n        \"createdAt\": \"2025-11-03T12:41:03.870Z\",\n        \"updatedAt\": \"2025-11-03T12:41:03.870Z\",\n        \"__v\": 0\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Update",
+							"id": "8689746-137371d3-4adb-4efb-b93e-35ba671009b6",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OGE1NjdhZDNmZDQwNGNjNjc3ZTc1OTEiLCJlbWFpbCI6InN1cGVyYWRtaW5AZ21haWwuY29tIiwicm9sZSI6InN1cGVyYWRtaW4iLCJtdXN0X2NoYW5nZV9wYXNzd29yZCI6ZmFsc2UsImlhdCI6MTc1NjgxNjQxNSwiZXhwIjoxNzU2OTAyODE1fQ.PWh-5VwizxMDmILvBSPxkQXNQNhpT_n3DN6qZhjptog",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"john.doe1@example.com\",\r\n  \"first_name\": \"John\",\r\n  \"last_name\": \"Doe\",\r\n  \"phone\": \"9876543210\",\r\n  \"role\": \"admin\",\r\n  \"status\": \"active\",\r\n  \"userId\":\"68a567b93fd404cc677e7596\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://car-rental.sukrit.work/api/v1/admin/auth/update-user",
+									"protocol": "https",
+									"host": [
+										"car-rental",
+										"sukrit",
+										"work"
+									],
+									"path": [
+										"api",
+										"v1",
+										"admin",
+										"auth",
+										"update-user"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Fetch Users",
+							"id": "8689746-d0b272d7-bab1-481c-8ea6-71f1e4004b1c",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OGMyOWQ5MTY0OTgxNDQ1MDU2MDkwZTYiLCJlbWFpbCI6InN1cGVyYWRtaW5AZ21haWwuY29tIiwicm9sZSI6InN1cGVyYWRtaW4iLCJtdXN0X2NoYW5nZV9wYXNzd29yZCI6ZmFsc2UsImlhdCI6MTc1Nzc0NDkxMiwiZXhwIjoxNzU3ODMxMzEyfQ.dPly4e7IiOBVESuR75HDr1sd05xx_nOrxL49m424-3E",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/admin/auth/fetch-users",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"admin",
+										"auth",
+										"fetch-users"
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "8689746-b129e927-344b-41e7-a440-a2d9d7026553",
+									"name": "Fetch Users",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OGMyOWQ5MTY0OTgxNDQ1MDU2MDkwZTYiLCJlbWFpbCI6InN1cGVyYWRtaW5AZ21haWwuY29tIiwicm9sZSI6InN1cGVyYWRtaW4iLCJtdXN0X2NoYW5nZV9wYXNzd29yZCI6ZmFsc2UsImlhdCI6MTc1Nzc0NDkxMiwiZXhwIjoxNzU3ODMxMzEyfQ.dPly4e7IiOBVESuR75HDr1sd05xx_nOrxL49m424-3E",
+												"type": "text"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "http://localhost:3001/admin/auth/fetch-users",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3001",
+											"path": [
+												"admin",
+												"auth",
+												"fetch-users"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "Text",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "1435"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"59b-9KG0sG1jjJvweng/qWm45iENhjY\""
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 03 Nov 2025 12:44:29 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": true,\n    \"statusCode\": 200,\n    \"message\": \"Users fetched successfully\",\n    \"result\": [\n        {\n            \"_id\": \"6908a2df656ff58e78b7b253\",\n            \"email\": \"abyz5@gmail.com\",\n            \"first_name\": \"AB\",\n            \"last_name\": \"yz\",\n            \"phone\": \"1234567890\",\n            \"role\": {\n                \"_id\": \"6904577cee011117bb0d1b5f\",\n                \"name\": \"superadmin\",\n                \"description\": \"Super Administrator with all permissions\"\n            },\n            \"status\": \"active\",\n            \"failed_login_attempts\": 0,\n            \"must_change_password\": true,\n            \"assigned_teams\": [],\n            \"permissions\": [],\n            \"created_by\": \"6904577cee011117bb0d1c6c\",\n            \"createdAt\": \"2025-11-03T12:41:03.870Z\",\n            \"updatedAt\": \"2025-11-03T12:41:03.870Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6908a12656d26bfbcfe57f96\",\n            \"email\": \"abxyz5@gmail.com\",\n            \"first_name\": \"ABX\",\n            \"last_name\": \"yz\",\n            \"phone\": \"1234567890\",\n            \"role\": {\n                \"_id\": \"6904577cee011117bb0d1b5f\",\n                \"name\": \"superadmin\",\n                \"description\": \"Super Administrator with all permissions\"\n            },\n            \"status\": \"active\",\n            \"failed_login_attempts\": 0,\n            \"must_change_password\": true,\n            \"assigned_teams\": [],\n            \"permissions\": [],\n            \"created_by\": \"6904577cee011117bb0d1c6c\",\n            \"createdAt\": \"2025-11-03T12:33:42.626Z\",\n            \"updatedAt\": \"2025-11-03T12:33:42.626Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6904577cee011117bb0d1c6c\",\n            \"email\": \"superadmin@gmail.com\",\n            \"first_name\": \"System\",\n            \"last_name\": \"Superadmin\",\n            \"phone\": \"+0000000000\",\n            \"role\": \"superadmin\",\n            \"status\": \"active\",\n            \"failed_login_attempts\": 0,\n            \"must_change_password\": false,\n            \"assigned_teams\": [],\n            \"permissions\": [],\n            \"created_by\": null,\n            \"createdAt\": \"2025-10-31T06:30:20.482Z\",\n            \"updatedAt\": \"2025-11-03T12:27:13.106Z\",\n            \"__v\": 0,\n            \"last_login\": \"2025-11-03T12:27:13.101Z\"\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Fetch User",
+							"id": "8689746-b9fa2763-100f-44e2-98a5-17cf7c192b60",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OTA0NTc3Y2VlMDExMTE3YmIwZDFjNmMiLCJyb2xlIjoic3VwZXJhZG1pbiIsImlhdCI6MTc2MjIzOTYwNCwiZXhwIjoxNzYyMzI2MDA0fQ.WYp7SLrT8lAONygE8DUPHW2ej5YmGYhuboB16Jeskhg",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OGE1NjdhZDNmZDQwNGNjNjc3ZTc1OTEiLCJlbWFpbCI6InN1cGVyYWRtaW5AZ21haWwuY29tIiwicm9sZSI6InN1cGVyYWRtaW4iLCJtdXN0X2NoYW5nZV9wYXNzd29yZCI6ZmFsc2UsImlhdCI6MTc1NjgxNjQxNSwiZXhwIjoxNzU2OTAyODE1fQ.PWh-5VwizxMDmILvBSPxkQXNQNhpT_n3DN6qZhjptog",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3001/admin/auth/user/6908a2df656ff58e78b7b253",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"admin",
+										"auth",
+										"user",
+										"6908a2df656ff58e78b7b253"
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "8689746-238e8056-e933-4c73-b581-5555bb760f83",
+									"name": "Fetch User",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OGE1NjdhZDNmZDQwNGNjNjc3ZTc1OTEiLCJlbWFpbCI6InN1cGVyYWRtaW5AZ21haWwuY29tIiwicm9sZSI6InN1cGVyYWRtaW4iLCJtdXN0X2NoYW5nZV9wYXNzd29yZCI6ZmFsc2UsImlhdCI6MTc1NjgxNjQxNSwiZXhwIjoxNzU2OTAyODE1fQ.PWh-5VwizxMDmILvBSPxkQXNQNhpT_n3DN6qZhjptog",
+												"type": "text"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "http://localhost:3001/admin/auth/user/6908a2df656ff58e78b7b253",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3001",
+											"path": [
+												"admin",
+												"auth",
+												"user",
+												"6908a2df656ff58e78b7b253"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "Text",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "550"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"226-NBOVnEAyUIV76up36OCZ6CBZvMU\""
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 03 Nov 2025 12:46:35 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": true,\n    \"statusCode\": 200,\n    \"message\": \"User fetched successfully\",\n    \"result\": {\n        \"_id\": \"6908a2df656ff58e78b7b253\",\n        \"email\": \"abyz5@gmail.com\",\n        \"first_name\": \"AB\",\n        \"last_name\": \"yz\",\n        \"phone\": \"1234567890\",\n        \"role\": {\n            \"_id\": \"6904577cee011117bb0d1b5f\",\n            \"name\": \"superadmin\",\n            \"description\": \"Super Administrator with all permissions\"\n        },\n        \"status\": \"active\",\n        \"failed_login_attempts\": 0,\n        \"must_change_password\": true,\n        \"assigned_teams\": [],\n        \"permissions\": [],\n        \"created_by\": \"6904577cee011117bb0d1c6c\",\n        \"createdAt\": \"2025-11-03T12:41:03.870Z\",\n        \"updatedAt\": \"2025-11-03T12:41:03.870Z\",\n        \"__v\": 0\n    }\n}"
+								}
+							]
+						}
+					],
+					"id": "8689746-50f73b8a-ec49-4260-b126-10133f66bea6"
+				},
+				{
+					"name": "Mdm",
+					"item": [
+						{
+							"name": "Categories",
+							"item": [
+								{
+									"name": "Create",
+									"id": "8689746-abacb697-aff8-4a6a-aa02-dd085d658ed9",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OGE1NjdhZDNmZDQwNGNjNjc3ZTc1OTEiLCJlbWFpbCI6InN1cGVyYWRtaW5AZ21haWwuY29tIiwicm9sZSI6InN1cGVyYWRtaW4iLCJtdXN0X2NoYW5nZV9wYXNzd29yZCI6ZmFsc2UsImlhdCI6MTc1NjkwODQyOSwiZXhwIjoxNzU2OTk0ODI5fQ.IzZLv_Px-MIhn2mESyRfjg2awfWUZbHc8IradPZ58Zg",
+												"type": "text"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"name\": \"TESTING-11\",\r\n  \"description\": \"Types of vehicles available for rental\",\r\n  \"isSystem\": false,\r\n  \"isEditable\": true\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "https://car-rental.sukrit.work/api/v1/admin/mdm/categories/create",
+											"protocol": "https",
+											"host": [
+												"car-rental",
+												"sukrit",
+												"work"
+											],
+											"path": [
+												"api",
+												"v1",
+												"admin",
+												"mdm",
+												"categories",
+												"create"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Fetch All",
+									"id": "8689746-1eff88c6-26e7-4328-a7fe-4bb545610cc8",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OGMyOWQ5MTY0OTgxNDQ1MDU2MDkwZTYiLCJyb2xlIjoic3VwZXJhZG1pbiIsImlhdCI6MTc2MzExMTUzMywiZXhwIjoxNzYzMTk3OTMzfQ.6rCGMnsqU37YRw8nKn4D5tAjqebCMlsxSzYroJCMH24",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OGE1NjdhZDNmZDQwNGNjNjc3ZTc1OTEiLCJlbWFpbCI6InN1cGVyYWRtaW5AZ21haWwuY29tIiwicm9sZSI6InN1cGVyYWRtaW4iLCJtdXN0X2NoYW5nZV9wYXNzd29yZCI6ZmFsc2UsImlhdCI6MTc1NjkwODQyOSwiZXhwIjoxNzU2OTk0ODI5fQ.IzZLv_Px-MIhn2mESyRfjg2awfWUZbHc8IradPZ58Zg",
+												"type": "text"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "https://car-rental.sukrit.work/api/v1/admin/mdm/categories/all-categories",
+											"protocol": "https",
+											"host": [
+												"car-rental",
+												"sukrit",
+												"work"
+											],
+											"path": [
+												"api",
+												"v1",
+												"admin",
+												"mdm",
+												"categories",
+												"all-categories"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get By Id",
+									"id": "8689746-b3196ce4-a843-4709-8922-f9baa58b0111",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OGE1NjdhZDNmZDQwNGNjNjc3ZTc1OTEiLCJlbWFpbCI6InN1cGVyYWRtaW5AZ21haWwuY29tIiwicm9sZSI6InN1cGVyX2FkbWluIiwibXVzdF9jaGFuZ2VfcGFzc3dvcmQiOmZhbHNlLCJpYXQiOjE3NTU2ODc3NzksImV4cCI6MTc1NTc3NDE3OX0.Wd47kqbYczbXStO44sDZ7r7FtSRMz-n6PSBEC-qcS7U",
+												"type": "text"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "https://car-rental.sukrit.work/api/v1/admin/mdm/categories/id/68a5b0499875a35d5d4c0384",
+											"protocol": "https",
+											"host": [
+												"car-rental",
+												"sukrit",
+												"work"
+											],
+											"path": [
+												"api",
+												"v1",
+												"admin",
+												"mdm",
+												"categories",
+												"id",
+												"68a5b0499875a35d5d4c0384"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get By Name",
+									"id": "8689746-2203cee6-2366-4274-a28a-ecb0ca8b4eee",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OGE1NjdhZDNmZDQwNGNjNjc3ZTc1OTEiLCJlbWFpbCI6InN1cGVyYWRtaW5AZ21haWwuY29tIiwicm9sZSI6InN1cGVyX2FkbWluIiwibXVzdF9jaGFuZ2VfcGFzc3dvcmQiOmZhbHNlLCJpYXQiOjE3NTU2ODc3NzksImV4cCI6MTc1NTc3NDE3OX0.Wd47kqbYczbXStO44sDZ7r7FtSRMz-n6PSBEC-qcS7U",
+												"type": "text"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "https://car-rental.sukrit.work/api/v1/admin/mdm/categories/name/color_codes2",
+											"protocol": "https",
+											"host": [
+												"car-rental",
+												"sukrit",
+												"work"
+											],
+											"path": [
+												"api",
+												"v1",
+												"admin",
+												"mdm",
+												"categories",
+												"name",
+												"color_codes2"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Update",
+									"id": "8689746-480f9b71-aa11-4098-bc75-09d803e6e982",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OGE1NjdhZDNmZDQwNGNjNjc3ZTc1OTEiLCJlbWFpbCI6InN1cGVyYWRtaW5AZ21haWwuY29tIiwicm9sZSI6InN1cGVyX2FkbWluIiwibXVzdF9jaGFuZ2VfcGFzc3dvcmQiOmZhbHNlLCJpYXQiOjE3NTU2ODc3NzksImV4cCI6MTc1NTc3NDE3OX0.Wd47kqbYczbXStO44sDZ7r7FtSRMz-n6PSBEC-qcS7U",
+												"type": "text"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"name\": \"color_SD1\",\r\n  \"description\": \"Types of vehicles available for rental\",\r\n  \"isSystem\": false,\r\n  \"isEditable\": true,\r\n  \"categoryId\":\"68a5b0605ae2b538aa9668a7\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "https://car-rental.sukrit.work/api/v1/admin/mdm/categories/update",
+											"protocol": "https",
+											"host": [
+												"car-rental",
+												"sukrit",
+												"work"
+											],
+											"path": [
+												"api",
+												"v1",
+												"admin",
+												"mdm",
+												"categories",
+												"update"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Delete",
+									"id": "8689746-f52ed046-8d4d-4928-8f1f-d47bc03f337b",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OGE1NjdhZDNmZDQwNGNjNjc3ZTc1OTEiLCJlbWFpbCI6InN1cGVyYWRtaW5AZ21haWwuY29tIiwicm9sZSI6InN1cGVyX2FkbWluIiwibXVzdF9jaGFuZ2VfcGFzc3dvcmQiOmZhbHNlLCJpYXQiOjE3NTU2ODc3NzksImV4cCI6MTc1NTc3NDE3OX0.Wd47kqbYczbXStO44sDZ7r7FtSRMz-n6PSBEC-qcS7U",
+												"type": "text"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "https://car-rental.sukrit.work/api/v1/admin/mdm/categories/delete/68a5c3ed389d24560576cfa7",
+											"protocol": "https",
+											"host": [
+												"car-rental",
+												"sukrit",
+												"work"
+											],
+											"path": [
+												"api",
+												"v1",
+												"admin",
+												"mdm",
+												"categories",
+												"delete",
+												"68a5c3ed389d24560576cfa7"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"id": "8689746-db4649e8-468a-4b83-b89c-6d8c03b49bf2"
+						},
+						{
+							"name": "Values",
+							"item": [
+								{
+									"name": "Create",
+									"id": "8689746-d9efcc79-ded9-45c2-9b74-6daf789fada7",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OGE1NjdhZDNmZDQwNGNjNjc3ZTc1OTEiLCJlbWFpbCI6InN1cGVyYWRtaW5AZ21haWwuY29tIiwicm9sZSI6InN1cGVyYWRtaW4iLCJtdXN0X2NoYW5nZV9wYXNzd29yZCI6ZmFsc2UsImlhdCI6MTc1NjkwODQyOSwiZXhwIjoxNzU2OTk0ODI5fQ.IzZLv_Px-MIhn2mESyRfjg2awfWUZbHc8IradPZ58Zg",
+												"type": "text"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"categoryId\": \"68b84b9c8030551cb4ca277c\",\r\n  \"code\": \"SEDTESTANAA\",\r\n  \"value\": \"SEDTESTANAA\",\r\n  \"label\": \"SEDTESTANAA\",\r\n  \"parentId\": null,\r\n  \"metadata\": {\r\n    \"seatingCapacity\": 5,\r\n    \"luggageCapacity\": 2,\r\n    \"vehicleClass\": \"Standard\"\r\n  },\r\n  \"isActive\": true,\r\n  \"dependencies\": []\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "https://car-rental.sukrit.work/api/v1/admin/mdm/values/create",
+											"protocol": "https",
+											"host": [
+												"car-rental",
+												"sukrit",
+												"work"
+											],
+											"path": [
+												"api",
+												"v1",
+												"admin",
+												"mdm",
+												"values",
+												"create"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Update",
+									"id": "8689746-790f4a58-9c7f-42d3-a303-25bdc960478f",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OGE1NjdhZDNmZDQwNGNjNjc3ZTc1OTEiLCJlbWFpbCI6InN1cGVyYWRtaW5AZ21haWwuY29tIiwicm9sZSI6InN1cGVyX2FkbWluIiwibXVzdF9jaGFuZ2VfcGFzc3dvcmQiOmZhbHNlLCJpYXQiOjE3NTU2ODc3NzksImV4cCI6MTc1NTc3NDE3OX0.Wd47kqbYczbXStO44sDZ7r7FtSRMz-n6PSBEC-qcS7U",
+												"type": "text"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"categoryId\": \"68a5c3ed389d24560576cfa7\",\r\n  \"code\": \"SEDANAA\",\r\n  \"value\": \"SedanAS\",\r\n  \"label\": \"4-Door Sedan\",\r\n  \"parentId\": null,\r\n  \"metadata\": {\r\n    \"seatingCapacity\": 5,\r\n    \"luggageCapacity\": 2,\r\n    \"vehicleClass\": \"Standard\"\r\n  },\r\n  \"isActive\": true,\r\n  \"dependencies\": [],\r\n  \"reason\":\"For Testing\",\r\n  \"mdmValueId\":\"68a5ce2341e479f82bb19c3a\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "https://car-rental.sukrit.work/api/v1/admin/mdm/values/update",
+											"protocol": "https",
+											"host": [
+												"car-rental",
+												"sukrit",
+												"work"
+											],
+											"path": [
+												"api",
+												"v1",
+												"admin",
+												"mdm",
+												"values",
+												"update"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Fetch All",
+									"id": "8689746-6035b348-7302-4d21-91d1-45c950e88611",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OGMyOWQ5MTY0OTgxNDQ1MDU2MDkwZTYiLCJyb2xlIjoic3VwZXJhZG1pbiIsImlhdCI6MTc2MzAzMTAzOCwiZXhwIjoxNzYzMTE3NDM4fQ.I7QpMZ0QrGoOe8SQ2BEpOy3XC0zwV2JkUfjCXL-Px_I",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OGE1NjdhZDNmZDQwNGNjNjc3ZTc1OTEiLCJlbWFpbCI6InN1cGVyYWRtaW5AZ21haWwuY29tIiwicm9sZSI6InN1cGVyYWRtaW4iLCJtdXN0X2NoYW5nZV9wYXNzd29yZCI6ZmFsc2UsImlhdCI6MTc1NjkwODQyOSwiZXhwIjoxNzU2OTk0ODI5fQ.IzZLv_Px-MIhn2mESyRfjg2awfWUZbHc8IradPZ58Zg",
+												"type": "text"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "https://car-rental.sukrit.work/api/v1/admin/mdm/values/all-values",
+											"protocol": "https",
+											"host": [
+												"car-rental",
+												"sukrit",
+												"work"
+											],
+											"path": [
+												"api",
+												"v1",
+												"admin",
+												"mdm",
+												"values",
+												"all-values"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get By Id",
+									"id": "8689746-4409b0fa-b5d2-4e40-9c99-b0c8ebf9ffe4",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OGE1NjdhZDNmZDQwNGNjNjc3ZTc1OTEiLCJlbWFpbCI6InN1cGVyYWRtaW5AZ21haWwuY29tIiwicm9sZSI6InN1cGVyX2FkbWluIiwibXVzdF9jaGFuZ2VfcGFzc3dvcmQiOmZhbHNlLCJpYXQiOjE3NTU3NTY2NjAsImV4cCI6MTc1NTg0MzA2MH0.1joXh1MjB65plZTJpTIRZEu04h18fqQkdkw5eIGknBg",
+												"type": "text"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "https://car-rental.sukrit.work/api/v1/admin/mdm/values/id/68a5cddb5e950343989e3751",
+											"protocol": "https",
+											"host": [
+												"car-rental",
+												"sukrit",
+												"work"
+											],
+											"path": [
+												"api",
+												"v1",
+												"admin",
+												"mdm",
+												"values",
+												"id",
+												"68a5cddb5e950343989e3751"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get By CategoryId",
+									"id": "8689746-5700e54f-e2f4-4dd1-a20d-3e0efd7f538b",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OGE1NjdhZDNmZDQwNGNjNjc3ZTc1OTEiLCJlbWFpbCI6InN1cGVyYWRtaW5AZ21haWwuY29tIiwicm9sZSI6InN1cGVyX2FkbWluIiwibXVzdF9jaGFuZ2VfcGFzc3dvcmQiOmZhbHNlLCJpYXQiOjE3NTU4NDUwNzQsImV4cCI6MTc1NTkzMTQ3NH0.R2LxhAI9H7yWRIdHZKau350XiF4PU9OyRsr5Kqg_WOQ",
+												"type": "text"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "https://car-rental.sukrit.work/api/v1/admin/mdm/values/category/68a5c3ed389d24560576cfa7",
+											"protocol": "https",
+											"host": [
+												"car-rental",
+												"sukrit",
+												"work"
+											],
+											"path": [
+												"api",
+												"v1",
+												"admin",
+												"mdm",
+												"values",
+												"category",
+												"68a5c3ed389d24560576cfa7"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Hierarchy",
+									"id": "8689746-c31f0ee6-bda3-48dd-b53d-5a3dfe3b4c35",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OGE1NjdhZDNmZDQwNGNjNjc3ZTc1OTEiLCJlbWFpbCI6InN1cGVyYWRtaW5AZ21haWwuY29tIiwicm9sZSI6InN1cGVyX2FkbWluIiwibXVzdF9jaGFuZ2VfcGFzc3dvcmQiOmZhbHNlLCJpYXQiOjE3NTU3NTY2NjAsImV4cCI6MTc1NTg0MzA2MH0.1joXh1MjB65plZTJpTIRZEu04h18fqQkdkw5eIGknBg",
+												"type": "text"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "https://car-rental.sukrit.work/api/v1/admin/mdm/values/hierarchy/68a5c3ed389d24560576cfa7",
+											"protocol": "https",
+											"host": [
+												"car-rental",
+												"sukrit",
+												"work"
+											],
+											"path": [
+												"api",
+												"v1",
+												"admin",
+												"mdm",
+												"values",
+												"hierarchy",
+												"68a5c3ed389d24560576cfa7"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get Value History",
+									"id": "8689746-54e25de9-2f07-4dc0-890d-c9ff6c3eb452",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://car-rental.sukrit.work/api/v1/admin/mdm/values/:id/history",
+											"protocol": "https",
+											"host": [
+												"car-rental",
+												"sukrit",
+												"work"
+											],
+											"path": [
+												"api",
+												"v1",
+												"admin",
+												"mdm",
+												"values",
+												":id",
+												"history"
+											],
+											"variable": [
+												{
+													"id": "3a422f66-9a4c-4297-bc30-eeda6ae5e8d1",
+													"key": "id",
+													"value": ""
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"id": "8689746-15f217e1-5424-4e23-a872-52b727035763"
+						},
+						{
+							"name": "History",
+							"item": [
+								{
+									"name": "Recent Changes",
+									"id": "8689746-165825d9-6999-4a16-84ce-d6eb4454e84f",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OGE1NjdhZDNmZDQwNGNjNjc3ZTc1OTEiLCJlbWFpbCI6InN1cGVyYWRtaW5AZ21haWwuY29tIiwicm9sZSI6InN1cGVyX2FkbWluIiwibXVzdF9jaGFuZ2VfcGFzc3dvcmQiOmZhbHNlLCJpYXQiOjE3NTU4NDUwNzQsImV4cCI6MTc1NTkzMTQ3NH0.R2LxhAI9H7yWRIdHZKau350XiF4PU9OyRsr5Kqg_WOQ",
+												"type": "text"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "https://car-rental.sukrit.work/api/v1/admin/mdm/history/recent",
+											"protocol": "https",
+											"host": [
+												"car-rental",
+												"sukrit",
+												"work"
+											],
+											"path": [
+												"api",
+												"v1",
+												"admin",
+												"mdm",
+												"history",
+												"recent"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get By Value Id",
+									"id": "8689746-3047fa9e-9467-4b7b-8cca-3d1c99a22fea",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OGE1NjdhZDNmZDQwNGNjNjc3ZTc1OTEiLCJlbWFpbCI6InN1cGVyYWRtaW5AZ21haWwuY29tIiwicm9sZSI6InN1cGVyX2FkbWluIiwibXVzdF9jaGFuZ2VfcGFzc3dvcmQiOmZhbHNlLCJpYXQiOjE3NTU4NDUwNzQsImV4cCI6MTc1NTkzMTQ3NH0.R2LxhAI9H7yWRIdHZKau350XiF4PU9OyRsr5Kqg_WOQ",
+												"type": "text"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "https://car-rental.sukrit.work/api/v1/admin/mdm/history/value/id/68a5cc655e950343989e3749",
+											"protocol": "https",
+											"host": [
+												"car-rental",
+												"sukrit",
+												"work"
+											],
+											"path": [
+												"api",
+												"v1",
+												"admin",
+												"mdm",
+												"history",
+												"value",
+												"id",
+												"68a5cc655e950343989e3749"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"id": "8689746-5db75991-d3ef-450b-8702-5cec235e9a8b"
+						}
+					],
+					"id": "8689746-886363c7-9c03-4dd8-b08a-273aac3cbf96"
+				},
+				{
+					"name": "Roles & Permissions",
+					"item": [
+						{
+							"name": "Get All Permissions",
+							"id": "8689746-dbc7789b-b818-4878-8382-468f0d32d1f5",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OGE1NjdhZDNmZDQwNGNjNjc3ZTc1OTEiLCJlbWFpbCI6InN1cGVyYWRtaW5AZ21haWwuY29tIiwicm9sZSI6InN1cGVyYWRtaW4iLCJtdXN0X2NoYW5nZV9wYXNzd29yZCI6ZmFsc2UsImlhdCI6MTc1NjYxNTczMCwiZXhwIjoxNzU2NzAyMTMwfQ.99RXyweyIjrUX81-E7JVki-SafmgM2F2qSYo4QUHygE",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://car-rental.sukrit.work/api/v1/admin/roles-permissions/permissions/get-all-permissions",
+									"protocol": "https",
+									"host": [
+										"car-rental",
+										"sukrit",
+										"work"
+									],
+									"path": [
+										"api",
+										"v1",
+										"admin",
+										"roles-permissions",
+										"permissions",
+										"get-all-permissions"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Role",
+							"id": "8689746-cd2d5130-396b-475c-92e7-d0d84732fd1f",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OTA0NTc3Y2VlMDExMTE3YmIwZDFjNmMiLCJyb2xlIjoic3VwZXJhZG1pbiIsImlhdCI6MTc2MjI1NTcyMSwiZXhwIjoxNzYyMzQyMTIxfQ.qJkmQbXfXkloJYQ53_zHEVtCPWA85EBCwkb4eQtzvBY",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OGE1NjdhZDNmZDQwNGNjNjc3ZTc1OTEiLCJlbWFpbCI6InN1cGVyYWRtaW5AZ21haWwuY29tIiwicm9sZSI6InN1cGVyYWRtaW4iLCJtdXN0X2NoYW5nZV9wYXNzd29yZCI6ZmFsc2UsImlhdCI6MTc1NjgxNjQxNSwiZXhwIjoxNzU2OTAyODE1fQ.PWh-5VwizxMDmILvBSPxkQXNQNhpT_n3DN6qZhjptog",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Admin\",\r\n  \"description\": \"Administrator role with full access\",\r\n  \"permissions\": [\r\n    \"64f8c2b3e1a5b9d8a1a23c45\",\r\n    \"64f8c2b3e1a5b9d8a1a23c46\"\r\n  ],\r\n  \"isActive\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3001/admin/roles-permissions/roles/create",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"admin",
+										"roles-permissions",
+										"roles",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All Roles",
+							"id": "8689746-a8b6c003-79f3-4b06-a1fc-fd84ad2bc7b2",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OTA0NTc3Y2VlMDExMTE3YmIwZDFjNmMiLCJyb2xlIjoic3VwZXJhZG1pbiIsImlhdCI6MTc2MjE3MjgzMywiZXhwIjoxNzYyMjU5MjMzfQ.89i1KKW1-G6TR_8QfGUqJQ8Sc12A2dQCYjjL7oNOrCI",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OGMyOWQ5MTY0OTgxNDQ1MDU2MDkwZTYiLCJlbWFpbCI6InN1cGVyYWRtaW5AZ21haWwuY29tIiwicm9sZSI6InN1cGVyYWRtaW4iLCJtdXN0X2NoYW5nZV9wYXNzd29yZCI6ZmFsc2UsImlhdCI6MTc1Nzc0NDkxMiwiZXhwIjoxNzU3ODMxMzEyfQ.dPly4e7IiOBVESuR75HDr1sd05xx_nOrxL49m424-3E",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://car-rental.sukrit.work/api/v1/admin/roles-permissions/roles/get-all-roles",
+									"protocol": "https",
+									"host": [
+										"car-rental",
+										"sukrit",
+										"work"
+									],
+									"path": [
+										"api",
+										"v1",
+										"admin",
+										"roles-permissions",
+										"roles",
+										"get-all-roles"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "8689746-96d5e33d-7b7d-4aab-83eb-38f94004b59e"
+				},
+				{
+					"name": "Vehicles",
+					"item": [
+						{
+							"name": "Get All Vehicles",
+							"id": "8689746-6df08c5c-581d-49cc-b78b-18d4c784053b",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OGMyOWQ5MTY0OTgxNDQ1MDU2MDkwZTYiLCJyb2xlIjoic3VwZXJhZG1pbiIsImlhdCI6MTc2NDY1NDg5NywiZXhwIjoxNzY0NzQxMjk3fQ.UbaWYowfmZxZ4jnHrxX1JctISpCFP6N0FXeT7KcoHG0",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/admin/vehicles/list?page=1&limit=5",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"admin",
+										"vehicles",
+										"list"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "limit",
+											"value": "5"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "8689746-2a710a28-d11e-446e-bf2d-6b7e21aaee94",
+									"name": "Get All Vehicles",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/admin/vehicles/list?page=1&limit=5",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"admin",
+												"vehicles",
+												"list"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1"
+												},
+												{
+													"key": "limit",
+													"value": "5"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "2369"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"941-erfVUPaBAiOGxXWzncwmlWKsUsE\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 25 Nov 2025 12:41:35 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": true,\n    \"statusCode\": 200,\n    \"message\": \"Vehicles retrieved successfully\",\n    \"result\": {\n        \"data\": [\n            {\n                \"_id\": \"692451180461065063c2fe63\",\n                \"lessorId\": \"6916d952c605bdd1ce417803\",\n                \"registrationNumber\": \"MH22CX13639\",\n                \"vin\": \"2HGCM82633AC25X534\",\n                \"make\": \"68b84ac38030551cb4ca2aa2\",\n                \"model\": \"68b84ac38030551cb4ca29a2\",\n                \"variant\": \"68b84ac38030551cb4ca27a2\",\n                \"fuelType\": \"68b84ac38030551cb4ca96a2\",\n                \"manufacturingYear\": 2021,\n                \"chassisNumber\": \"CHACSXS223512\",\n                \"engineNumber\": \"ENGINEX8g6532322\",\n                \"registrationDate\": \"2024-03-15T00:00:00.000Z\",\n                \"seatingCapacity\": 5,\n                \"color\": \"White\",\n                \"status\": \"listed\",\n                \"currentOdometer\": 12500,\n                \"expectedLease\": {\n                    \"cities\": []\n                },\n                \"images\": [],\n                \"documents\": [],\n                \"createdAt\": \"2025-11-24T12:35:36.949Z\",\n                \"updatedAt\": \"2025-11-24T12:35:36.949Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"691c7361e146fd599e5916e5\",\n                \"lessorId\": \"691c434ce146fd599e5916d6\",\n                \"registrationNumber\": \"MH12CX13332\",\n                \"chassisNumber\": \"CHACSXS123511\",\n                \"engineNumber\": \"ENGINEX8C6532321\",\n                \"vin\": \"1HGCM82633AC23X534\",\n                \"make\": \"68b84ac38030551cb4ca2aa3\",\n                \"variant\": \"68b84ac38030551cb4ca27a3\",\n                \"fuelType\": \"68b84ac38030551cb4ca96a3\",\n                \"manufacturingYear\": 2021,\n                \"registrationDate\": \"2024-03-15T00:00:00.000Z\",\n                \"seatingCapacity\": 5,\n                \"color\": \"White\",\n                \"status\": \"listed\",\n                \"currentOdometer\": 12500,\n                \"expectedLease\": {\n                    \"cities\": []\n                },\n                \"images\": [],\n                \"documents\": [],\n                \"createdAt\": \"2025-11-18T13:23:46.001Z\",\n                \"updatedAt\": \"2025-11-18T13:26:23.400Z\",\n                \"__v\": 0,\n                \"paymentDetails\": {\n                    \"platformFee\": 5800,\n                    \"onboardingCharge\": 1500,\n                    \"tax\": 18,\n                    \"discount\": 500,\n                    \"expectedRent\": 25000\n                },\n                \"bankDetails\": {\n                    \"bankName\": \"SBI Bank\",\n                    \"accountHolderName\": \"John Doe\",\n                    \"accountNumber\": \"1234567890\",\n                    \"ifscCode\": \"HDFC0001234\"\n                }\n            },\n            {\n                \"_id\": \"691c23b4e146fd599e5916d1\",\n                \"lessorId\": \"68d38748efb8da92e8cb5f54\",\n                \"registrationNumber\": \"MH12CX13342\",\n                \"chassisNumber\": \"CHACSXS123521\",\n                \"engineNumber\": \"ENGINEX8C6532221\",\n                \"vin\": \"1HGCM82633AC23X532\",\n                \"make\": \"68b84ac38030551cb4ca26a3\",\n                \"variant\": \"68b84ac38030551cb4ca26a3\",\n                \"fuelType\": \"68b84ac38030551cb4ca26a3\",\n                \"manufacturingYear\": 2021,\n                \"registrationDate\": \"2024-03-15T00:00:00.000Z\",\n                \"seatingCapacity\": 5,\n                \"color\": \"White\",\n                \"status\": \"listed\",\n                \"currentOdometer\": 12500,\n                \"expectedLease\": {\n                    \"expectedRent\": 303200,\n                    \"tentativeLeaseDate\": \"2025-08-01T00:00:00.000Z\",\n                    \"maxKmPerMonth\": 1000,\n                    \"lockInPeriod\": \"1 - 3 Years\",\n                    \"cities\": [\n                        \"Delhi\",\n                        \"Bengaluru\"\n                    ]\n                },\n                \"images\": [],\n                \"documents\": [],\n                \"createdAt\": \"2025-11-18T07:43:48.086Z\",\n                \"updatedAt\": \"2025-11-18T13:24:58.825Z\",\n                \"__v\": 0\n            }\n        ],\n        \"pagination\": {\n            \"total\": 3,\n            \"page\": \"1\",\n            \"limit\": \"5\",\n            \"totalPages\": 1\n        }\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Update Bank Details",
+							"id": "8689746-500aabe8-bd05-4d39-b2d9-9d3e38c62113",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OGMyOWQ5MTY0OTgxNDQ1MDU2MDkwZTYiLCJyb2xlIjoic3VwZXJhZG1pbiIsImlhdCI6MTc2NDIzNjMyMCwiZXhwIjoxNzY0MzIyNzIwfQ.a-Cw34adK9QXdckvOqK32Pds_3xP93E0jgaVqs_1ksA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"bankName\": \"ICICI\",\r\n  \"accountHolderName\": \"Neha maurya\",\r\n  \"accountNumber\": \"1234567890\",\r\n  \"ifscCode\": \"HDFC0001234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/admin/vehicles/bank-details/691c7361e146fd599e5916e5",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"admin",
+										"vehicles",
+										"bank-details",
+										"691c7361e146fd599e5916e5"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Creact Vehicles",
+							"id": "8689746-5eb8883e-1390-4894-a913-74edbd8204f9",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OGMyOWQ5MTY0OTgxNDQ1MDU2MDkwZTYiLCJyb2xlIjoic3VwZXJhZG1pbiIsImlhdCI6MTc2NDY1NDg5NywiZXhwIjoxNzY0NzQxMjk3fQ.UbaWYowfmZxZ4jnHrxX1JctISpCFP6N0FXeT7KcoHG0",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"registrationNumber\": \"MH22CX13623\",\r\n  \"vin\": \"2HGCM82633AC25X544\",\r\n  \"chassisNumber\":\"CHACSXS223511\",\r\n  \"engineNumber\":\"ENGINEX8g6532334\",\r\n  \"make\": \"68b84ac38030551cb4ca2a89\",\r\n  \"model\": \"68b84ac38030551cb4ca2900\",\r\n  \"variant\": \"68b84ac38030551cb4ca27a2\",\r\n  \"fuelType\": \"68b84ac38030551cb4ca96a2\",\r\n  \"manufacturingYear\": 2021,\r\n  \"registrationDate\": \"2025-12-02\",\r\n  \"seatingCapacity\": 5,\r\n  \"color\": \"White\",\r\n  \"currentOdometer\":12500,\r\n  \"status\": \"listed\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/admin/vehicles/add-vehicle",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"admin",
+										"vehicles",
+										"add-vehicle"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "8689746-06a9bbd1-c205-4dd2-a171-eec9d2f484e0"
+				},
+				{
+					"name": "Master",
+					"item": [
+						{
+							"name": "Roles",
+							"id": "8689746-3f9c7e40-6719-4323-b68b-177204d1e011",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OGE1NjdhZDNmZDQwNGNjNjc3ZTc1OTEiLCJlbWFpbCI6InN1cGVyYWRtaW5AZ21haWwuY29tIiwicm9sZSI6InN1cGVyYWRtaW4iLCJtdXN0X2NoYW5nZV9wYXNzd29yZCI6ZmFsc2UsImlhdCI6MTc1NjgxNjQxNSwiZXhwIjoxNzU2OTAyODE1fQ.PWh-5VwizxMDmILvBSPxkQXNQNhpT_n3DN6qZhjptog",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://car-rental.sukrit.work/api/v1/admin/master/roles",
+									"protocol": "https",
+									"host": [
+										"car-rental",
+										"sukrit",
+										"work"
+									],
+									"path": [
+										"api",
+										"v1",
+										"admin",
+										"master",
+										"roles"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "8689746-c30fe7f7-0758-42ca-83af-91299f8cee67"
+				},
+				{
+					"name": "Car Owner",
+					"item": [
+						{
+							"name": "Get Owner List",
+							"id": "8689746-94fd1cc1-d0f1-4870-8f5f-2ad1e0da347e",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OGMyOWQ5MTY0OTgxNDQ1MDU2MDkwZTYiLCJyb2xlIjoic3VwZXJhZG1pbiIsImlhdCI6MTc2NDIxOTUzNiwiZXhwIjoxNzY0MzA1OTM2fQ.NE8RAKq_A4T38a8FlJPfGNvqYuJ7bXLmuErViewYELI",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{local_url}}/admin/carowners",
+									"host": [
+										"{{local_url}}"
+									],
+									"path": [
+										"admin",
+										"carowners"
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "8689746-623c3ae1-6941-48e8-a71c-ea477abf4cee",
+									"name": "New Request",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{local_url}}/admin/carowners",
+											"host": [
+												"{{local_url}}"
+											],
+											"path": [
+												"admin",
+												"carowners"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "Text",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "1990"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"7c6-s2l0CDoGboQdTcRkcxFAKPAbxkg\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 12 Nov 2025 13:09:06 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": true,\n    \"statusCode\": 200,\n    \"message\": \"Car owner profile fetched successfully\",\n    \"result\": [\n        {\n            \"_id\": \"691440c1581ed7e3b560cc78\",\n            \"phone\": \"987653420\",\n            \"userType\": \"Lessee\",\n            \"gstNumber\": \"\",\n            \"contactDetails\": {\n                \"contactPerson\": \"Sonal\",\n                \"mobileNumber\": \"7834545656\",\n                \"email\": \"rom7272@yopmail.com\",\n                \"designation\": \"Developer\",\n                \"financierNoc\": \"/uploads/1762934977135-749126648.jpg\"\n            },\n            \"gstDetails\": {\n                \"legalName\": \"Romaa\",\n                \"tradeName\": \"Hero\",\n                \"businessAddress\": \"LKO India\"\n            },\n            \"userId\": \"69143ed2b462e26163197853\"\n        },\n        {\n            \"_id\": \"6914389f38653aabbb680611\",\n            \"phone\": \"987653429\",\n            \"userType\": \"Lessor\",\n            \"gstNumber\": \"\",\n            \"contactDetails\": {\n                \"contactPerson\": \"Roma diallos\",\n                \"mobileNumber\": \"7834545656\",\n                \"email\": \"rom7272@yopmail.com\",\n                \"designation\": \"Developer\",\n                \"financierNoc\": \"/uploads/1762934950264-639520041.jpg\"\n            },\n            \"gstDetails\": {\n                \"legalName\": \"Honda\",\n                \"tradeName\": \"Hero\",\n                \"businessAddress\": \"LKO Private Limited Company\"\n            },\n            \"userId\": \"69133ca5a1bdd6726e22851a\"\n        },\n        {\n            \"_id\": \"6911e2fd1d0f06b9902c2fdd\",\n            \"phone\": \"\",\n            \"userType\": \"\",\n            \"gstNumber\": \"\",\n            \"contactDetails\": {\n                \"contactPerson\": \"Samba d\",\n                \"mobileNumber\": \"7812345679\",\n                \"email\": \"smd9272@yopmail.com\",\n                \"designation\": \"Developer\",\n                \"financierNoc\": \"/uploads/1762783729489-329831986.jpg\"\n            },\n            \"gstDetails\": {\n                \"legalName\": \"Techsima Solution Pvt Ltd\",\n                \"tradeName\": \"Techsima\",\n                \"businessAddress\": \"Private Limited Company\"\n            },\n            \"userId\": null\n        },\n        {\n            \"_id\": \"6911d27459bfe5aeefdd2354\",\n            \"phone\": \"9876534310\",\n            \"userType\": \"Lessor\",\n            \"gstNumber\": \"\",\n            \"contactDetails\": {\n                \"contactPerson\": \"\",\n                \"mobileNumber\": \"\",\n                \"email\": \"\",\n                \"designation\": \"\",\n                \"financierNoc\": \"\"\n            },\n            \"gstDetails\": {\n                \"legalName\": \"\",\n                \"tradeName\": \"\",\n                \"businessAddress\": \"\"\n            },\n            \"userId\": \"690b293379cd31f03b3e4fe3\"\n        },\n        {\n            \"_id\": \"6911ce030d01860f976b513b\",\n            \"phone\": \"9876534310\",\n            \"userType\": \"Lessor\",\n            \"gstNumber\": \"\",\n            \"contactDetails\": {\n                \"contactPerson\": \"\",\n                \"mobileNumber\": \"\",\n                \"email\": \"\",\n                \"designation\": \"\",\n                \"financierNoc\": \"\"\n            },\n            \"gstDetails\": {\n                \"legalName\": \"Techsima Solution Pvt Ltd\",\n                \"tradeName\": \"Techsima\",\n                \"businessAddress\": \"Private Limited Company\"\n            },\n            \"userId\": \"690b293379cd31f03b3e4fe3\"\n        }\n    ],\n    \"pagination\": {\n        \"currentPage\": 1,\n        \"itemsPerPage\": 10\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Update Contact Details",
+							"id": "8689746-33140a67-c1bc-4f82-96f1-364c79605850",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OGMyOWQ5MTY0OTgxNDQ1MDU2MDkwZTYiLCJyb2xlIjoic3VwZXJhZG1pbiIsImlhdCI6MTc2Mjk0Nzk3MywiZXhwIjoxNzYzMDM0MzczfQ.GtkblkK6KX9hRULbWodB2XCSCRA9jypaKtMKsBVXkR8",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "contactPerson",
+											"value": "Sonal",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local_url}}/admin/carowners/691440c1581ed7e3b560cc78/contact",
+									"host": [
+										"{{local_url}}"
+									],
+									"path": [
+										"admin",
+										"carowners",
+										"691440c1581ed7e3b560cc78",
+										"contact"
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "8689746-cb97b7dc-1eff-4e4c-a087-aacb9427dafd",
+									"name": "New Request",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "contactPerson",
+													"value": "Sonal",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{local_url}}/admin/carowners/691440c1581ed7e3b560cc78/contact",
+											"host": [
+												"{{local_url}}"
+											],
+											"path": [
+												"admin",
+												"carowners",
+												"691440c1581ed7e3b560cc78",
+												"contact"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "Text",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "481"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"1e1-5MHudeOtFoWClsh5GL+xZI/x4TY\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 12 Nov 2025 13:10:26 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": true,\n    \"statusCode\": 200,\n    \"message\": \"Contact details updated successfully\",\n    \"result\": {\n        \"_id\": \"691440c1581ed7e3b560cc78\",\n        \"phone\": \"987653420\",\n        \"userType\": \"Lessee\",\n        \"gstNumber\": \"\",\n        \"contactDetails\": {\n            \"contactPerson\": \"Sonal\",\n            \"mobileNumber\": \"7834545656\",\n            \"email\": \"rom7272@yopmail.com\",\n            \"designation\": \"Developer\",\n            \"financierNoc\": \"/uploads/1762934977135-749126648.jpg\"\n        },\n        \"gstDetails\": {\n            \"legalName\": \"Romaa\",\n            \"tradeName\": \"Hero\",\n            \"businessAddress\": \"LKO India\"\n        },\n        \"userId\": \"69143ed2b462e26163197853\"\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Update Gst Details",
+							"id": "8689746-efa13876-7e67-447c-8434-abac5291c856",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OGMyOWQ5MTY0OTgxNDQ1MDU2MDkwZTYiLCJyb2xlIjoic3VwZXJhZG1pbiIsImlhdCI6MTc2Mjk0Nzk3MywiZXhwIjoxNzYzMDM0MzczfQ.GtkblkK6KX9hRULbWodB2XCSCRA9jypaKtMKsBVXkR8",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"legalName\": \"Romaa\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local_url}}/admin/carowners/691440c1581ed7e3b560cc78/gst",
+									"host": [
+										"{{local_url}}"
+									],
+									"path": [
+										"admin",
+										"carowners",
+										"691440c1581ed7e3b560cc78",
+										"gst"
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "8689746-9e983a77-77f3-4b75-8645-fae4e91eed56",
+									"name": "New Request",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"legalName\": \"Romaa\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{local_url}}/admin/carowners/691440c1581ed7e3b560cc78/gst",
+											"host": [
+												"{{local_url}}"
+											],
+											"path": [
+												"admin",
+												"carowners",
+												"691440c1581ed7e3b560cc78",
+												"gst"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "Text",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "477"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"1dd-7mRYGc1e+5oUfgZDS+ePDCbL6Ok\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 12 Nov 2025 13:10:13 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": true,\n    \"statusCode\": 200,\n    \"message\": \"GST details updated successfully\",\n    \"result\": {\n        \"_id\": \"691440c1581ed7e3b560cc78\",\n        \"phone\": \"987653420\",\n        \"userType\": \"Lessee\",\n        \"gstNumber\": \"\",\n        \"contactDetails\": {\n            \"contactPerson\": \"Sonal\",\n            \"mobileNumber\": \"7834545656\",\n            \"email\": \"rom7272@yopmail.com\",\n            \"designation\": \"Developer\",\n            \"financierNoc\": \"/uploads/1762934977135-749126648.jpg\"\n        },\n        \"gstDetails\": {\n            \"legalName\": \"Romaa\",\n            \"tradeName\": \"Hero\",\n            \"businessAddress\": \"LKO India\"\n        },\n        \"userId\": \"69143ed2b462e26163197853\"\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Get Contact Details by ownerId",
+							"id": "8689746-514df7a6-ca09-4c20-bd51-64f005b120c5",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OGMyOWQ5MTY0OTgxNDQ1MDU2MDkwZTYiLCJyb2xlIjoic3VwZXJhZG1pbiIsImlhdCI6MTc2MzM1NjY5MSwiZXhwIjoxNzYzNDQzMDkxfQ.7JJFLWin8v1SLGa-8EkE2CQFMQgWB8XVNyeu1jPSr7s",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OGMyOWQ5MTY0OTgxNDQ1MDU2MDkwZTYiLCJlbWFpbCI6InN1cGVyYWRtaW5AZ21haWwuY29tIiwicm9sZSI6InN1cGVyYWRtaW4iLCJtdXN0X2NoYW5nZV9wYXNzd29yZCI6ZmFsc2UsImlhdCI6MTc1Nzc0NDkxMiwiZXhwIjoxNzU3ODMxMzEyfQ.dPly4e7IiOBVESuR75HDr1sd05xx_nOrxL49m424-3E",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/admin/carowners/69120eb4923f6235c0640cfb/contact-details",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"admin",
+										"carowners",
+										"69120eb4923f6235c0640cfb",
+										"contact-details"
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "8689746-1f90c72e-5a3c-45cc-9303-1aa3ff1e7537",
+									"name": "New Request",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OGMyOWQ5MTY0OTgxNDQ1MDU2MDkwZTYiLCJlbWFpbCI6InN1cGVyYWRtaW5AZ21haWwuY29tIiwicm9sZSI6InN1cGVyYWRtaW4iLCJtdXN0X2NoYW5nZV9wYXNzd29yZCI6ZmFsc2UsImlhdCI6MTc1Nzc0NDkxMiwiZXhwIjoxNzU3ODMxMzEyfQ.dPly4e7IiOBVESuR75HDr1sd05xx_nOrxL49m424-3E",
+												"type": "text"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{base_url}}/admin/carowners/69186199f428dbbd0b3d1690/contact-details",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"admin",
+												"carowners",
+												"69186199f428dbbd0b3d1690",
+												"contact-details"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "349"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"15d-LuXt17AXh51VMGrFHzK5bDKPDqw\""
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 15 Nov 2025 13:15:19 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": true,\n    \"statusCode\": 200,\n    \"message\": \"Contact details fetched successfully\",\n    \"result\": {\n        \"_id\": \"69186199f428dbbd0b3d1690\",\n        \"phone\": \"9876534387\",\n        \"userType\": \"Lessor\",\n        \"contactDetails\": {\n            \"contactPerson\": \"Samba d\",\n            \"mobileNumber\": \"7812345679\",\n            \"email\": \"smd9272@yopmail.com\",\n            \"designation\": \"Developer\",\n            \"financierNoc\": \"\"\n        },\n        \"userId\": \"6916d952c605bdd1ce417803\"\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Get Gst details by ownerId",
+							"id": "8689746-190f07ee-bca3-4990-a825-aa82f734f1aa",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/admin/carowners/69186199f428dbbd0b3d1690/gst-details",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"admin",
+										"carowners",
+										"69186199f428dbbd0b3d1690",
+										"gst-details"
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "8689746-e58b44ee-f6ab-4a28-8580-1284ff238a17",
+									"name": "Get Gst details by owner id",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/admin/carowners/69186199f428dbbd0b3d1690/gst-details",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"admin",
+												"carowners",
+												"69186199f428dbbd0b3d1690",
+												"gst-details"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "335"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"14f-IAEUiSs/bY3N+kzKtsyIZLUc2gE\""
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 15 Nov 2025 13:16:46 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": true,\n    \"statusCode\": 200,\n    \"message\": \"GST details fetched successfully\",\n    \"result\": {\n        \"_id\": \"69186199f428dbbd0b3d1690\",\n        \"phone\": \"9876534387\",\n        \"userType\": \"Lessor\",\n        \"gstNumber\": \"\",\n        \"gstDetails\": {\n            \"legalName\": \"Techsima Solution Pvt Ltd\",\n            \"tradeName\": \"Techsima\",\n            \"businessAddress\": \"Private Limited Company\"\n        },\n        \"userId\": \"6916d952c605bdd1ce417803\"\n    }\n}"
+								}
+							]
+						}
+					],
+					"id": "8689746-2fe023e2-1a2f-4f54-862b-e665be1ef3dd"
+				}
+			],
+			"id": "8689746-710b3419-005d-4703-bf95-77882a802235",
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OGMyOWQ5MTY0OTgxNDQ1MDU2MDkwZTYiLCJyb2xlIjoic3VwZXJhZG1pbiIsImlhdCI6MTc2Mzk4NDkyOSwiZXhwIjoxNzY0MDcxMzI5fQ.44o_zxEG5SSpS_XlIZcUNL59pXGJSMV7ZYmW_OcaLx8",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "fcbf32d3-19c5-449f-82fe-fd22a16ff961",
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "8082c366-7118-4025-969e-9abf0549ccee",
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Mobile",
+			"item": [
+				{
+					"name": "Auth",
+					"item": [
+						{
+							"name": "Login",
+							"id": "8689746-7b8f9aa7-4337-4538-bc65-f86950e2b660",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"phone\": \"9876534675\",\r\n  \"userType\": \"Lessee\" // Lessor or Lessee\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/mobile/auth/login",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"mobile",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Verify OTP",
+							"id": "8689746-f3a3545d-1067-4694-abcd-84c56ee04525",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"phone\": \"9876534675\",\r\n    \"userType\": \"Lessor\",\r\n    \"otp\": \"707065\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/mobile/auth/verify-otp",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"mobile",
+										"auth",
+										"verify-otp"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "8689746-91800497-2c8e-4f6d-81e3-d4615acee822"
+				},
+				{
+					"name": "Car Owner",
+					"item": [
+						{
+							"name": "Profile",
+							"item": [
+								{
+									"name": "Contact Details",
+									"item": [
+										{
+											"name": "Contact",
+											"id": "8689746-d957b7f8-eeef-4bb5-bbdd-2ef6a49cf79f",
+											"protocolProfileBehavior": {
+												"disabledSystemHeaders": {},
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": [
+														{
+															"key": "token",
+															"value": "{{auth_token}}",
+															"type": "string"
+														}
+													]
+												},
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "formdata",
+													"formdata": [
+														{
+															"key": "contactPerson",
+															"value": "Samba d",
+															"type": "text"
+														},
+														{
+															"key": "mobileNumber",
+															"value": "7812345679",
+															"type": "text"
+														},
+														{
+															"key": "email",
+															"value": "smd9272@yopmail.com",
+															"type": "text"
+														},
+														{
+															"key": "designation",
+															"value": "Developer",
+															"type": "text"
+														},
+														{
+															"key": "financierNoc",
+															"type": "file",
+															"src": "/C:/Users/DELL/Downloads/meetbanner.jpg"
+														}
+													]
+												},
+												"url": {
+													"raw": "{{base_url}}/mobile/ownerprofile/contact",
+													"host": [
+														"{{base_url}}"
+													],
+													"path": [
+														"mobile",
+														"ownerprofile",
+														"contact"
+													]
+												}
+											},
+											"response": [
+												{
+													"id": "8689746-f559c069-f6f6-4470-9987-0ffcf852d1f8",
+													"name": "Contact",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [],
+														"body": {
+															"mode": "formdata",
+															"formdata": [
+																{
+																	"key": "contactPerson",
+																	"value": "Shital m",
+																	"type": "text",
+																	"disabled": true
+																},
+																{
+																	"key": "mobileNumber",
+																	"value": "7812345679",
+																	"type": "text",
+																	"disabled": true
+																},
+																{
+																	"key": "email",
+																	"value": "smd9272@yopmail.com",
+																	"type": "text",
+																	"disabled": true
+																},
+																{
+																	"key": "designation",
+																	"value": "Developer",
+																	"type": "text",
+																	"disabled": true
+																},
+																{
+																	"key": "financierNoc",
+																	"type": "file",
+																	"src": "/C:/Users/DELL/Downloads/Pi7_Passport_Photo (3).jpeg"
+																}
+															]
+														},
+														"url": {
+															"raw": "{{base_url}}/mobile/ownerprofile/contact",
+															"host": [
+																"{{base_url}}"
+															],
+															"path": [
+																"mobile",
+																"ownerprofile",
+																"contact"
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": null,
+													"header": [
+														{
+															"key": "X-Powered-By",
+															"value": "Express"
+														},
+														{
+															"key": "Access-Control-Allow-Origin",
+															"value": "*"
+														},
+														{
+															"key": "Access-Control-Allow-Credentials",
+															"value": "true"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/json; charset=utf-8"
+														},
+														{
+															"key": "Content-Length",
+															"value": "520"
+														},
+														{
+															"key": "ETag",
+															"value": "W/\"208-w7xN6u4L8jOGqB9tE+cfNrnY43E\""
+														},
+														{
+															"key": "Date",
+															"value": "Thu, 27 Nov 2025 06:46:40 GMT"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=5"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": "{\n    \"status\": true,\n    \"statusCode\": 200,\n    \"message\": \"Contact details updated successfully\",\n    \"result\": {\n        \"_id\": \"6927eaa5923f6235c0640d1e\",\n        \"phone\": \"9876534387\",\n        \"userType\": \"Lessor\",\n        \"contactDetails\": {\n            \"contactPerson\": \"Shital m\",\n            \"mobileNumber\": \"7812345679\",\n            \"email\": \"smd9272@yopmail.com\",\n            \"designation\": \"Developer\",\n            \"financierNoc\": \"/uploads/1764226000032-72170140.jpeg\"\n        },\n        \"gstDetails\": {\n            \"gstNumber\": \"27ABCDs6234JHAG4f\",\n            \"legalName\": \"Heroo\",\n            \"tradeName\": \"Hero\",\n            \"businessAddress\": \"LKO Private Limited Company\"\n        },\n        \"userId\": \"691c434ce146fd599e5916d6\"\n    }\n}"
+												}
+											]
+										}
+									],
+									"id": "8689746-f6258012-b62c-447d-a14e-73d0c3e34b28"
+								},
+								{
+									"name": "Gst Details",
+									"item": [
+										{
+											"name": "Create Gst",
+											"id": "8689746-ea4b4fe4-a42c-4a2a-a6c3-4e8c573a094f",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": [
+														{
+															"key": "token",
+															"value": "{{auth_token}}",
+															"type": "string"
+														}
+													]
+												},
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"gstDetails\": {\r\n    \"gstNumber\": \"29ABCDE1234JHAkSk\",\r\n    \"legalName\": \"Techsima Solution Pvt Ltd\",\r\n    \"tradeName\": \"Techsima\",\r\n    \"businessAddress\": \"Private Limited Company\"\r\n  }\r\n}\r\n",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{base_url}}/mobile/ownerprofile/gst",
+													"host": [
+														"{{base_url}}"
+													],
+													"path": [
+														"mobile",
+														"ownerprofile",
+														"gst"
+													]
+												}
+											},
+											"response": [
+												{
+													"id": "8689746-c805f493-e60c-4d4f-aaf5-7dfef39790a8",
+													"name": "Create Gst",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [],
+														"body": {
+															"mode": "raw",
+															"raw": "{\r\n   \"gstNumber\": \"27ABCDs6234JHhG4f\"\r\n}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{base_url}}/mobile/ownerprofile/gst",
+															"host": [
+																"{{base_url}}"
+															],
+															"path": [
+																"mobile",
+																"ownerprofile",
+																"gst"
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": null,
+													"header": [
+														{
+															"key": "X-Powered-By",
+															"value": "Express"
+														},
+														{
+															"key": "Access-Control-Allow-Origin",
+															"value": "*"
+														},
+														{
+															"key": "Access-Control-Allow-Credentials",
+															"value": "true"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/json; charset=utf-8"
+														},
+														{
+															"key": "Content-Length",
+															"value": "516"
+														},
+														{
+															"key": "ETag",
+															"value": "W/\"204-50aYF5Km6DUIIVvbNsnzw2Td3xw\""
+														},
+														{
+															"key": "Date",
+															"value": "Thu, 27 Nov 2025 06:47:14 GMT"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=5"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": "{\n    \"status\": true,\n    \"statusCode\": 200,\n    \"message\": \"GST details updated successfully\",\n    \"result\": {\n        \"_id\": \"6927eaa5923f6235c0640d1e\",\n        \"phone\": \"9876534387\",\n        \"userType\": \"Lessor\",\n        \"contactDetails\": {\n            \"contactPerson\": \"Shital m\",\n            \"mobileNumber\": \"7812345679\",\n            \"email\": \"smd9272@yopmail.com\",\n            \"designation\": \"Developer\",\n            \"financierNoc\": \"/uploads/1764226000032-72170140.jpeg\"\n        },\n        \"gstDetails\": {\n            \"gstNumber\": \"27ABCDs6234JHhG4f\",\n            \"legalName\": \"Heroo\",\n            \"tradeName\": \"Hero\",\n            \"businessAddress\": \"LKO Private Limited Company\"\n        },\n        \"userId\": \"691c434ce146fd599e5916d6\"\n    }\n}"
+												}
+											]
+										}
+									],
+									"id": "8689746-df5a2e72-3f64-40cf-9f24-7442cddaef16"
+								},
+								{
+									"name": "Get Contact details by owner id",
+									"id": "8689746-ab41b5e8-82b5-47c6-b110-ecf022e3911f",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{auth_token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/mobile/ownerprofile/69186199f428dbbd0b3d1690/contact-details",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"mobile",
+												"ownerprofile",
+												"69186199f428dbbd0b3d1690",
+												"contact-details"
+											]
+										}
+									},
+									"response": [
+										{
+											"id": "8689746-27139d80-2972-4456-99dc-89ada27fe8c6",
+											"name": "New Request",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{base_url}}/mobile/ownerprofile/69186199f428dbbd0b3d1690/contact-details",
+													"host": [
+														"{{base_url}}"
+													],
+													"path": [
+														"mobile",
+														"ownerprofile",
+														"69186199f428dbbd0b3d1690",
+														"contact-details"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": null,
+											"header": [
+												{
+													"key": "X-Powered-By",
+													"value": "Express"
+												},
+												{
+													"key": "Access-Control-Allow-Origin",
+													"value": "*"
+												},
+												{
+													"key": "Access-Control-Allow-Credentials",
+													"value": "true"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "Content-Length",
+													"value": "310"
+												},
+												{
+													"key": "ETag",
+													"value": "W/\"136-66w8CArdXjbnyvGms/xLOsbXiY0\""
+												},
+												{
+													"key": "Date",
+													"value": "Sat, 15 Nov 2025 12:57:24 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=5"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"status\": true,\n    \"statusCode\": 200,\n    \"message\": \"Contact details fetched successfully\",\n    \"result\": {\n        \"_id\": \"69186199f428dbbd0b3d1690\",\n        \"contactDetails\": {\n            \"contactPerson\": \"Samba d\",\n            \"mobileNumber\": \"7812345679\",\n            \"email\": \"smd9272@yopmail.com\",\n            \"designation\": \"Developer\",\n            \"financierNoc\": null\n        },\n        \"userId\": \"6916d952c605bdd1ce417803\"\n    }\n}"
+										}
+									]
+								},
+								{
+									"name": "Get gst details by owner id",
+									"id": "8689746-eed4a263-138d-4ffb-8901-207caaa5e985",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{auth_token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/mobile/ownerprofile/69186199f428dbbd0b3d1690/gst-details",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"mobile",
+												"ownerprofile",
+												"69186199f428dbbd0b3d1690",
+												"gst-details"
+											]
+										}
+									},
+									"response": [
+										{
+											"id": "8689746-d944f529-b79b-41bb-b508-d57885c9067d",
+											"name": "New Request",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{base_url}}/mobile/ownerprofile/69186199f428dbbd0b3d1690/gst-details",
+													"host": [
+														"{{base_url}}"
+													],
+													"path": [
+														"mobile",
+														"ownerprofile",
+														"69186199f428dbbd0b3d1690",
+														"gst-details"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": null,
+											"header": [
+												{
+													"key": "X-Powered-By",
+													"value": "Express"
+												},
+												{
+													"key": "Access-Control-Allow-Origin",
+													"value": "*"
+												},
+												{
+													"key": "Access-Control-Allow-Credentials",
+													"value": "true"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "Content-Length",
+													"value": "311"
+												},
+												{
+													"key": "ETag",
+													"value": "W/\"137-2qXMCLzmPVA8d0/Q0h/9SsfZrl0\""
+												},
+												{
+													"key": "Date",
+													"value": "Sat, 15 Nov 2025 12:58:48 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=5"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"status\": true,\n    \"statusCode\": 200,\n    \"message\": \"GST details fetched successfully\",\n    \"result\": {\n        \"_id\": \"69186199f428dbbd0b3d1690\",\n        \"gstNumber\": \"29ABCDE1234JHAkSk\",\n        \"gstDetails\": {\n            \"legalName\": \"Techsima Solution Pvt Ltd\",\n            \"tradeName\": \"Techsima\",\n            \"businessAddress\": \"Private Limited Company\"\n        },\n        \"userId\": \"6916d952c605bdd1ce417803\"\n    }\n}"
+										}
+									]
+								}
+							],
+							"id": "8689746-2c8b0e05-853f-4cb1-b36d-3652d63ef95c"
+						},
+						{
+							"name": "Get Profile",
+							"id": "8689746-6d8bf1cf-132f-4fca-9b4d-fd2fbb645042",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					],
+					"id": "8689746-26792de7-a659-4024-b53e-020d64700b31"
+				},
+				{
+					"name": "Master",
+					"item": [
+						{
+							"name": "Get category",
+							"id": "8689746-6a0af02a-f904-49dc-8d37-faf9a2bf7e76",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OTE2ZDk1MmM2MDViZGQxY2U0MTc4MDMiLCJpYXQiOjE3NjMxMTE2MjUsImV4cCI6MTc2MzE5ODAyNX0.rGO5BCE1vY0tTXEDBqscBMkKKeRSuNYY-wcIOHsQsmg",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"categoryName\": \"document_types\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/mobile/category/get-values-by-name",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"mobile",
+										"category",
+										"get-values-by-name"
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "8689746-cfb7c928-8746-4717-9855-8d2997c60b8e",
+									"name": "New Request",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"categoryName\": \"document_types\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url}}/mobile/category/get-values-by-name",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"mobile",
+												"category",
+												"get-values-by-name"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "844"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"34c-I6bZGeZ1g1KYSKpZU58jzEX8RoA\""
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 14 Nov 2025 11:14:53 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": true,\n    \"statusCode\": 200,\n    \"message\": \"Values fetched successfully for category\",\n    \"result\": [\n        {\n            \"id\": \"6904577cee011117bb0d1bab\",\n            \"value\": \"PAN Card\"\n        },\n        {\n            \"id\": \"6904577cee011117bb0d1bac\",\n            \"value\": \"Aadhaar Card\"\n        },\n        {\n            \"id\": \"6904577cee011117bb0d1bad\",\n            \"value\": \"Driving License\"\n        },\n        {\n            \"id\": \"6904577cee011117bb0d1bae\",\n            \"value\": \"RC Book\"\n        },\n        {\n            \"id\": \"6904577cee011117bb0d1baf\",\n            \"value\": \"Insurance\"\n        },\n        {\n            \"id\": \"6904577cee011117bb0d1bb0\",\n            \"value\": \"GSTIN\"\n        },\n        {\n            \"id\": \"6904577cee011117bb0d1bb1\",\n            \"value\": \"Bank Statement\"\n        },\n        {\n            \"id\": \"6904577cee011117bb0d1bb2\",\n            \"value\": \"Salary Slip\"\n        },\n        {\n            \"id\": \"6904577cee011117bb0d1bb3\",\n            \"value\": \"Income Tax Return\"\n        },\n        {\n            \"id\": \"6904577cee011117bb0d1bb4\",\n            \"value\": \"Pollution Under Control\"\n        },\n        {\n            \"id\": \"6904577cee011117bb0d1c56\",\n            \"value\": \"Salary Slip\"\n        },\n        {\n            \"id\": \"6904577cee011117bb0d1c57\",\n            \"value\": \"Bank Statement\"\n        },\n        {\n            \"id\": \"6904577cee011117bb0d1c58\",\n            \"value\": \"Income Tax Return\"\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Get All category",
+							"id": "8689746-d70803c1-7c7b-4272-8625-79db0f7c2a84",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OTE2ZDk1MmM2MDViZGQxY2U0MTc4MDMiLCJpYXQiOjE3NjMyMTI3MTcsImV4cCI6MTc2MzI5OTExN30.XYf_2hCW_HWD4h4jRWySiCvLlcT-ipe6wvt3u7rKjyI",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{base_url}}/mobile/category/all-categories",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"mobile",
+										"category",
+										"all-categories"
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "8689746-23a8f9e0-bee0-426d-aa1f-12349ec60bd8",
+									"name": "Get All category",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "{{base_url}}/mobile/category/all-categories",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"mobile",
+												"category",
+												"all-categories"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "3084"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"c0c-+HnLws43VV/w+DrK6WDr8r+UhtI\""
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 15 Nov 2025 13:27:53 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": true,\n    \"statusCode\": 200,\n    \"message\": \"All categories fetched successfully\",\n    \"result\": [\n        {\n            \"_id\": \"6904577cee011117bb0d1b79\",\n            \"name\": \"vehicle_brands\",\n            \"description\": \"Manufacturers and brands of vehicles\"\n        },\n        {\n            \"_id\": \"6904577cee011117bb0d1b7a\",\n            \"name\": \"fuel_types\",\n            \"description\": \"Types of fuel used in vehicles\"\n        },\n        {\n            \"_id\": \"6904577cee011117bb0d1b7b\",\n            \"name\": \"document_types\",\n            \"description\": \"Types of documents used in the system\"\n        },\n        {\n            \"_id\": \"6904577cee011117bb0d1b7c\",\n            \"name\": \"vehicle_types\",\n            \"description\": \"Types of vehicles (Hatchback, Sedan, SUV, etc.)\"\n        },\n        {\n            \"_id\": \"6904577cee011117bb0d1b7d\",\n            \"name\": \"occupation_types\",\n            \"description\": \"Types of occupations for lessees\"\n        },\n        {\n            \"_id\": \"6904577cee011117bb0d1b7e\",\n            \"name\": \"constitution_types\",\n            \"description\": \"Types of business constitutions for lessors\"\n        },\n        {\n            \"_id\": \"6904577cee011117bb0d1b7f\",\n            \"name\": \"task_types\",\n            \"description\": \"Types of tasks in the system\"\n        },\n        {\n            \"_id\": \"6904577cee011117bb0d1b80\",\n            \"name\": \"service_types\",\n            \"description\": \"Types of services offered\"\n        },\n        {\n            \"_id\": \"6904577cee011117bb0d1b81\",\n            \"name\": \"package_tiers\",\n            \"description\": \"Tiers for packages (Basic, Standard, Premium, etc.)\"\n        },\n        {\n            \"_id\": \"6904577cee011117bb0d1b82\",\n            \"name\": \"charge_types\",\n            \"description\": \"Types of charges in the system\"\n        },\n        {\n            \"_id\": \"6904577cee011117bb0d1b83\",\n            \"name\": \"cities\",\n            \"description\": \"Cities where operations are conducted\"\n        },\n        {\n            \"_id\": \"6904577cee011117bb0d1b84\",\n            \"name\": \"states\",\n            \"description\": \"States where operations are conducted\"\n        },\n        {\n            \"_id\": \"6904577cee011117bb0d1b85\",\n            \"name\": \"sla_types\",\n            \"description\": \"Types of SLAs for tasks\"\n        },\n        {\n            \"_id\": \"6904577cee011117bb0d1b86\",\n            \"name\": \"vehicle_features\",\n            \"description\": \"Features available in vehicles\"\n        },\n        {\n            \"_id\": \"6904577cee011117bb0d1b87\",\n            \"name\": \"insurance_companies\",\n            \"description\": \"Insurance providers\"\n        },\n        {\n            \"_id\": \"6904577cee011117bb0d1b88\",\n            \"name\": \"payment_methods\",\n            \"description\": \"Accepted payment methods\"\n        },\n        {\n            \"_id\": \"6904577cee011117bb0d1b89\",\n            \"name\": \"payment_frequencies\",\n            \"description\": \"Lease payment frequencies\"\n        },\n        {\n            \"_id\": \"6904577cee011117bb0d1b8a\",\n            \"name\": \"lease_statuses\",\n            \"description\": \"Possible statuses of a lease\"\n        },\n        {\n            \"_id\": \"6904577cee011117bb0d1b8b\",\n            \"name\": \"kyc_statuses\",\n            \"description\": \"KYC verification statuses\"\n        },\n        {\n            \"_id\": \"6904577cee011117bb0d1b8c\",\n            \"name\": \"vehicle_statuses\",\n            \"description\": \"Possible statuses of a vehicle\"\n        },\n        {\n            \"_id\": \"6904577cee011117bb0d1b8d\",\n            \"name\": \"service_vendor_types\",\n            \"description\": \"Types of service vendors\"\n        },\n        {\n            \"_id\": \"6904577cee011117bb0d1b8e\",\n            \"name\": \"benefit_types\",\n            \"description\": \"Types of benefits in packages\"\n        },\n        {\n            \"_id\": \"6904577cee011117bb0d1b8f\",\n            \"name\": \"marital_statuses\",\n            \"description\": \"Marital status options\"\n        },\n        {\n            \"_id\": \"6904577cee011117bb0d1b90\",\n            \"name\": \"education_levels\",\n            \"description\": \"Education qualification levels\"\n        },\n        {\n            \"_id\": \"6904577cee011117bb0d1b91\",\n            \"name\": \"income_proof_types\",\n            \"description\": \"Types of income proof documents\"\n        },\n        {\n            \"_id\": \"6904577cee011117bb0d1b92\",\n            \"name\": \"bank_names\",\n            \"description\": \"Bank names for payment processing\"\n        },\n        {\n            \"_id\": \"6904577cee011117bb0d1b93\",\n            \"name\": \"invoice_statuses\",\n            \"description\": \"Possible statuses of an invoice\"\n        },\n        {\n            \"_id\": \"6904577cee011117bb0d1b94\",\n            \"name\": \"payment_statuses\",\n            \"description\": \"Possible statuses of a payment\"\n        }\n    ]\n}"
+								}
+							]
+						}
+					],
+					"id": "8689746-5ee36891-dcf6-4fbb-9787-90cc6dfd86c5"
+				},
+				{
+					"name": "vehicles",
+					"item": [
+						{
+							"name": "Add Vehicle",
+							"id": "8689746-fac6ed64-34b8-461f-954a-48e51abfcbce",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"registrationNumber\": \"MH12CX33332\",\r\n  \"vin\": \"1HGCM82633AC23X544\",\r\n  \"chassisNumber\":\"CHACSXS153511\",\r\n  \"engineNumber\":\"ENGINEX8C6535321\",\r\n  \"make\": \"68b84ac38030551cb4ca2aa3\",\r\n  \"model\": \"68b84ac38030551cb4ca29a3\",\r\n  \"variant\": \"68b84ac38030551cb4ca27a3\",\r\n  \"fuelType\": \"68b84ac38030551cb4ca96a3\",\r\n  \"manufacturingYear\": 2021,\r\n  \"registrationDate\": \"2024-03-15\",\r\n  \"seatingCapacity\": 5,\r\n  \"color\": \"White\",\r\n  \"currentOdometer\":12500,\r\n  \"status\": \"listed\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/mobile/vehicles/add-vehicle",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"mobile",
+										"vehicles",
+										"add-vehicle"
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "8689746-3aa7e94f-e509-4779-9e32-a2db719ea667",
+									"name": "Add Vehicle",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"registrationNumber\": \"MH12CX13332\",\r\n  \"vin\": \"1HGCM82633AC23X534\",\r\n  \"chassisNumber\":\"CHACSXS123511\",\r\n  \"engineNumber\":\"ENGINEX8C6532321\",\r\n  \"make\": \"68b84ac38030551cb4ca2aa3\",\r\n  \"model\": \"68b84ac38030551cb4ca29a3\",\r\n  \"variant\": \"68b84ac38030551cb4ca27a3\",\r\n  \"fuelType\": \"68b84ac38030551cb4ca96a3\",\r\n  \"manufacturingYear\": 2021,\r\n  \"registrationDate\": \"2024-03-15\",\r\n  \"seatingCapacity\": 5,\r\n  \"color\": \"White\",\r\n  \"currentOdometer\":12500,\r\n  \"status\": \"listed\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url}}/mobile/vehicles/add-vehicle",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"mobile",
+												"vehicles",
+												"add-vehicle"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Alt-Svc",
+											"value": "h3=\":443\"; ma=2592000"
+										},
+										{
+											"key": "Content-Length",
+											"value": "684"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 18 Nov 2025 13:23:46 GMT"
+										},
+										{
+											"key": "Etag",
+											"value": "W/\"2ac-VHJKxoqPai5PzcOuz/SWiKABrWA\""
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": true,\n    \"statusCode\": 200,\n    \"message\": \"Vehicle created successfully\",\n    \"result\": {\n        \"lessorId\": \"691c434ce146fd599e5916d6\",\n        \"registrationNumber\": \"MH12CX13332\",\n        \"chassisNumber\": \"CHACSXS123511\",\n        \"engineNumber\": \"ENGINEX8C6532321\",\n        \"vin\": \"1HGCM82633AC23X534\",\n        \"make\": \"68b84ac38030551cb4ca2aa3\",\n        \"variant\": \"68b84ac38030551cb4ca27a3\",\n        \"fuelType\": \"68b84ac38030551cb4ca96a3\",\n        \"manufacturingYear\": 2021,\n        \"registrationDate\": \"2024-03-15T00:00:00.000Z\",\n        \"seatingCapacity\": 5,\n        \"color\": \"White\",\n        \"status\": \"listed\",\n        \"currentOdometer\": 12500,\n        \"expectedLease\": {\n            \"cities\": []\n        },\n        \"images\": [],\n        \"_id\": \"691c7361e146fd599e5916e5\",\n        \"documents\": [],\n        \"createdAt\": \"2025-11-18T13:23:46.001Z\",\n        \"updatedAt\": \"2025-11-18T13:23:46.001Z\",\n        \"__v\": 0\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Update Expected Lease",
+							"id": "8689746-6ab581a2-7d69-4907-90e6-c17a9a375b4b",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"expectedRent\": 303200,\r\n  \"tentativeLeaseDate\": \"2025-08-01\",\r\n  \"maxKmPerMonth\": 1000,\r\n  \"lockInPeriod\": \"1 - 3 Years\",\r\n  \"cities\": [\"Delhi\", \"Bengaluru\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/mobile/vehicles/expected-lease/692d9b999b2f6a87f079e378",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"mobile",
+										"vehicles",
+										"expected-lease",
+										"692d9b999b2f6a87f079e378"
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "8689746-c0d3f8eb-19c0-4510-bfef-951e94766e8a",
+									"name": "Update Expected Lease",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"expectedRent\": 303200,\r\n  \"tentativeLeaseDate\": \"2025-08-01\",\r\n  \"maxKmPerMonth\": 1000,\r\n  \"lockInPeriod\": \"1 - 3 Years\",\r\n  \"cities\": [\"Delhi\", \"Bengaluru\"]\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url}}/mobile/vehicles/expected-lease/691c23b4e146fd599e5916d1",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"mobile",
+												"vehicles",
+												"expected-lease",
+												"691c23b4e146fd599e5916d1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Alt-Svc",
+											"value": "h3=\":443\"; ma=2592000"
+										},
+										{
+											"key": "Content-Length",
+											"value": "830"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 18 Nov 2025 13:24:58 GMT"
+										},
+										{
+											"key": "Etag",
+											"value": "W/\"33e-ky71ppVuYggAKy5X5jnnSF4pUhE\""
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": true,\n    \"statusCode\": 200,\n    \"message\": \"Expected Lease updated successfully\",\n    \"result\": {\n        \"_id\": \"691c23b4e146fd599e5916d1\",\n        \"lessorId\": \"68d38748efb8da92e8cb5f54\",\n        \"registrationNumber\": \"MH12CX13342\",\n        \"chassisNumber\": \"CHACSXS123521\",\n        \"engineNumber\": \"ENGINEX8C6532221\",\n        \"vin\": \"1HGCM82633AC23X532\",\n        \"make\": \"68b84ac38030551cb4ca26a3\",\n        \"variant\": \"68b84ac38030551cb4ca26a3\",\n        \"fuelType\": \"68b84ac38030551cb4ca26a3\",\n        \"manufacturingYear\": 2021,\n        \"registrationDate\": \"2024-03-15T00:00:00.000Z\",\n        \"seatingCapacity\": 5,\n        \"color\": \"White\",\n        \"status\": \"listed\",\n        \"currentOdometer\": 12500,\n        \"expectedLease\": {\n            \"expectedRent\": 303200,\n            \"tentativeLeaseDate\": \"2025-08-01T00:00:00.000Z\",\n            \"maxKmPerMonth\": 1000,\n            \"lockInPeriod\": \"1 - 3 Years\",\n            \"cities\": [\n                \"Delhi\",\n                \"Bengaluru\"\n            ]\n        },\n        \"images\": [],\n        \"documents\": [],\n        \"createdAt\": \"2025-11-18T07:43:48.086Z\",\n        \"updatedAt\": \"2025-11-18T13:24:58.825Z\",\n        \"__v\": 0\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Update Payment Details",
+							"id": "8689746-8cb075b7-f176-4779-a57d-6a90c37d668b",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"platformFee\": 5800,\r\n  \"onboardingCharge\": 1500,\r\n  \"tax\": 18,\r\n  \"discount\": 500,\r\n  \"expectedRent\": 25000\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/mobile/vehicles/payment-details/692d9b999b2f6a87f079e378",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"mobile",
+										"vehicles",
+										"payment-details",
+										"692d9b999b2f6a87f079e378"
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "8689746-a5233c87-a48c-4eb5-95e1-4ea12a193ce0",
+									"name": "Update Payment Details",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"platformFee\": 5800,\r\n  \"onboardingCharge\": 1500,\r\n  \"tax\": 18,\r\n  \"discount\": 500,\r\n  \"expectedRent\": 25000\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url}}/mobile/vehicles/payment-details/691c7361e146fd599e5916e5",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"mobile",
+												"vehicles",
+												"payment-details",
+												"691c7361e146fd599e5916e5"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Alt-Svc",
+											"value": "h3=\":443\"; ma=2592000"
+										},
+										{
+											"key": "Content-Length",
+											"value": "799"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 18 Nov 2025 13:25:52 GMT"
+										},
+										{
+											"key": "Etag",
+											"value": "W/\"31f-VWqFGnBkdYrOmuCj6weEXg8EHqU\""
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": true,\n    \"statusCode\": 200,\n    \"message\": \"Payment details updated successfully\",\n    \"result\": {\n        \"paymentDetails\": {\n            \"platformFee\": 5800,\n            \"onboardingCharge\": 1500,\n            \"tax\": 18,\n            \"discount\": 500,\n            \"expectedRent\": 25000\n        },\n        \"_id\": \"691c7361e146fd599e5916e5\",\n        \"lessorId\": \"691c434ce146fd599e5916d6\",\n        \"registrationNumber\": \"MH12CX13332\",\n        \"chassisNumber\": \"CHACSXS123511\",\n        \"engineNumber\": \"ENGINEX8C6532321\",\n        \"vin\": \"1HGCM82633AC23X534\",\n        \"make\": \"68b84ac38030551cb4ca2aa3\",\n        \"variant\": \"68b84ac38030551cb4ca27a3\",\n        \"fuelType\": \"68b84ac38030551cb4ca96a3\",\n        \"manufacturingYear\": 2021,\n        \"registrationDate\": \"2024-03-15T00:00:00.000Z\",\n        \"seatingCapacity\": 5,\n        \"color\": \"White\",\n        \"status\": \"listed\",\n        \"currentOdometer\": 12500,\n        \"expectedLease\": {\n            \"cities\": []\n        },\n        \"images\": [],\n        \"documents\": [],\n        \"createdAt\": \"2025-11-18T13:23:46.001Z\",\n        \"updatedAt\": \"2025-11-18T13:25:52.304Z\",\n        \"__v\": 0\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Update Bank Details",
+							"id": "8689746-4a8bacd0-90cb-4f05-9911-9b62b5eab8e3",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"bankName\": \"SBI Bank\",\r\n  \"accountHolderName\": \"John Doe\",\r\n  \"accountNumber\": \"1234567890\",\r\n  \"ifscCode\": \"HDFC0001234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/mobile/vehicles/bank-details/692d9b999b2f6a87f079e378",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"mobile",
+										"vehicles",
+										"bank-details",
+										"692d9b999b2f6a87f079e378"
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "8689746-de227a0b-ee28-4cf5-820c-d0423bab2ce3",
+									"name": "Update Bank Details",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"bankName\": \"SBI Bank\",\r\n  \"accountHolderName\": \"John Doe\",\r\n  \"accountNumber\": \"1234567890\",\r\n  \"ifscCode\": \"HDFC0001234\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url}}/mobile/vehicles/bank-details/691c7361e146fd599e5916e5",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"mobile",
+												"vehicles",
+												"bank-details",
+												"691c7361e146fd599e5916e5"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Alt-Svc",
+											"value": "h3=\":443\"; ma=2592000"
+										},
+										{
+											"key": "Content-Length",
+											"value": "919"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 18 Nov 2025 13:26:23 GMT"
+										},
+										{
+											"key": "Etag",
+											"value": "W/\"397-P6MgxZroxPnOGLSi/hOW+lTNyqE\""
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": true,\n    \"statusCode\": 200,\n    \"message\": \"Bank details updated successfully\",\n    \"result\": {\n        \"bankDetails\": {\n            \"bankName\": \"SBI Bank\",\n            \"accountHolderName\": \"John Doe\",\n            \"accountNumber\": \"1234567890\",\n            \"ifscCode\": \"HDFC0001234\"\n        },\n        \"_id\": \"691c7361e146fd599e5916e5\",\n        \"lessorId\": \"691c434ce146fd599e5916d6\",\n        \"registrationNumber\": \"MH12CX13332\",\n        \"chassisNumber\": \"CHACSXS123511\",\n        \"engineNumber\": \"ENGINEX8C6532321\",\n        \"vin\": \"1HGCM82633AC23X534\",\n        \"make\": \"68b84ac38030551cb4ca2aa3\",\n        \"variant\": \"68b84ac38030551cb4ca27a3\",\n        \"fuelType\": \"68b84ac38030551cb4ca96a3\",\n        \"manufacturingYear\": 2021,\n        \"registrationDate\": \"2024-03-15T00:00:00.000Z\",\n        \"seatingCapacity\": 5,\n        \"color\": \"White\",\n        \"status\": \"listed\",\n        \"currentOdometer\": 12500,\n        \"expectedLease\": {\n            \"cities\": []\n        },\n        \"images\": [],\n        \"documents\": [],\n        \"createdAt\": \"2025-11-18T13:23:46.001Z\",\n        \"updatedAt\": \"2025-11-18T13:26:23.400Z\",\n        \"__v\": 0,\n        \"paymentDetails\": {\n            \"platformFee\": 5800,\n            \"onboardingCharge\": 1500,\n            \"tax\": 18,\n            \"discount\": 500,\n            \"expectedRent\": 25000\n        }\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Get Vehicle By Id",
+							"id": "8689746-07fceaf8-f96b-40ce-84c8-70f15eba3060",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/mobile/vehicles/vehicleId/692d9b619b2f6a87f079e36a",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"mobile",
+										"vehicles",
+										"vehicleId",
+										"692d9b619b2f6a87f079e36a"
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "8689746-525e8a40-af6f-4532-917d-512a72e00842",
+									"name": "Get Vehicle By Id",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/mobile/vehicles/vehicleId/691c7361e146fd599e5916e5",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"mobile",
+												"vehicles",
+												"vehicleId",
+												"691c7361e146fd599e5916e5"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "63"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"3f-4lbn9XIcVYFRwMu5n+50fox85xE\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 18 Nov 2025 13:30:35 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": false,\n    \"statusCode\": 404,\n    \"message\": \"Vehicle not found\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Get Vehicle By Lessor Id",
+							"id": "8689746-04ae3e6b-a8e2-4c50-abec-a23be17f6ca6",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/mobile/vehicles/lessorId/692d9b619b2f6a87f079e36a",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"mobile",
+										"vehicles",
+										"lessorId",
+										"692d9b619b2f6a87f079e36a"
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "8689746-9773d303-896e-4be3-91f7-225dd6e8689e",
+									"name": "Get Vehicle By Lessor Id",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/mobile/vehicles/lessorId/691c434ce146fd599e5916d6",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"mobile",
+												"vehicles",
+												"lessorId",
+												"691c434ce146fd599e5916d6"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "88"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"58-0vCfP85yaPe6izyFoZevorMlcXk\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 18 Nov 2025 13:31:21 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": true,\n    \"statusCode\": 200,\n    \"message\": \"Vehicles retrieved successfully\",\n    \"result\": []\n}"
+								}
+							]
+						},
+						{
+							"name": "Create vehicle by Digio Response",
+							"id": "8689746-93c7ca9a-9cab-495f-8a06-3f201e300ba5",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"user_details\": {\r\n        \"owner_name\": \"UJYARE LAL  KACHHI\",\r\n        \"father_name\": \"\",\r\n        \"mobile_number\": \"\",\r\n        \"owner_number\": \"1\",\r\n        \"present_address\": \"VILLAGE MAJHGWAN NEAR, KALI MANDIR MAJHAGWAN, , , Madhya Pradesh,\",\r\n        \"permanent_address\": \"VILLAGE MAJHGWAN NEAR, KALI MANDIR MAJHAGWAN, , , Madhya Pradesh,\"\r\n    },\r\n    \"vehicle_details\": {\r\n        \"rc_number\": \"MP20CK6685\",\r\n        \"registration_date\": \"2020-12-02\",\r\n        \"vehicle_category\": \"LMV\",\r\n        \"vehicle_chassis_number\": \"MAT626288LKK44229\",\r\n        \"vehicle_engine_number\": \"REVTRN08KZXK78404\",\r\n        \"maker_description\": \"TATA MOTORS LTD\",\r\n        \"maker_model\": \"TIAGO XZ 1.2RTN BS6\",\r\n        \"fuel_type\": \"PETROL\",\r\n        \"color\": \"DAYTONA GREY\",\r\n        \"norms_type\": \"BHARAT STAGE VI\",\r\n        \"fit_up_to\": \"2035-12-01\",\r\n        \"vehicle_gross_weight\": \"1373\",\r\n        \"number_of_cylinders\": \"3\",\r\n        \"seat_capacity\": \"5\",\r\n        \"sleeper_capacity\": \"0\",\r\n        \"wheelbase\": \"2400\",\r\n        \"unladen_weight\": \"973\",\r\n        \"vehicle_category_description\": \"Motor Car(LMV)\",\r\n        \"rc_status\": \"ACTIVE\",\r\n        \"masked_name\": false,\r\n        \"registered_at\": \"JABALPUR RTO, Madhya Pradesh\",\r\n        \"cubic_capacity\": \"1199.00\",\r\n        \"rto_code\": \"\"\r\n    },\r\n    \"finance_details\": {\r\n        \"financier\": \"\",\r\n        \"financed\": false,\r\n        \"insurance_company\": \"Universal Sompo General Insurance  Co. Ltd.\",\r\n        \"insurance_policy_number\": \"2311/80216840/00/000\",\r\n        \"insurance_upto\": \"2026-11-05\",\r\n        \"manufacturing_date\": \"10/2020\",\r\n        \"manufacturing_date_formatted\": \"2020-10\",\r\n        \"latest_by\": \"2025-12-03\",\r\n        \"less_info\": true,\r\n        \"tax_upto\": \"2035-12-01\",\r\n        \"tax_paid_upto\": \"2035-12-01\"\r\n    },\r\n    \"permit_details\": {\r\n        \"permit_number\": \"\",\r\n        \"permit_type\": \"\",\r\n        \"national_permit_number\": \"\",\r\n        \"blacklist_status\": \"\",\r\n        \"noc_details\": \"\",\r\n        \"pucc_number\": \"MP02000320001710\",\r\n        \"pucc_upto\": \"2026-05-07\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/mobile/vehicles/digio",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"mobile",
+										"vehicles",
+										"digio"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "8689746-673648b5-3963-4899-8337-900ca16dc55b"
+				},
+				{
+					"name": "lessees",
+					"item": [
+						{
+							"name": "Update Occupation",
+							"id": "8689746-eb4e5736-01b1-465c-9a26-e501b91aa1b9",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"industry\": \"679a32b1f91a2a2454c2d001\", \r\n  \"companyName\": \"TCS Pvt Ltd\",\r\n  \"designation\": \"679a32b1f91a2a2454c2d001\",\r\n  \"profession\": \"679a32b1f91a2a2454c2d001\",\r\n  \"netMonthlySalary\": 85000,\r\n  \"currentEmployerYear\": 2,\r\n  \"currentEmployerMonth\": 6\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/mobile/lessees/occupation",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"mobile",
+										"lessees",
+										"occupation"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Kyc",
+							"id": "8689746-a12754cc-ec5a-4a5a-a0b1-cc4dfd842ef1",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"pan\": \"ABCDE1234F\",\r\n  \"aadhaar\": \"123412341234\",\r\n  \"verificationStatus\": \"verified\",\r\n  \"documents\": [\r\n    {\r\n      \"type\": \"67bdcc345e12aa1c9e9f4444\",\r\n      \"documentId\": \"DL-12345\",\r\n      \"fileUrl\": \"https://s3/dl.pdf\",\r\n      \"status\": \"verified\"\r\n    }\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/mobile/lessees/kyc",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"mobile",
+										"lessees",
+										"kyc"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Bank Details",
+							"id": "8689746-9f7f0753-273c-455d-a6cd-1163d3f40ca2",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"bankName\": \"HDFC Bank\",\r\n  \"accountHolderName\": \"Amit Sharma\",\r\n  \"accountNumber\": \"1234567890\",\r\n  \"ifsc\": \"HDFC0001234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/mobile/lessees/bank-details",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"mobile",
+										"lessees",
+										"bank-details"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Profile",
+							"id": "8689746-6e9898eb-6636-45c2-af62-b9e7567c8873",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/mobile/lessees/profile",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"mobile",
+										"lessees",
+										"profile"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "8689746-0a881490-6932-47d6-98b3-ef5618c439a6"
+				}
+			],
+			"id": "8689746-5b8985bc-0fa9-4627-8893-4f017cdacd32",
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OTE2ZDk1MmM2MDViZGQxY2U0MTc4MDMiLCJpYXQiOjE3NjM5ODcyMDcsImV4cCI6MTc2NDA3MzYwN30.alXFrrOwvfg5tdySV-ais5fgj6ayH9pNTEXRmTnaUns",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "3ab5140f-3ad5-428a-b8b9-67a9d3f29c19",
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "c85f1d14-9def-4ad4-99e7-2391817d8581",
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Digio",
+			"item": [
+				{
+					"name": "PAN Verification",
+					"id": "8689746-c56a1347-ff0a-4e5b-bdf9-aaa821c21a3a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{client_secret}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{client_id}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id_no\": \"EDSPK0089Q\" // PAN Card\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{sandbox_url}}/client/v4/apis/kyc/fetch_id_data/PAN",
+							"host": [
+								"{{sandbox_url}}"
+							],
+							"path": [
+								"client",
+								"v4",
+								"apis",
+								"kyc",
+								"fetch_id_data",
+								"PAN"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GST Verification",
+					"id": "8689746-e6178583-7e2c-4e13-b8ce-be59fd2c0662",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{client_secret}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{client_id}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id_no\":\"23AAQFT9996C1ZI\" // GST Verification\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{sandbox_url}}/client/v4/apis/kyc/fetch_id_data/GST",
+							"host": [
+								"{{sandbox_url}}"
+							],
+							"path": [
+								"client",
+								"v4",
+								"apis",
+								"kyc",
+								"fetch_id_data",
+								"GST"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Aadhar Verification",
+					"id": "8689746-290b1189-acdb-4dfd-aac0-13d153eb9d7e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{client_secret}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{client_id}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id_no\":\"750140785458\" // Aadhar Verification\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{sandbox_url}}/client/v4/apis/kyc/fetch_id_data/UAADHAAR",
+							"host": [
+								"{{sandbox_url}}"
+							],
+							"path": [
+								"client",
+								"v4",
+								"apis",
+								"kyc",
+								"fetch_id_data",
+								"UAADHAAR"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Vehicle RC Verification",
+					"id": "8689746-ada98d83-36d0-466d-9d74-91038764e750",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{client_secret}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{client_id}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"MP20CK6685\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{sandbox_url}}/client/v4/apis/verify/vehicle_rc",
+							"host": [
+								"{{sandbox_url}}"
+							],
+							"path": [
+								"client",
+								"v4",
+								"apis",
+								"verify",
+								"vehicle_rc"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "8689746-e1116bc4-cf94-4a37-ab08-cf8b4b94b6b3"
+		}
+	]
+}
