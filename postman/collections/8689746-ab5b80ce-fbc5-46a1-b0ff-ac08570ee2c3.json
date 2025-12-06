@@ -945,6 +945,16 @@
 										"disableBodyPruning": true
 									},
 									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{auth_token}}",
+													"type": "string"
+												}
+											]
+										},
 										"method": "GET",
 										"header": [
 											{
@@ -959,16 +969,11 @@
 											}
 										],
 										"url": {
-											"raw": "https://car-rental.sukrit.work/api/v1/admin/mdm/values/category/68a5c3ed389d24560576cfa7",
-											"protocol": "https",
+											"raw": "{{base_url}}/admin/mdm/values/category/68a5c3ed389d24560576cfa7",
 											"host": [
-												"car-rental",
-												"sukrit",
-												"work"
+												"{{base_url}}"
 											],
 											"path": [
-												"api",
-												"v1",
 												"admin",
 												"mdm",
 												"values",
@@ -3221,7 +3226,7 @@
 										}
 									]
 								},
-								"method": "PATCH",
+								"method": "PUT",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -3263,7 +3268,7 @@
 										}
 									]
 								},
-								"method": "PATCH",
+								"method": "PUT",
 								"header": [],
 								"body": {
 									"mode": "raw",
