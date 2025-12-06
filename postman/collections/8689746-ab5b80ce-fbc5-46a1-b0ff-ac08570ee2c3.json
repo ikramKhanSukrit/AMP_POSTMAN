@@ -3277,7 +3277,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"industry\": \"679a32b1f91a2a2454c2d001\", \r\n  \"companyName\": \"TCS Pvt Ltd\",\r\n  \"designation\": \"679a32b1f91a2a2454c2d001\",\r\n  \"profession\": \"679a32b1f91a2a2454c2d001\",\r\n  \"netMonthlySalary\": 85000,\r\n  \"currentEmployerYear\": 2,\r\n  \"currentEmployerMonth\": 6\r\n}\r\n",
+									"raw": "{\r\n  \"industry\": \"6933e330ed2450f67e8f537a\", // Fetch id from mdm value - category:industries\r\n  \"companyName\": \"TCS Pvt Ltd\",\r\n  \"designation\": \"6932ea28ed2450f67e8f532f\", // Fetch id from mdm value - category:designations\r\n  \"profession\": \"68c29d90649814450560903a\", // Fetch id from mdm value - category:occupation_types\r\n  \"netMonthlySalary\": 85000,\r\n  \"currentEmployerYear\": 2,\r\n  \"currentEmployerMonth\": 6\r\n}\r\n",
 									"options": {
 										"raw": {
 											"language": "json"
