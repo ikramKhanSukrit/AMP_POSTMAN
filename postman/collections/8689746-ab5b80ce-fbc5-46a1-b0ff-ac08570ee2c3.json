@@ -102,7 +102,7 @@
 									"bearer": [
 										{
 											"key": "token",
-											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OTA0NTc3Y2VlMDExMTE3YmIwZDFjNmMiLCJyb2xlIjoic3VwZXJhZG1pbiIsImlhdCI6MTc2MjI1NTcyMSwiZXhwIjoxNzYyMzQyMTIxfQ.qJkmQbXfXkloJYQ53_zHEVtCPWA85EBCwkb4eQtzvBY",
+											"value": "{{auth_token}}",
 											"type": "string"
 										}
 									]
@@ -117,7 +117,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"email\": \"abyz5@gmail.com\",\r\n  \"password\": \"123456789\",\r\n  \"first_name\": \"AB\",\r\n  \"last_name\": \"yz\",\r\n  \"phone\": 1234567890,\r\n  \"role\": \"superadmin\"\r\n}",
+									"raw": "{\r\n  \"email\": \"an3@gmail.com\",\r\n  \"password\": \"123457889\",\r\n  \"first_name\": \"ABn\",\r\n  \"last_name\": \"yzn\",\r\n  \"phone\": 1234577897,\r\n  \"role\": \"superadmin\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -125,12 +125,10 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:3001/admin/auth/register",
-									"protocol": "http",
+									"raw": "{{base_url}}/admin/auth/register",
 									"host": [
-										"localhost"
+										"{{base_url}}"
 									],
-									"port": "3001",
 									"path": [
 										"admin",
 										"auth",
@@ -138,88 +136,7 @@
 									]
 								}
 							},
-							"response": [
-								{
-									"id": "8689746-03a6422d-f266-43db-9845-1eeae8edcd0a",
-									"name": "Register",
-									"originalRequest": {
-										"method": "POST",
-										"header": [
-											{
-												"key": "Authorization",
-												"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OGMyOWQ5MTY0OTgxNDQ1MDU2MDkwZTYiLCJlbWFpbCI6InN1cGVyYWRtaW5AZ21haWwuY29tIiwicm9sZSI6InN1cGVyYWRtaW4iLCJtdXN0X2NoYW5nZV9wYXNzd29yZCI6ZmFsc2UsImlhdCI6MTc1Nzc0NDkxMiwiZXhwIjoxNzU3ODMxMzEyfQ.dPly4e7IiOBVESuR75HDr1sd05xx_nOrxL49m424-3E",
-												"type": "text"
-											}
-										],
-										"body": {
-											"mode": "raw",
-											"raw": "{\r\n  \"email\": \"abyz5@gmail.com\",\r\n  \"password\": \"123456789\",\r\n  \"first_name\": \"AB\",\r\n  \"last_name\": \"yz\",\r\n  \"phone\": 1234567890,\r\n  \"role\": \"6904577cee011117bb0d1b5f\"\r\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": {
-											"raw": "http://localhost:3001/admin/auth/register",
-											"protocol": "http",
-											"host": [
-												"localhost"
-											],
-											"port": "3001",
-											"path": [
-												"admin",
-												"auth",
-												"register"
-											]
-										}
-									},
-									"status": "Created",
-									"code": 201,
-									"_postman_previewlanguage": "Text",
-									"header": [
-										{
-											"key": "X-Powered-By",
-											"value": "Express"
-										},
-										{
-											"key": "Access-Control-Allow-Origin",
-											"value": "*"
-										},
-										{
-											"key": "Access-Control-Allow-Credentials",
-											"value": "true"
-										},
-										{
-											"key": "Content-Type",
-											"value": "application/json; charset=utf-8"
-										},
-										{
-											"key": "Content-Length",
-											"value": "468"
-										},
-										{
-											"key": "ETag",
-											"value": "W/\"1d4-dJFx4FIXtWEQJ/6FiUhPDC1pmkw\""
-										},
-										{
-											"key": "Date",
-											"value": "Mon, 03 Nov 2025 12:41:03 GMT"
-										},
-										{
-											"key": "Connection",
-											"value": "keep-alive"
-										},
-										{
-											"key": "Keep-Alive",
-											"value": "timeout=5"
-										}
-									],
-									"cookie": [],
-									"responseTime": null,
-									"body": "{\n    \"status\": true,\n    \"statusCode\": 200,\n    \"message\": \"Account created successfully\",\n    \"result\": {\n        \"email\": \"abyz5@gmail.com\",\n        \"first_name\": \"AB\",\n        \"last_name\": \"yz\",\n        \"phone\": \"1234567890\",\n        \"role\": \"6904577cee011117bb0d1b5f\",\n        \"status\": \"active\",\n        \"failed_login_attempts\": 0,\n        \"must_change_password\": true,\n        \"assigned_teams\": [],\n        \"permissions\": [],\n        \"created_by\": \"6904577cee011117bb0d1c6c\",\n        \"_id\": \"6908a2df656ff58e78b7b253\",\n        \"createdAt\": \"2025-11-03T12:41:03.870Z\",\n        \"updatedAt\": \"2025-11-03T12:41:03.870Z\",\n        \"__v\": 0\n    }\n}"
-								}
-							]
+							"response": []
 						},
 						{
 							"name": "Update",
@@ -228,6 +145,16 @@
 								"disableBodyPruning": true
 							},
 							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth_token}}",
+											"type": "string"
+										}
+									]
+								},
 								"method": "POST",
 								"header": [
 									{
@@ -243,7 +170,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"email\": \"john.doe1@example.com\",\r\n  \"first_name\": \"John\",\r\n  \"last_name\": \"Doe\",\r\n  \"phone\": \"9876543210\",\r\n  \"role\": \"admin\",\r\n  \"status\": \"active\",\r\n  \"userId\":\"68a567b93fd404cc677e7596\"\r\n}",
+									"raw": "{\r\n  \"email\": \"doen1@example.com\",\r\n  \"first_name\": \"John n\",\r\n  \"last_name\": \"Doe\",\r\n  \"phone\": \"9876542210\",\r\n  \"role\": \"admin\",\r\n  \"status\": \"active\",\r\n  \"userId\":\"6904450008caa3e5cb13a065\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -251,16 +178,11 @@
 									}
 								},
 								"url": {
-									"raw": "https://car-rental.sukrit.work/api/v1/admin/auth/update-user",
-									"protocol": "https",
+									"raw": "{{base_url}}/admin/auth/update-user",
 									"host": [
-										"car-rental",
-										"sukrit",
-										"work"
+										"{{base_url}}"
 									],
 									"path": [
-										"api",
-										"v1",
 										"admin",
 										"auth",
 										"update-user"
@@ -402,7 +324,7 @@
 									"bearer": [
 										{
 											"key": "token",
-											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OTA0NTc3Y2VlMDExMTE3YmIwZDFjNmMiLCJyb2xlIjoic3VwZXJhZG1pbiIsImlhdCI6MTc2MjIzOTYwNCwiZXhwIjoxNzYyMzI2MDA0fQ.WYp7SLrT8lAONygE8DUPHW2ej5YmGYhuboB16Jeskhg",
+											"value": "{{auth_token}}",
 											"type": "string"
 										}
 									]
@@ -421,23 +343,21 @@
 									}
 								],
 								"url": {
-									"raw": "http://localhost:3001/admin/auth/user/6908a2df656ff58e78b7b253",
-									"protocol": "http",
+									"raw": "{{base_url}}/admin/auth/user/6904450008caa3e5cb13a065",
 									"host": [
-										"localhost"
+										"{{base_url}}"
 									],
-									"port": "3001",
 									"path": [
 										"admin",
 										"auth",
 										"user",
-										"6908a2df656ff58e78b7b253"
+										"6904450008caa3e5cb13a065"
 									]
 								}
 							},
 							"response": [
 								{
-									"id": "8689746-238e8056-e933-4c73-b581-5555bb760f83",
+									"id": "8689746-023a8798-05e3-43cc-82e0-97d1bfb6e490",
 									"name": "Fetch User",
 									"originalRequest": {
 										"method": "GET",
@@ -454,64 +374,62 @@
 											}
 										],
 										"url": {
-											"raw": "http://localhost:3001/admin/auth/user/6908a2df656ff58e78b7b253",
-											"protocol": "http",
+											"raw": "{{base_url}}/admin/auth/user/6904450008caa3e5cb13a065",
 											"host": [
-												"localhost"
+												"{{base_url}}"
 											],
-											"port": "3001",
 											"path": [
 												"admin",
 												"auth",
 												"user",
-												"6908a2df656ff58e78b7b253"
+												"6904450008caa3e5cb13a065"
 											]
 										}
 									},
 									"status": "OK",
 									"code": 200,
-									"_postman_previewlanguage": "Text",
+									"_postman_previewlanguage": null,
 									"header": [
 										{
-											"key": "X-Powered-By",
-											"value": "Express"
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
 										},
 										{
 											"key": "Access-Control-Allow-Origin",
 											"value": "*"
 										},
 										{
-											"key": "Access-Control-Allow-Credentials",
-											"value": "true"
+											"key": "Alt-Svc",
+											"value": "h3=\":443\"; ma=2592000"
+										},
+										{
+											"key": "Content-Length",
+											"value": "654"
 										},
 										{
 											"key": "Content-Type",
 											"value": "application/json; charset=utf-8"
 										},
 										{
-											"key": "Content-Length",
-											"value": "550"
-										},
-										{
-											"key": "ETag",
-											"value": "W/\"226-NBOVnEAyUIV76up36OCZ6CBZvMU\""
-										},
-										{
 											"key": "Date",
-											"value": "Mon, 03 Nov 2025 12:46:35 GMT"
+											"value": "Sat, 06 Dec 2025 10:45:27 GMT"
 										},
 										{
-											"key": "Connection",
-											"value": "keep-alive"
+											"key": "Etag",
+											"value": "W/\"28e-vurnFLacmT8J45HI0dwh1HVdA3Q\""
 										},
 										{
-											"key": "Keep-Alive",
-											"value": "timeout=5"
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
 										}
 									],
 									"cookie": [],
 									"responseTime": null,
-									"body": "{\n    \"status\": true,\n    \"statusCode\": 200,\n    \"message\": \"User fetched successfully\",\n    \"result\": {\n        \"_id\": \"6908a2df656ff58e78b7b253\",\n        \"email\": \"abyz5@gmail.com\",\n        \"first_name\": \"AB\",\n        \"last_name\": \"yz\",\n        \"phone\": \"1234567890\",\n        \"role\": {\n            \"_id\": \"6904577cee011117bb0d1b5f\",\n            \"name\": \"superadmin\",\n            \"description\": \"Super Administrator with all permissions\"\n        },\n        \"status\": \"active\",\n        \"failed_login_attempts\": 0,\n        \"must_change_password\": true,\n        \"assigned_teams\": [],\n        \"permissions\": [],\n        \"created_by\": \"6904577cee011117bb0d1c6c\",\n        \"createdAt\": \"2025-11-03T12:41:03.870Z\",\n        \"updatedAt\": \"2025-11-03T12:41:03.870Z\",\n        \"__v\": 0\n    }\n}"
+									"body": "{\n    \"status\": true,\n    \"statusCode\": 200,\n    \"message\": \"User fetched successfully\",\n    \"result\": {\n        \"_id\": \"6904450008caa3e5cb13a065\",\n        \"email\": \"nmaurya7839@gmail.com\",\n        \"password_hash\": \"$2b$10$yG8B3KGD9jrMZlICvwXuguRzkVvsykjCx0UH8.UdEcaCLlucDFE5W\",\n        \"salt\": \"64rp1nq8m6b806s9336x12\",\n        \"first_name\": \"Neha\",\n        \"last_name\": \"maurya\",\n        \"phone\": \"7839336240\",\n        \"role\": \"superadmin\",\n        \"status\": \"active\",\n        \"failed_login_attempts\": 0,\n        \"must_change_password\": true,\n        \"assigned_teams\": [],\n        \"permissions\": [],\n        \"created_by\": \"68c29d9164981445056090e6\",\n        \"createdAt\": \"2025-10-31T05:11:28.160Z\",\n        \"updatedAt\": \"2025-11-06T04:43:13.418Z\",\n        \"__v\": 0,\n        \"updated_by\": \"68c29d9164981445056090e6\",\n        \"last_login\": \"2025-11-06T04:43:13.417Z\"\n    }\n}"
 								}
 							]
 						}
@@ -531,6 +449,16 @@
 										"disableBodyPruning": true
 									},
 									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{auth_token}}",
+													"type": "string"
+												}
+											]
+										},
 										"method": "POST",
 										"header": [
 											{
@@ -546,7 +474,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"name\": \"TESTING-11\",\r\n  \"description\": \"Types of vehicles available for rental\",\r\n  \"isSystem\": false,\r\n  \"isEditable\": true\r\n}",
+											"raw": "{\r\n  \"name\": \"TESTING-12\",\r\n  \"description\": \"Types of vehicles available for rental\",\r\n  \"isSystem\": false,\r\n  \"isEditable\": true\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -554,16 +482,11 @@
 											}
 										},
 										"url": {
-											"raw": "https://car-rental.sukrit.work/api/v1/admin/mdm/categories/create",
-											"protocol": "https",
+											"raw": "{{base_url}}/admin/mdm/categories/create",
 											"host": [
-												"car-rental",
-												"sukrit",
-												"work"
+												"{{base_url}}"
 											],
 											"path": [
-												"api",
-												"v1",
 												"admin",
 												"mdm",
 												"categories",
@@ -585,7 +508,7 @@
 											"bearer": [
 												{
 													"key": "token",
-													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OGMyOWQ5MTY0OTgxNDQ1MDU2MDkwZTYiLCJyb2xlIjoic3VwZXJhZG1pbiIsImlhdCI6MTc2MzExMTUzMywiZXhwIjoxNzYzMTk3OTMzfQ.6rCGMnsqU37YRw8nKn4D5tAjqebCMlsxSzYroJCMH24",
+													"value": "{{auth_token}}",
 													"type": "string"
 												}
 											]
@@ -604,16 +527,11 @@
 											}
 										],
 										"url": {
-											"raw": "https://car-rental.sukrit.work/api/v1/admin/mdm/categories/all-categories",
-											"protocol": "https",
+											"raw": "{{base_url}}/admin/mdm/categories/all-categories",
 											"host": [
-												"car-rental",
-												"sukrit",
-												"work"
+												"{{base_url}}"
 											],
 											"path": [
-												"api",
-												"v1",
 												"admin",
 												"mdm",
 												"categories",
@@ -630,6 +548,16 @@
 										"disableBodyPruning": true
 									},
 									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{auth_token}}",
+													"type": "string"
+												}
+											]
+										},
 										"method": "GET",
 										"header": [
 											{
@@ -644,21 +572,16 @@
 											}
 										],
 										"url": {
-											"raw": "https://car-rental.sukrit.work/api/v1/admin/mdm/categories/id/68a5b0499875a35d5d4c0384",
-											"protocol": "https",
+											"raw": "{{base_url}}/admin/mdm/categories/id/68c29d906498144505608ff3",
 											"host": [
-												"car-rental",
-												"sukrit",
-												"work"
+												"{{base_url}}"
 											],
 											"path": [
-												"api",
-												"v1",
 												"admin",
 												"mdm",
 												"categories",
 												"id",
-												"68a5b0499875a35d5d4c0384"
+												"68c29d906498144505608ff3"
 											]
 										}
 									},
@@ -671,6 +594,16 @@
 										"disableBodyPruning": true
 									},
 									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{auth_token}}",
+													"type": "string"
+												}
+											]
+										},
 										"method": "GET",
 										"header": [
 											{
@@ -685,21 +618,16 @@
 											}
 										],
 										"url": {
-											"raw": "https://car-rental.sukrit.work/api/v1/admin/mdm/categories/name/color_codes2",
-											"protocol": "https",
+											"raw": "{{base_url}}/admin/mdm/categories/name/vehicle_brands",
 											"host": [
-												"car-rental",
-												"sukrit",
-												"work"
+												"{{base_url}}"
 											],
 											"path": [
-												"api",
-												"v1",
 												"admin",
 												"mdm",
 												"categories",
 												"name",
-												"color_codes2"
+												"vehicle_brands"
 											]
 										}
 									},
@@ -712,6 +640,16 @@
 										"disableBodyPruning": true
 									},
 									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{auth_token}}",
+													"type": "string"
+												}
+											]
+										},
 										"method": "POST",
 										"header": [
 											{
@@ -727,7 +665,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"name\": \"color_SD1\",\r\n  \"description\": \"Types of vehicles available for rental\",\r\n  \"isSystem\": false,\r\n  \"isEditable\": true,\r\n  \"categoryId\":\"68a5b0605ae2b538aa9668a7\"\r\n}",
+											"raw": "{\r\n  \"name\": \"vehicle_brand\",\r\n  \"description\": \"Types of vehicles available for rental\",\r\n  \"isSystem\": false,\r\n  \"isEditable\": true,\r\n  \"categoryId\":\"68c29d906498144505608ff3\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -735,16 +673,11 @@
 											}
 										},
 										"url": {
-											"raw": "https://car-rental.sukrit.work/api/v1/admin/mdm/categories/update",
-											"protocol": "https",
+											"raw": "{{base_url}}/admin/mdm/categories/update",
 											"host": [
-												"car-rental",
-												"sukrit",
-												"work"
+												"{{base_url}}"
 											],
 											"path": [
-												"api",
-												"v1",
 												"admin",
 												"mdm",
 												"categories",
@@ -761,6 +694,16 @@
 										"disableBodyPruning": true
 									},
 									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{auth_token}}",
+													"type": "string"
+												}
+											]
+										},
 										"method": "DELETE",
 										"header": [
 											{
@@ -775,21 +718,16 @@
 											}
 										],
 										"url": {
-											"raw": "https://car-rental.sukrit.work/api/v1/admin/mdm/categories/delete/68a5c3ed389d24560576cfa7",
-											"protocol": "https",
+											"raw": "{{base_url}}/admin/mdm/categories/delete/68c29d906498144505608ff3",
 											"host": [
-												"car-rental",
-												"sukrit",
-												"work"
+												"{{base_url}}"
 											],
 											"path": [
-												"api",
-												"v1",
 												"admin",
 												"mdm",
 												"categories",
 												"delete",
-												"68a5c3ed389d24560576cfa7"
+												"68c29d906498144505608ff3"
 											]
 										}
 									},
@@ -808,6 +746,16 @@
 										"disableBodyPruning": true
 									},
 									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{auth_token}}",
+													"type": "string"
+												}
+											]
+										},
 										"method": "POST",
 										"header": [
 											{
@@ -823,7 +771,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"categoryId\": \"68b84b9c8030551cb4ca277c\",\r\n  \"code\": \"SEDTESTANAA\",\r\n  \"value\": \"SEDTESTANAA\",\r\n  \"label\": \"SEDTESTANAA\",\r\n  \"parentId\": null,\r\n  \"metadata\": {\r\n    \"seatingCapacity\": 5,\r\n    \"luggageCapacity\": 2,\r\n    \"vehicleClass\": \"Standard\"\r\n  },\r\n  \"isActive\": true,\r\n  \"dependencies\": []\r\n}",
+											"raw": "{\r\n  \"categoryId\": \"68c29d906498144505608ff3\",\r\n  \"code\": \"SEDTESTANA\",\r\n  \"value\": \"SEDTESTANA\",\r\n  \"label\": \"SEDTESTANA\",\r\n  \"parentId\": null,\r\n  \"metadata\": {\r\n    \"seatingCapacity\": 5,\r\n    \"luggageCapacity\": 2,\r\n    \"vehicleClass\": \"Standard\"\r\n  },\r\n  \"isActive\": true,\r\n  \"dependencies\": []\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -831,16 +779,11 @@
 											}
 										},
 										"url": {
-											"raw": "https://car-rental.sukrit.work/api/v1/admin/mdm/values/create",
-											"protocol": "https",
+											"raw": "{{base_url}}/admin/mdm/values/create",
 											"host": [
-												"car-rental",
-												"sukrit",
-												"work"
+												"{{base_url}}"
 											],
 											"path": [
-												"api",
-												"v1",
 												"admin",
 												"mdm",
 												"values",
@@ -857,6 +800,16 @@
 										"disableBodyPruning": true
 									},
 									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{auth_token}}",
+													"type": "string"
+												}
+											]
+										},
 										"method": "POST",
 										"header": [
 											{
@@ -880,16 +833,11 @@
 											}
 										},
 										"url": {
-											"raw": "https://car-rental.sukrit.work/api/v1/admin/mdm/values/update",
-											"protocol": "https",
+											"raw": "{{base_url}}/admin/mdm/values/update",
 											"host": [
-												"car-rental",
-												"sukrit",
-												"work"
+												"{{base_url}}"
 											],
 											"path": [
-												"api",
-												"v1",
 												"admin",
 												"mdm",
 												"values",
@@ -2225,7 +2173,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"phone\": \"9876534675\",\r\n  \"userType\": \"Lessee\" // Lessor or Lessee\r\n}",
+									"raw": "{\r\n  \"phone\": \"7676767676\",\r\n  \"userType\": \"Lessor\" // Lessor or Lessee\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
