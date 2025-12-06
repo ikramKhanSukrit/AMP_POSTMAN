@@ -2178,7 +2178,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"phone\": \"9876534675\",\r\n  \"userType\": \"Lessee\" // Lessor or Lessee\r\n}",
+									"raw": "{\r\n  \"phone\": \"9876534676\",\r\n  \"userType\": \"Lessor\" // Lessor or Lessee\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
