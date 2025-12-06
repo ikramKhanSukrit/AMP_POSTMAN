@@ -2784,123 +2784,6 @@
 							]
 						},
 						{
-							"name": "Update Bank Details",
-							"id": "8689746-4a8bacd0-90cb-4f05-9911-9b62b5eab8e3",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{auth_token}}",
-											"type": "string"
-										}
-									]
-								},
-								"method": "PATCH",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n  \"bankName\": \"SBI Bank\",\r\n  \"accountHolderName\": \"John Doe\",\r\n  \"accountNumber\": \"1234567890\",\r\n  \"ifscCode\": \"HDFC0001234\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{base_url}}/mobile/vehicles/bank-details/692d9b999b2f6a87f079e378",
-									"host": [
-										"{{base_url}}"
-									],
-									"path": [
-										"mobile",
-										"vehicles",
-										"bank-details",
-										"692d9b999b2f6a87f079e378"
-									]
-								}
-							},
-							"response": [
-								{
-									"id": "8689746-de227a0b-ee28-4cf5-820c-d0423bab2ce3",
-									"name": "Update Bank Details",
-									"originalRequest": {
-										"method": "PATCH",
-										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": "{\r\n  \"bankName\": \"SBI Bank\",\r\n  \"accountHolderName\": \"John Doe\",\r\n  \"accountNumber\": \"1234567890\",\r\n  \"ifscCode\": \"HDFC0001234\"\r\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": {
-											"raw": "{{base_url}}/mobile/vehicles/bank-details/691c7361e146fd599e5916e5",
-											"host": [
-												"{{base_url}}"
-											],
-											"path": [
-												"mobile",
-												"vehicles",
-												"bank-details",
-												"691c7361e146fd599e5916e5"
-											]
-										}
-									},
-									"status": "OK",
-									"code": 200,
-									"_postman_previewlanguage": null,
-									"header": [
-										{
-											"key": "Access-Control-Allow-Credentials",
-											"value": "true"
-										},
-										{
-											"key": "Access-Control-Allow-Origin",
-											"value": "*"
-										},
-										{
-											"key": "Alt-Svc",
-											"value": "h3=\":443\"; ma=2592000"
-										},
-										{
-											"key": "Content-Length",
-											"value": "919"
-										},
-										{
-											"key": "Content-Type",
-											"value": "application/json; charset=utf-8"
-										},
-										{
-											"key": "Date",
-											"value": "Tue, 18 Nov 2025 13:26:23 GMT"
-										},
-										{
-											"key": "Etag",
-											"value": "W/\"397-P6MgxZroxPnOGLSi/hOW+lTNyqE\""
-										},
-										{
-											"key": "Vary",
-											"value": "Accept-Encoding"
-										},
-										{
-											"key": "X-Powered-By",
-											"value": "Express"
-										}
-									],
-									"cookie": [],
-									"responseTime": null,
-									"body": "{\n    \"status\": true,\n    \"statusCode\": 200,\n    \"message\": \"Bank details updated successfully\",\n    \"result\": {\n        \"bankDetails\": {\n            \"bankName\": \"SBI Bank\",\n            \"accountHolderName\": \"John Doe\",\n            \"accountNumber\": \"1234567890\",\n            \"ifscCode\": \"HDFC0001234\"\n        },\n        \"_id\": \"691c7361e146fd599e5916e5\",\n        \"lessorId\": \"691c434ce146fd599e5916d6\",\n        \"registrationNumber\": \"MH12CX13332\",\n        \"chassisNumber\": \"CHACSXS123511\",\n        \"engineNumber\": \"ENGINEX8C6532321\",\n        \"vin\": \"1HGCM82633AC23X534\",\n        \"make\": \"68b84ac38030551cb4ca2aa3\",\n        \"variant\": \"68b84ac38030551cb4ca27a3\",\n        \"fuelType\": \"68b84ac38030551cb4ca96a3\",\n        \"manufacturingYear\": 2021,\n        \"registrationDate\": \"2024-03-15T00:00:00.000Z\",\n        \"seatingCapacity\": 5,\n        \"color\": \"White\",\n        \"status\": \"listed\",\n        \"currentOdometer\": 12500,\n        \"expectedLease\": {\n            \"cities\": []\n        },\n        \"images\": [],\n        \"documents\": [],\n        \"createdAt\": \"2025-11-18T13:23:46.001Z\",\n        \"updatedAt\": \"2025-11-18T13:26:23.400Z\",\n        \"__v\": 0,\n        \"paymentDetails\": {\n            \"platformFee\": 5800,\n            \"onboardingCharge\": 1500,\n            \"tax\": 18,\n            \"discount\": 500,\n            \"expectedRent\": 25000\n        }\n    }\n}"
-								}
-							]
-						},
-						{
 							"name": "Get Vehicle By Id",
 							"id": "8689746-07fceaf8-f96b-40ce-84c8-70f15eba3060",
 							"protocolProfileBehavior": {
@@ -3545,6 +3428,123 @@
 									"cookie": [],
 									"responseTime": null,
 									"body": "{\n    \"status\": true,\n    \"statusCode\": 200,\n    \"message\": \"Contact details updated successfully\",\n    \"result\": {\n        \"_id\": \"6927eaa5923f6235c0640d1e\",\n        \"phone\": \"9876534387\",\n        \"userType\": \"Lessor\",\n        \"contactDetails\": {\n            \"contactPerson\": \"Shital m\",\n            \"mobileNumber\": \"7812345679\",\n            \"email\": \"smd9272@yopmail.com\",\n            \"designation\": \"Developer\",\n            \"financierNoc\": \"/uploads/1764226000032-72170140.jpeg\"\n        },\n        \"gstDetails\": {\n            \"gstNumber\": \"27ABCDs6234JHAG4f\",\n            \"legalName\": \"Heroo\",\n            \"tradeName\": \"Hero\",\n            \"businessAddress\": \"LKO Private Limited Company\"\n        },\n        \"userId\": \"691c434ce146fd599e5916d6\"\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Update Bank Details",
+							"id": "8689746-4a8bacd0-90cb-4f05-9911-9b62b5eab8e3",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"bankName\": \"SBI Bank\",\r\n  \"accountHolderName\": \"John Doe\",\r\n  \"accountNumber\": \"1234567890\",\r\n  \"ifscCode\": \"HDFC0001234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/mobile/vehicles/bank-details/692d9b999b2f6a87f079e378",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"mobile",
+										"vehicles",
+										"bank-details",
+										"692d9b999b2f6a87f079e378"
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "8689746-de227a0b-ee28-4cf5-820c-d0423bab2ce3",
+									"name": "Update Bank Details",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"bankName\": \"SBI Bank\",\r\n  \"accountHolderName\": \"John Doe\",\r\n  \"accountNumber\": \"1234567890\",\r\n  \"ifscCode\": \"HDFC0001234\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url}}/mobile/vehicles/bank-details/691c7361e146fd599e5916e5",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"mobile",
+												"vehicles",
+												"bank-details",
+												"691c7361e146fd599e5916e5"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Alt-Svc",
+											"value": "h3=\":443\"; ma=2592000"
+										},
+										{
+											"key": "Content-Length",
+											"value": "919"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 18 Nov 2025 13:26:23 GMT"
+										},
+										{
+											"key": "Etag",
+											"value": "W/\"397-P6MgxZroxPnOGLSi/hOW+lTNyqE\""
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": true,\n    \"statusCode\": 200,\n    \"message\": \"Bank details updated successfully\",\n    \"result\": {\n        \"bankDetails\": {\n            \"bankName\": \"SBI Bank\",\n            \"accountHolderName\": \"John Doe\",\n            \"accountNumber\": \"1234567890\",\n            \"ifscCode\": \"HDFC0001234\"\n        },\n        \"_id\": \"691c7361e146fd599e5916e5\",\n        \"lessorId\": \"691c434ce146fd599e5916d6\",\n        \"registrationNumber\": \"MH12CX13332\",\n        \"chassisNumber\": \"CHACSXS123511\",\n        \"engineNumber\": \"ENGINEX8C6532321\",\n        \"vin\": \"1HGCM82633AC23X534\",\n        \"make\": \"68b84ac38030551cb4ca2aa3\",\n        \"variant\": \"68b84ac38030551cb4ca27a3\",\n        \"fuelType\": \"68b84ac38030551cb4ca96a3\",\n        \"manufacturingYear\": 2021,\n        \"registrationDate\": \"2024-03-15T00:00:00.000Z\",\n        \"seatingCapacity\": 5,\n        \"color\": \"White\",\n        \"status\": \"listed\",\n        \"currentOdometer\": 12500,\n        \"expectedLease\": {\n            \"cities\": []\n        },\n        \"images\": [],\n        \"documents\": [],\n        \"createdAt\": \"2025-11-18T13:23:46.001Z\",\n        \"updatedAt\": \"2025-11-18T13:26:23.400Z\",\n        \"__v\": 0,\n        \"paymentDetails\": {\n            \"platformFee\": 5800,\n            \"onboardingCharge\": 1500,\n            \"tax\": 18,\n            \"discount\": 500,\n            \"expectedRent\": 25000\n        }\n    }\n}"
 								}
 							]
 						}
