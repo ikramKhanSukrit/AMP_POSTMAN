@@ -3369,14 +3369,14 @@
 									}
 								},
 								"url": {
-									"raw": "{{base_url}}/mobile/lessees/update-bank-details",
+									"raw": "{{base_url}}/mobile/lessees/update-bank",
 									"host": [
 										"{{base_url}}"
 									],
 									"path": [
 										"mobile",
 										"lessees",
-										"update-bank-details"
+										"update-bank"
 									]
 								}
 							},
