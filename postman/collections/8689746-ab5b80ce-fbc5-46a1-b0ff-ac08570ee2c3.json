@@ -3544,7 +3544,7 @@
 										{
 											"key": "designation",
 											"value": "6932ea28ed2450f67e8f532f",
-											"description": "// Fetch id from mdm master data",
+											"description": "// Fetch id from mdm value category:designations",
 											"type": "text"
 										},
 										{
