@@ -825,7 +825,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"categoryId\": \"68a5c3ed389d24560576cfa7\",\r\n  \"code\": \"SEDANAA\",\r\n  \"value\": \"SedanAS\",\r\n  \"label\": \"4-Door Sedan\",\r\n  \"parentId\": null,\r\n  \"metadata\": {\r\n    \"seatingCapacity\": 5,\r\n    \"luggageCapacity\": 2,\r\n    \"vehicleClass\": \"Standard\"\r\n  },\r\n  \"isActive\": true,\r\n  \"dependencies\": [],\r\n  \"reason\":\"For Testing\",\r\n  \"mdmValueId\":\"68a5ce2341e479f82bb19c3a\"\r\n}",
+											"raw": "{\r\n  \"categoryId\": \"68a5c3ed389d24560576cfa7\",\r\n  \"code\": \"SEDANAA\",\r\n  \"value\": \"SedanAS\",\r\n  \"label\": \"4-Door Sedan\",\r\n  \"parentId\": null,\r\n  \"metadata\": {\r\n    \"seatingCapacity\": 5,\r\n    \"luggageCapacity\": 2,\r\n    \"vehicleClass\": \"Standard\"\r\n  },\r\n  \"isActive\": true,\r\n  \"dependencies\": [],\r\n  \"reason\":\"For Testing\",\r\n  \"mdmValueId\":\"68c29d906498144505609010\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -859,7 +859,7 @@
 											"bearer": [
 												{
 													"key": "token",
-													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OGMyOWQ5MTY0OTgxNDQ1MDU2MDkwZTYiLCJyb2xlIjoic3VwZXJhZG1pbiIsImlhdCI6MTc2MzAzMTAzOCwiZXhwIjoxNzYzMTE3NDM4fQ.I7QpMZ0QrGoOe8SQ2BEpOy3XC0zwV2JkUfjCXL-Px_I",
+													"value": "{{auth_token}}",
 													"type": "string"
 												}
 											]
@@ -878,16 +878,11 @@
 											}
 										],
 										"url": {
-											"raw": "https://car-rental.sukrit.work/api/v1/admin/mdm/values/all-values",
-											"protocol": "https",
+											"raw": "{{base_url}}/admin/mdm/values/all-values",
 											"host": [
-												"car-rental",
-												"sukrit",
-												"work"
+												"{{base_url}}"
 											],
 											"path": [
-												"api",
-												"v1",
 												"admin",
 												"mdm",
 												"values",
@@ -904,6 +899,16 @@
 										"disableBodyPruning": true
 									},
 									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{auth_token}}",
+													"type": "string"
+												}
+											]
+										},
 										"method": "GET",
 										"header": [
 											{
@@ -918,21 +923,16 @@
 											}
 										],
 										"url": {
-											"raw": "https://car-rental.sukrit.work/api/v1/admin/mdm/values/id/68a5cddb5e950343989e3751",
-											"protocol": "https",
+											"raw": "{{base_url}}/admin/mdm/values/id/68c29d906498144505609010",
 											"host": [
-												"car-rental",
-												"sukrit",
-												"work"
+												"{{base_url}}"
 											],
 											"path": [
-												"api",
-												"v1",
 												"admin",
 												"mdm",
 												"values",
 												"id",
-												"68a5cddb5e950343989e3751"
+												"68c29d906498144505609010"
 											]
 										}
 									},
@@ -2173,7 +2173,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"phone\": \"7676767676\",\r\n  \"userType\": \"Lessor\" // Lessor or Lessee\r\n}",
+									"raw": "{\r\n  \"phone\": \"9876534675\",\r\n  \"userType\": \"Lessee\" // Lessor or Lessee\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
