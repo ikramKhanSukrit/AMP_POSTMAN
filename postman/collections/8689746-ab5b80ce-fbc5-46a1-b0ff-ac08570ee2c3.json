@@ -2280,505 +2280,6 @@
 								}
 							},
 							"response": []
-						}
-					],
-					"id": "8689746-91800497-2c8e-4f6d-81e3-d4615acee822"
-				},
-				{
-					"name": "Car Owner",
-					"item": [
-						{
-							"name": "Profile",
-							"item": [
-								{
-									"name": "Contact Details",
-									"item": [
-										{
-											"name": "Contact",
-											"id": "8689746-d957b7f8-eeef-4bb5-bbdd-2ef6a49cf79f",
-											"protocolProfileBehavior": {
-												"disabledSystemHeaders": {},
-												"disableBodyPruning": true
-											},
-											"request": {
-												"auth": {
-													"type": "bearer",
-													"bearer": [
-														{
-															"key": "token",
-															"value": "{{auth_token}}",
-															"type": "string"
-														}
-													]
-												},
-												"method": "PUT",
-												"header": [],
-												"body": {
-													"mode": "formdata",
-													"formdata": [
-														{
-															"key": "contactPerson",
-															"value": "Samba d",
-															"type": "text"
-														},
-														{
-															"key": "mobileNumber",
-															"value": "7812345679",
-															"type": "text"
-														},
-														{
-															"key": "email",
-															"value": "smd9272@yopmail.com",
-															"type": "text"
-														},
-														{
-															"key": "designation",
-															"value": "Developer",
-															"type": "text"
-														},
-														{
-															"key": "financierNoc",
-															"type": "file",
-															"src": "/C:/Users/DELL/Downloads/meetbanner.jpg"
-														}
-													]
-												},
-												"url": {
-													"raw": "{{base_url}}/mobile/ownerprofile/contact",
-													"host": [
-														"{{base_url}}"
-													],
-													"path": [
-														"mobile",
-														"ownerprofile",
-														"contact"
-													]
-												}
-											},
-											"response": [
-												{
-													"id": "8689746-f559c069-f6f6-4470-9987-0ffcf852d1f8",
-													"name": "Contact",
-													"originalRequest": {
-														"method": "PUT",
-														"header": [],
-														"body": {
-															"mode": "formdata",
-															"formdata": [
-																{
-																	"key": "contactPerson",
-																	"value": "Shital m",
-																	"type": "text",
-																	"disabled": true
-																},
-																{
-																	"key": "mobileNumber",
-																	"value": "7812345679",
-																	"type": "text",
-																	"disabled": true
-																},
-																{
-																	"key": "email",
-																	"value": "smd9272@yopmail.com",
-																	"type": "text",
-																	"disabled": true
-																},
-																{
-																	"key": "designation",
-																	"value": "Developer",
-																	"type": "text",
-																	"disabled": true
-																},
-																{
-																	"key": "financierNoc",
-																	"type": "file",
-																	"src": "/C:/Users/DELL/Downloads/Pi7_Passport_Photo (3).jpeg"
-																}
-															]
-														},
-														"url": {
-															"raw": "{{base_url}}/mobile/ownerprofile/contact",
-															"host": [
-																"{{base_url}}"
-															],
-															"path": [
-																"mobile",
-																"ownerprofile",
-																"contact"
-															]
-														}
-													},
-													"status": "OK",
-													"code": 200,
-													"_postman_previewlanguage": null,
-													"header": [
-														{
-															"key": "X-Powered-By",
-															"value": "Express"
-														},
-														{
-															"key": "Access-Control-Allow-Origin",
-															"value": "*"
-														},
-														{
-															"key": "Access-Control-Allow-Credentials",
-															"value": "true"
-														},
-														{
-															"key": "Content-Type",
-															"value": "application/json; charset=utf-8"
-														},
-														{
-															"key": "Content-Length",
-															"value": "520"
-														},
-														{
-															"key": "ETag",
-															"value": "W/\"208-w7xN6u4L8jOGqB9tE+cfNrnY43E\""
-														},
-														{
-															"key": "Date",
-															"value": "Thu, 27 Nov 2025 06:46:40 GMT"
-														},
-														{
-															"key": "Connection",
-															"value": "keep-alive"
-														},
-														{
-															"key": "Keep-Alive",
-															"value": "timeout=5"
-														}
-													],
-													"cookie": [],
-													"responseTime": null,
-													"body": "{\n    \"status\": true,\n    \"statusCode\": 200,\n    \"message\": \"Contact details updated successfully\",\n    \"result\": {\n        \"_id\": \"6927eaa5923f6235c0640d1e\",\n        \"phone\": \"9876534387\",\n        \"userType\": \"Lessor\",\n        \"contactDetails\": {\n            \"contactPerson\": \"Shital m\",\n            \"mobileNumber\": \"7812345679\",\n            \"email\": \"smd9272@yopmail.com\",\n            \"designation\": \"Developer\",\n            \"financierNoc\": \"/uploads/1764226000032-72170140.jpeg\"\n        },\n        \"gstDetails\": {\n            \"gstNumber\": \"27ABCDs6234JHAG4f\",\n            \"legalName\": \"Heroo\",\n            \"tradeName\": \"Hero\",\n            \"businessAddress\": \"LKO Private Limited Company\"\n        },\n        \"userId\": \"691c434ce146fd599e5916d6\"\n    }\n}"
-												}
-											]
-										}
-									],
-									"id": "8689746-f6258012-b62c-447d-a14e-73d0c3e34b28"
-								},
-								{
-									"name": "Gst Details",
-									"item": [
-										{
-											"name": "Create Gst",
-											"id": "8689746-ea4b4fe4-a42c-4a2a-a6c3-4e8c573a094f",
-											"protocolProfileBehavior": {
-												"disableBodyPruning": true
-											},
-											"request": {
-												"auth": {
-													"type": "bearer",
-													"bearer": [
-														{
-															"key": "token",
-															"value": "{{auth_token}}",
-															"type": "string"
-														}
-													]
-												},
-												"method": "PUT",
-												"header": [],
-												"body": {
-													"mode": "raw",
-													"raw": "{\r\n  \"gstDetails\": {\r\n    \"gstNumber\": \"29ABCDE1234JHAkSk\",\r\n    \"legalName\": \"Techsima Solution Pvt Ltd\",\r\n    \"tradeName\": \"Techsima\",\r\n    \"businessAddress\": \"Private Limited Company\"\r\n  }\r\n}\r\n",
-													"options": {
-														"raw": {
-															"language": "json"
-														}
-													}
-												},
-												"url": {
-													"raw": "{{base_url}}/mobile/ownerprofile/gst",
-													"host": [
-														"{{base_url}}"
-													],
-													"path": [
-														"mobile",
-														"ownerprofile",
-														"gst"
-													]
-												}
-											},
-											"response": [
-												{
-													"id": "8689746-c805f493-e60c-4d4f-aaf5-7dfef39790a8",
-													"name": "Create Gst",
-													"originalRequest": {
-														"method": "PUT",
-														"header": [],
-														"body": {
-															"mode": "raw",
-															"raw": "{\r\n   \"gstNumber\": \"27ABCDs6234JHhG4f\"\r\n}",
-															"options": {
-																"raw": {
-																	"language": "json"
-																}
-															}
-														},
-														"url": {
-															"raw": "{{base_url}}/mobile/ownerprofile/gst",
-															"host": [
-																"{{base_url}}"
-															],
-															"path": [
-																"mobile",
-																"ownerprofile",
-																"gst"
-															]
-														}
-													},
-													"status": "OK",
-													"code": 200,
-													"_postman_previewlanguage": null,
-													"header": [
-														{
-															"key": "X-Powered-By",
-															"value": "Express"
-														},
-														{
-															"key": "Access-Control-Allow-Origin",
-															"value": "*"
-														},
-														{
-															"key": "Access-Control-Allow-Credentials",
-															"value": "true"
-														},
-														{
-															"key": "Content-Type",
-															"value": "application/json; charset=utf-8"
-														},
-														{
-															"key": "Content-Length",
-															"value": "516"
-														},
-														{
-															"key": "ETag",
-															"value": "W/\"204-50aYF5Km6DUIIVvbNsnzw2Td3xw\""
-														},
-														{
-															"key": "Date",
-															"value": "Thu, 27 Nov 2025 06:47:14 GMT"
-														},
-														{
-															"key": "Connection",
-															"value": "keep-alive"
-														},
-														{
-															"key": "Keep-Alive",
-															"value": "timeout=5"
-														}
-													],
-													"cookie": [],
-													"responseTime": null,
-													"body": "{\n    \"status\": true,\n    \"statusCode\": 200,\n    \"message\": \"GST details updated successfully\",\n    \"result\": {\n        \"_id\": \"6927eaa5923f6235c0640d1e\",\n        \"phone\": \"9876534387\",\n        \"userType\": \"Lessor\",\n        \"contactDetails\": {\n            \"contactPerson\": \"Shital m\",\n            \"mobileNumber\": \"7812345679\",\n            \"email\": \"smd9272@yopmail.com\",\n            \"designation\": \"Developer\",\n            \"financierNoc\": \"/uploads/1764226000032-72170140.jpeg\"\n        },\n        \"gstDetails\": {\n            \"gstNumber\": \"27ABCDs6234JHhG4f\",\n            \"legalName\": \"Heroo\",\n            \"tradeName\": \"Hero\",\n            \"businessAddress\": \"LKO Private Limited Company\"\n        },\n        \"userId\": \"691c434ce146fd599e5916d6\"\n    }\n}"
-												}
-											]
-										}
-									],
-									"id": "8689746-df5a2e72-3f64-40cf-9f24-7442cddaef16"
-								},
-								{
-									"name": "Get Contact details by owner id",
-									"id": "8689746-ab41b5e8-82b5-47c6-b110-ecf022e3911f",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"auth": {
-											"type": "bearer",
-											"bearer": [
-												{
-													"key": "token",
-													"value": "{{auth_token}}",
-													"type": "string"
-												}
-											]
-										},
-										"method": "GET",
-										"header": [],
-										"url": {
-											"raw": "{{base_url}}/mobile/ownerprofile/69186199f428dbbd0b3d1690/contact-details",
-											"host": [
-												"{{base_url}}"
-											],
-											"path": [
-												"mobile",
-												"ownerprofile",
-												"69186199f428dbbd0b3d1690",
-												"contact-details"
-											]
-										}
-									},
-									"response": [
-										{
-											"id": "8689746-27139d80-2972-4456-99dc-89ada27fe8c6",
-											"name": "New Request",
-											"originalRequest": {
-												"method": "GET",
-												"header": [],
-												"url": {
-													"raw": "{{base_url}}/mobile/ownerprofile/69186199f428dbbd0b3d1690/contact-details",
-													"host": [
-														"{{base_url}}"
-													],
-													"path": [
-														"mobile",
-														"ownerprofile",
-														"69186199f428dbbd0b3d1690",
-														"contact-details"
-													]
-												}
-											},
-											"status": "OK",
-											"code": 200,
-											"_postman_previewlanguage": null,
-											"header": [
-												{
-													"key": "X-Powered-By",
-													"value": "Express"
-												},
-												{
-													"key": "Access-Control-Allow-Origin",
-													"value": "*"
-												},
-												{
-													"key": "Access-Control-Allow-Credentials",
-													"value": "true"
-												},
-												{
-													"key": "Content-Type",
-													"value": "application/json; charset=utf-8"
-												},
-												{
-													"key": "Content-Length",
-													"value": "310"
-												},
-												{
-													"key": "ETag",
-													"value": "W/\"136-66w8CArdXjbnyvGms/xLOsbXiY0\""
-												},
-												{
-													"key": "Date",
-													"value": "Sat, 15 Nov 2025 12:57:24 GMT"
-												},
-												{
-													"key": "Connection",
-													"value": "keep-alive"
-												},
-												{
-													"key": "Keep-Alive",
-													"value": "timeout=5"
-												}
-											],
-											"cookie": [],
-											"responseTime": null,
-											"body": "{\n    \"status\": true,\n    \"statusCode\": 200,\n    \"message\": \"Contact details fetched successfully\",\n    \"result\": {\n        \"_id\": \"69186199f428dbbd0b3d1690\",\n        \"contactDetails\": {\n            \"contactPerson\": \"Samba d\",\n            \"mobileNumber\": \"7812345679\",\n            \"email\": \"smd9272@yopmail.com\",\n            \"designation\": \"Developer\",\n            \"financierNoc\": null\n        },\n        \"userId\": \"6916d952c605bdd1ce417803\"\n    }\n}"
-										}
-									]
-								},
-								{
-									"name": "Get gst details by owner id",
-									"id": "8689746-eed4a263-138d-4ffb-8901-207caaa5e985",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"auth": {
-											"type": "bearer",
-											"bearer": [
-												{
-													"key": "token",
-													"value": "{{auth_token}}",
-													"type": "string"
-												}
-											]
-										},
-										"method": "GET",
-										"header": [],
-										"url": {
-											"raw": "{{base_url}}/mobile/ownerprofile/69186199f428dbbd0b3d1690/gst-details",
-											"host": [
-												"{{base_url}}"
-											],
-											"path": [
-												"mobile",
-												"ownerprofile",
-												"69186199f428dbbd0b3d1690",
-												"gst-details"
-											]
-										}
-									},
-									"response": [
-										{
-											"id": "8689746-d944f529-b79b-41bb-b508-d57885c9067d",
-											"name": "New Request",
-											"originalRequest": {
-												"method": "GET",
-												"header": [],
-												"url": {
-													"raw": "{{base_url}}/mobile/ownerprofile/69186199f428dbbd0b3d1690/gst-details",
-													"host": [
-														"{{base_url}}"
-													],
-													"path": [
-														"mobile",
-														"ownerprofile",
-														"69186199f428dbbd0b3d1690",
-														"gst-details"
-													]
-												}
-											},
-											"status": "OK",
-											"code": 200,
-											"_postman_previewlanguage": null,
-											"header": [
-												{
-													"key": "X-Powered-By",
-													"value": "Express"
-												},
-												{
-													"key": "Access-Control-Allow-Origin",
-													"value": "*"
-												},
-												{
-													"key": "Access-Control-Allow-Credentials",
-													"value": "true"
-												},
-												{
-													"key": "Content-Type",
-													"value": "application/json; charset=utf-8"
-												},
-												{
-													"key": "Content-Length",
-													"value": "311"
-												},
-												{
-													"key": "ETag",
-													"value": "W/\"137-2qXMCLzmPVA8d0/Q0h/9SsfZrl0\""
-												},
-												{
-													"key": "Date",
-													"value": "Sat, 15 Nov 2025 12:58:48 GMT"
-												},
-												{
-													"key": "Connection",
-													"value": "keep-alive"
-												},
-												{
-													"key": "Keep-Alive",
-													"value": "timeout=5"
-												}
-											],
-											"cookie": [],
-											"responseTime": null,
-											"body": "{\n    \"status\": true,\n    \"statusCode\": 200,\n    \"message\": \"GST details fetched successfully\",\n    \"result\": {\n        \"_id\": \"69186199f428dbbd0b3d1690\",\n        \"gstNumber\": \"29ABCDE1234JHAkSk\",\n        \"gstDetails\": {\n            \"legalName\": \"Techsima Solution Pvt Ltd\",\n            \"tradeName\": \"Techsima\",\n            \"businessAddress\": \"Private Limited Company\"\n        },\n        \"userId\": \"6916d952c605bdd1ce417803\"\n    }\n}"
-										}
-									]
-								}
-							],
-							"id": "8689746-2c8b0e05-853f-4cb1-b36d-3652d63ef95c"
 						},
 						{
 							"name": "Get Profile",
@@ -2787,13 +2288,38 @@
 								"disableBodyPruning": true
 							},
 							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth_token}}",
+											"type": "string"
+										}
+									]
+								},
 								"method": "GET",
-								"header": []
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{base_url}}/mobile/user/profile",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"mobile",
+										"user",
+										"profile"
+									]
+								}
 							},
 							"response": []
 						}
 					],
-					"id": "8689746-26792de7-a659-4024-b53e-020d64700b31"
+					"id": "8689746-91800497-2c8e-4f6d-81e3-d4615acee822"
 				},
 				{
 					"name": "Master",
@@ -2840,14 +2366,14 @@
 							},
 							"response": [
 								{
-									"id": "8689746-cfb7c928-8746-4717-9855-8d2997c60b8e",
-									"name": "New Request",
+									"id": "8689746-b6a245d4-dada-4176-a18d-de55f869c1e8",
+									"name": "get category",
 									"originalRequest": {
 										"method": "POST",
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"categoryName\": \"document_types\"\r\n}",
+											"raw": "{\r\n  \"categoryName\": \"vehicle_brands\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -2871,45 +2397,45 @@
 									"_postman_previewlanguage": null,
 									"header": [
 										{
-											"key": "X-Powered-By",
-											"value": "Express"
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
 										},
 										{
 											"key": "Access-Control-Allow-Origin",
 											"value": "*"
 										},
 										{
-											"key": "Access-Control-Allow-Credentials",
-											"value": "true"
+											"key": "Alt-Svc",
+											"value": "h3=\":443\"; ma=2592000"
+										},
+										{
+											"key": "Content-Length",
+											"value": "200"
 										},
 										{
 											"key": "Content-Type",
 											"value": "application/json; charset=utf-8"
 										},
 										{
-											"key": "Content-Length",
-											"value": "844"
-										},
-										{
-											"key": "ETag",
-											"value": "W/\"34c-I6bZGeZ1g1KYSKpZU58jzEX8RoA\""
-										},
-										{
 											"key": "Date",
-											"value": "Fri, 14 Nov 2025 11:14:53 GMT"
+											"value": "Sat, 06 Dec 2025 10:27:29 GMT"
 										},
 										{
-											"key": "Connection",
-											"value": "keep-alive"
+											"key": "Etag",
+											"value": "W/\"c8-OuoTvmkIdkl5mqOuYv+MwY1dNd0\""
 										},
 										{
-											"key": "Keep-Alive",
-											"value": "timeout=5"
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
 										}
 									],
 									"cookie": [],
 									"responseTime": null,
-									"body": "{\n    \"status\": true,\n    \"statusCode\": 200,\n    \"message\": \"Values fetched successfully for category\",\n    \"result\": [\n        {\n            \"id\": \"6904577cee011117bb0d1bab\",\n            \"value\": \"PAN Card\"\n        },\n        {\n            \"id\": \"6904577cee011117bb0d1bac\",\n            \"value\": \"Aadhaar Card\"\n        },\n        {\n            \"id\": \"6904577cee011117bb0d1bad\",\n            \"value\": \"Driving License\"\n        },\n        {\n            \"id\": \"6904577cee011117bb0d1bae\",\n            \"value\": \"RC Book\"\n        },\n        {\n            \"id\": \"6904577cee011117bb0d1baf\",\n            \"value\": \"Insurance\"\n        },\n        {\n            \"id\": \"6904577cee011117bb0d1bb0\",\n            \"value\": \"GSTIN\"\n        },\n        {\n            \"id\": \"6904577cee011117bb0d1bb1\",\n            \"value\": \"Bank Statement\"\n        },\n        {\n            \"id\": \"6904577cee011117bb0d1bb2\",\n            \"value\": \"Salary Slip\"\n        },\n        {\n            \"id\": \"6904577cee011117bb0d1bb3\",\n            \"value\": \"Income Tax Return\"\n        },\n        {\n            \"id\": \"6904577cee011117bb0d1bb4\",\n            \"value\": \"Pollution Under Control\"\n        },\n        {\n            \"id\": \"6904577cee011117bb0d1c56\",\n            \"value\": \"Salary Slip\"\n        },\n        {\n            \"id\": \"6904577cee011117bb0d1c57\",\n            \"value\": \"Bank Statement\"\n        },\n        {\n            \"id\": \"6904577cee011117bb0d1c58\",\n            \"value\": \"Income Tax Return\"\n        }\n    ]\n}"
+									"body": "{\n    \"status\": true,\n    \"statusCode\": 200,\n    \"message\": \"Values fetched successfully for category\",\n    \"result\": [\n        {\n            \"id\": \"68c29d906498144505609010\",\n            \"value\": \"SedanAS\"\n        },\n        {\n            \"id\": \"68c29d906498144505609011\",\n            \"value\": \"Hyundai\"\n        }\n    ]\n}"
 								}
 							]
 						},
@@ -2925,7 +2451,7 @@
 									"bearer": [
 										{
 											"key": "token",
-											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OTE2ZDk1MmM2MDViZGQxY2U0MTc4MDMiLCJpYXQiOjE3NjMyMTI3MTcsImV4cCI6MTc2MzI5OTExN30.XYf_2hCW_HWD4h4jRWySiCvLlcT-ipe6wvt3u7rKjyI",
+											"value": "{{auth_token}}",
 											"type": "string"
 										}
 									]
@@ -2950,7 +2476,7 @@
 							},
 							"response": [
 								{
-									"id": "8689746-23a8f9e0-bee0-426d-aa1f-12349ec60bd8",
+									"id": "8689746-4616eb33-785c-48e7-9e34-09767abcc4fc",
 									"name": "Get All category",
 									"originalRequest": {
 										"method": "GET",
@@ -2976,45 +2502,49 @@
 									"_postman_previewlanguage": null,
 									"header": [
 										{
-											"key": "X-Powered-By",
-											"value": "Express"
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
 										},
 										{
 											"key": "Access-Control-Allow-Origin",
 											"value": "*"
 										},
 										{
-											"key": "Access-Control-Allow-Credentials",
-											"value": "true"
+											"key": "Alt-Svc",
+											"value": "h3=\":443\"; ma=2592000"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "br"
 										},
 										{
 											"key": "Content-Type",
 											"value": "application/json; charset=utf-8"
 										},
 										{
-											"key": "Content-Length",
-											"value": "3084"
-										},
-										{
-											"key": "ETag",
-											"value": "W/\"c0c-+HnLws43VV/w+DrK6WDr8r+UhtI\""
-										},
-										{
 											"key": "Date",
-											"value": "Sat, 15 Nov 2025 13:27:53 GMT"
+											"value": "Sat, 06 Dec 2025 10:27:06 GMT"
 										},
 										{
-											"key": "Connection",
-											"value": "keep-alive"
+											"key": "Etag",
+											"value": "W/\"dea-28lTiYRQEfYOoKwORBpfI2fDz4k\""
 										},
 										{
-											"key": "Keep-Alive",
-											"value": "timeout=5"
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Length",
+											"value": "815"
 										}
 									],
 									"cookie": [],
 									"responseTime": null,
-									"body": "{\n    \"status\": true,\n    \"statusCode\": 200,\n    \"message\": \"All categories fetched successfully\",\n    \"result\": [\n        {\n            \"_id\": \"6904577cee011117bb0d1b79\",\n            \"name\": \"vehicle_brands\",\n            \"description\": \"Manufacturers and brands of vehicles\"\n        },\n        {\n            \"_id\": \"6904577cee011117bb0d1b7a\",\n            \"name\": \"fuel_types\",\n            \"description\": \"Types of fuel used in vehicles\"\n        },\n        {\n            \"_id\": \"6904577cee011117bb0d1b7b\",\n            \"name\": \"document_types\",\n            \"description\": \"Types of documents used in the system\"\n        },\n        {\n            \"_id\": \"6904577cee011117bb0d1b7c\",\n            \"name\": \"vehicle_types\",\n            \"description\": \"Types of vehicles (Hatchback, Sedan, SUV, etc.)\"\n        },\n        {\n            \"_id\": \"6904577cee011117bb0d1b7d\",\n            \"name\": \"occupation_types\",\n            \"description\": \"Types of occupations for lessees\"\n        },\n        {\n            \"_id\": \"6904577cee011117bb0d1b7e\",\n            \"name\": \"constitution_types\",\n            \"description\": \"Types of business constitutions for lessors\"\n        },\n        {\n            \"_id\": \"6904577cee011117bb0d1b7f\",\n            \"name\": \"task_types\",\n            \"description\": \"Types of tasks in the system\"\n        },\n        {\n            \"_id\": \"6904577cee011117bb0d1b80\",\n            \"name\": \"service_types\",\n            \"description\": \"Types of services offered\"\n        },\n        {\n            \"_id\": \"6904577cee011117bb0d1b81\",\n            \"name\": \"package_tiers\",\n            \"description\": \"Tiers for packages (Basic, Standard, Premium, etc.)\"\n        },\n        {\n            \"_id\": \"6904577cee011117bb0d1b82\",\n            \"name\": \"charge_types\",\n            \"description\": \"Types of charges in the system\"\n        },\n        {\n            \"_id\": \"6904577cee011117bb0d1b83\",\n            \"name\": \"cities\",\n            \"description\": \"Cities where operations are conducted\"\n        },\n        {\n            \"_id\": \"6904577cee011117bb0d1b84\",\n            \"name\": \"states\",\n            \"description\": \"States where operations are conducted\"\n        },\n        {\n            \"_id\": \"6904577cee011117bb0d1b85\",\n            \"name\": \"sla_types\",\n            \"description\": \"Types of SLAs for tasks\"\n        },\n        {\n            \"_id\": \"6904577cee011117bb0d1b86\",\n            \"name\": \"vehicle_features\",\n            \"description\": \"Features available in vehicles\"\n        },\n        {\n            \"_id\": \"6904577cee011117bb0d1b87\",\n            \"name\": \"insurance_companies\",\n            \"description\": \"Insurance providers\"\n        },\n        {\n            \"_id\": \"6904577cee011117bb0d1b88\",\n            \"name\": \"payment_methods\",\n            \"description\": \"Accepted payment methods\"\n        },\n        {\n            \"_id\": \"6904577cee011117bb0d1b89\",\n            \"name\": \"payment_frequencies\",\n            \"description\": \"Lease payment frequencies\"\n        },\n        {\n            \"_id\": \"6904577cee011117bb0d1b8a\",\n            \"name\": \"lease_statuses\",\n            \"description\": \"Possible statuses of a lease\"\n        },\n        {\n            \"_id\": \"6904577cee011117bb0d1b8b\",\n            \"name\": \"kyc_statuses\",\n            \"description\": \"KYC verification statuses\"\n        },\n        {\n            \"_id\": \"6904577cee011117bb0d1b8c\",\n            \"name\": \"vehicle_statuses\",\n            \"description\": \"Possible statuses of a vehicle\"\n        },\n        {\n            \"_id\": \"6904577cee011117bb0d1b8d\",\n            \"name\": \"service_vendor_types\",\n            \"description\": \"Types of service vendors\"\n        },\n        {\n            \"_id\": \"6904577cee011117bb0d1b8e\",\n            \"name\": \"benefit_types\",\n            \"description\": \"Types of benefits in packages\"\n        },\n        {\n            \"_id\": \"6904577cee011117bb0d1b8f\",\n            \"name\": \"marital_statuses\",\n            \"description\": \"Marital status options\"\n        },\n        {\n            \"_id\": \"6904577cee011117bb0d1b90\",\n            \"name\": \"education_levels\",\n            \"description\": \"Education qualification levels\"\n        },\n        {\n            \"_id\": \"6904577cee011117bb0d1b91\",\n            \"name\": \"income_proof_types\",\n            \"description\": \"Types of income proof documents\"\n        },\n        {\n            \"_id\": \"6904577cee011117bb0d1b92\",\n            \"name\": \"bank_names\",\n            \"description\": \"Bank names for payment processing\"\n        },\n        {\n            \"_id\": \"6904577cee011117bb0d1b93\",\n            \"name\": \"invoice_statuses\",\n            \"description\": \"Possible statuses of an invoice\"\n        },\n        {\n            \"_id\": \"6904577cee011117bb0d1b94\",\n            \"name\": \"payment_statuses\",\n            \"description\": \"Possible statuses of a payment\"\n        }\n    ]\n}"
+									"body": "{\n    \"status\": true,\n    \"statusCode\": 200,\n    \"message\": \"All categories fetched successfully\",\n    \"result\": [\n        {\n            \"_id\": \"68c29d906498144505608ff3\",\n            \"name\": \"vehicle_brands\",\n            \"description\": \"Manufacturers and brands of vehicles\"\n        },\n        {\n            \"_id\": \"68c29d906498144505608ff4\",\n            \"name\": \"fuel_types\",\n            \"description\": \"Types of fuel used in vehicles\"\n        },\n        {\n            \"_id\": \"68c29d906498144505608ff5\",\n            \"name\": \"document_types\",\n            \"description\": \"Types of documents used in the system\"\n        },\n        {\n            \"_id\": \"68c29d906498144505608ff6\",\n            \"name\": \"vehicle_types\",\n            \"description\": \"Types of vehicles (Hatchback, Sedan, SUV, etc.)\"\n        },\n        {\n            \"_id\": \"68c29d906498144505608ff7\",\n            \"name\": \"occupation_types\",\n            \"description\": \"Types of occupations for lessees\"\n        },\n        {\n            \"_id\": \"68c29d906498144505608ff8\",\n            \"name\": \"constitution_types\",\n            \"description\": \"Types of business constitutions for lessors\"\n        },\n        {\n            \"_id\": \"68c29d906498144505608ff9\",\n            \"name\": \"task_types\",\n            \"description\": \"Types of tasks in the system\"\n        },\n        {\n            \"_id\": \"68c29d906498144505608ffa\",\n            \"name\": \"service_types\",\n            \"description\": \"Types of services offered\"\n        },\n        {\n            \"_id\": \"68c29d906498144505608ffb\",\n            \"name\": \"package_tiers\",\n            \"description\": \"Tiers for packages (Basic, Standard, Premium, etc.)\"\n        },\n        {\n            \"_id\": \"68c29d906498144505608ffc\",\n            \"name\": \"charge_types\",\n            \"description\": \"Types of charges in the system\"\n        },\n        {\n            \"_id\": \"68c29d906498144505608ffd\",\n            \"name\": \"cities\",\n            \"description\": \"Cities where operations are conducted\"\n        },\n        {\n            \"_id\": \"68c29d906498144505608ffe\",\n            \"name\": \"states\",\n            \"description\": \"States where operations are conducted\"\n        },\n        {\n            \"_id\": \"68c29d906498144505608fff\",\n            \"name\": \"sla_types\",\n            \"description\": \"Types of SLAs for tasks\"\n        },\n        {\n            \"_id\": \"68c29d906498144505609000\",\n            \"name\": \"vehicle_features\",\n            \"description\": \"Features available in vehicles\"\n        },\n        {\n            \"_id\": \"68c29d906498144505609001\",\n            \"name\": \"insurance_companies\",\n            \"description\": \"Insurance providers\"\n        },\n        {\n            \"_id\": \"68c29d906498144505609002\",\n            \"name\": \"payment_methods\",\n            \"description\": \"Accepted payment methods\"\n        },\n        {\n            \"_id\": \"68c29d906498144505609003\",\n            \"name\": \"payment_frequencies\",\n            \"description\": \"Lease payment frequencies\"\n        },\n        {\n            \"_id\": \"68c29d906498144505609004\",\n            \"name\": \"lease_statuses\",\n            \"description\": \"Possible statuses of a lease\"\n        },\n        {\n            \"_id\": \"68c29d906498144505609005\",\n            \"name\": \"kyc_statuses\",\n            \"description\": \"KYC verification statuses\"\n        },\n        {\n            \"_id\": \"68c29d906498144505609006\",\n            \"name\": \"vehicle_statuses\",\n            \"description\": \"Possible statuses of a vehicle\"\n        },\n        {\n            \"_id\": \"68c29d906498144505609007\",\n            \"name\": \"service_vendor_types\",\n            \"description\": \"Types of service vendors\"\n        },\n        {\n            \"_id\": \"68c29d906498144505609008\",\n            \"name\": \"benefit_types\",\n            \"description\": \"Types of benefits in packages\"\n        },\n        {\n            \"_id\": \"68c29d906498144505609009\",\n            \"name\": \"marital_statuses\",\n            \"description\": \"Marital status options\"\n        },\n        {\n            \"_id\": \"68c29d90649814450560900a\",\n            \"name\": \"education_levels\",\n            \"description\": \"Education qualification levels\"\n        },\n        {\n            \"_id\": \"68c29d90649814450560900b\",\n            \"name\": \"income_proof_types\",\n            \"description\": \"Types of income proof documents\"\n        },\n        {\n            \"_id\": \"68c29d90649814450560900c\",\n            \"name\": \"bank_names\",\n            \"description\": \"Bank names for payment processing\"\n        },\n        {\n            \"_id\": \"68c29d90649814450560900d\",\n            \"name\": \"invoice_statuses\",\n            \"description\": \"Possible statuses of an invoice\"\n        },\n        {\n            \"_id\": \"68c29d90649814450560900e\",\n            \"name\": \"payment_statuses\",\n            \"description\": \"Possible statuses of a payment\"\n        },\n        {\n            \"_id\": \"68d4d0cf53a3d09ea4500bd9\",\n            \"name\": \"TESTING-11\",\n            \"description\": \"Types of vehicles available for rental\"\n        },\n        {\n            \"_id\": \"68d4da3a53a3d09ea4500bf0\",\n            \"name\": \"test_category\",\n            \"description\": \"test_category description\"\n        },\n        {\n            \"_id\": \"68fb70fa53a3d09ea45013c7\",\n            \"name\": \"test_Category\",\n            \"description\": \"test_Category_description\"\n        },\n        {\n            \"_id\": \"6932e95bed2450f67e8f5327\",\n            \"name\": \"designations\",\n            \"description\": \"Designations\"\n        },\n        {\n            \"_id\": \"6933e2cced2450f67e8f5369\",\n            \"name\": \"industries\",\n            \"description\": \"Industries\"\n        }\n    ]\n}"
 								}
 							]
 						}
@@ -3699,7 +3229,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"user_details\": {\r\n        \"owner_name\": \"UJYARE LAL  KACHHI\",\r\n        \"father_name\": \"\",\r\n        \"mobile_number\": \"\",\r\n        \"owner_number\": \"1\",\r\n        \"present_address\": \"VILLAGE MAJHGWAN NEAR, KALI MANDIR MAJHAGWAN, , , Madhya Pradesh,\",\r\n        \"permanent_address\": \"VILLAGE MAJHGWAN NEAR, KALI MANDIR MAJHAGWAN, , , Madhya Pradesh,\"\r\n    },\r\n    \"vehicle_details\": {\r\n        \"rc_number\": \"MP20CK6685\",\r\n        \"registration_date\": \"2020-12-02\",\r\n        \"vehicle_category\": \"LMV\",\r\n        \"vehicle_chassis_number\": \"MAT626288LKK44229\",\r\n        \"vehicle_engine_number\": \"REVTRN08KZXK78404\",\r\n        \"maker_description\": \"TATA MOTORS LTD\",\r\n        \"maker_model\": \"TIAGO XZ 1.2RTN BS6\",\r\n        \"fuel_type\": \"PETROL\",\r\n        \"color\": \"DAYTONA GREY\",\r\n        \"norms_type\": \"BHARAT STAGE VI\",\r\n        \"fit_up_to\": \"2035-12-01\",\r\n        \"vehicle_gross_weight\": \"1373\",\r\n        \"number_of_cylinders\": \"3\",\r\n        \"seat_capacity\": \"5\",\r\n        \"sleeper_capacity\": \"0\",\r\n        \"wheelbase\": \"2400\",\r\n        \"unladen_weight\": \"973\",\r\n        \"vehicle_category_description\": \"Motor Car(LMV)\",\r\n        \"rc_status\": \"ACTIVE\",\r\n        \"masked_name\": false,\r\n        \"registered_at\": \"JABALPUR RTO, Madhya Pradesh\",\r\n        \"cubic_capacity\": \"1199.00\",\r\n        \"rto_code\": \"\"\r\n    },\r\n    \"finance_details\": {\r\n        \"financier\": \"\",\r\n        \"financed\": false,\r\n        \"insurance_company\": \"Universal Sompo General Insurance  Co. Ltd.\",\r\n        \"insurance_policy_number\": \"2311/80216840/00/000\",\r\n        \"insurance_upto\": \"2026-11-05\",\r\n        \"manufacturing_date\": \"10/2020\",\r\n        \"manufacturing_date_formatted\": \"2020-10\",\r\n        \"latest_by\": \"2025-12-03\",\r\n        \"less_info\": true,\r\n        \"tax_upto\": \"2035-12-01\",\r\n        \"tax_paid_upto\": \"2035-12-01\"\r\n    },\r\n    \"permit_details\": {\r\n        \"permit_number\": \"\",\r\n        \"permit_type\": \"\",\r\n        \"national_permit_number\": \"\",\r\n        \"blacklist_status\": \"\",\r\n        \"noc_details\": \"\",\r\n        \"pucc_number\": \"MP02000320001710\",\r\n        \"pucc_upto\": \"2026-05-07\"\r\n    }\r\n}",
+									"raw": "{\r\n    \"user_details\": {\r\n        \"owner_name\": \"UJYARE LAL  KACHHI\",\r\n        \"father_name\": \"\",\r\n        \"mobile_number\": \"\",\r\n        \"owner_number\": \"1\",\r\n        \"present_address\": \"VILLAGE MAJHGWAN NEAR, KALI MANDIR MAJHAGWAN, , , Madhya Pradesh,\",\r\n        \"permanent_address\": \"VILLAGE MAJHGWAN NEAR, KALI MANDIR MAJHAGWAN, , , Madhya Pradesh,\"\r\n    },\r\n    \"vehicle_details\": {\r\n        \"rc_number\": \"MP2VCON1Mp\",\r\n        \"registration_date\": \"2020-12-02\",\r\n        \"vehicle_category\": \"LMV\",\r\n        \"vehicle_chassis_number\": \"MAMB4pp290LMK1229\",\r\n        \"vehicle_engine_number\": \"REANZNFppMuXK2404\",\r\n        \"maker_description\": \"TATAA MOTORS\",\r\n        \"maker_model\": \"TIAGOO XZ 1.2RTN\",\r\n        \"fuel_type\": \"PETROOL\",\r\n        \"color\": \"DAYTONA GREY\",\r\n        \"norms_type\": \"BHARAT STAGE VI\",\r\n        \"fit_up_to\": \"2035-12-01\",\r\n        \"vehicle_gross_weight\": \"1373\",\r\n        \"number_of_cylinders\": \"3\",\r\n        \"seat_capacity\": \"5\",\r\n        \"sleeper_capacity\": \"0\",\r\n        \"wheelbase\": \"2400\",\r\n        \"unladen_weight\": \"973\",\r\n        \"vehicle_category_description\": \"Motor Car(LMV)\",\r\n        \"rc_status\": \"ACTIVE\",\r\n        \"masked_name\": false,\r\n        \"registered_at\": \"JABALPUR RTO, Madhya Pradesh\",\r\n        \"cubic_capacity\": \"1199.00\",\r\n        \"rto_code\": \"\"\r\n    },\r\n    \"finance_details\": {\r\n        \"financier\": \"\",\r\n        \"financed\": false,\r\n        \"insurance_company\": \"Universal Sompo General Insurance  Co. Ltd.\",\r\n        \"insurance_policy_number\": \"2311/80216840/00/000\",\r\n        \"insurance_upto\": \"2026-11-05\",\r\n        \"manufacturing_date\": \"10/2020\",\r\n        \"manufacturing_date_formatted\": \"2020-10\",\r\n        \"latest_by\": \"2025-12-03\",\r\n        \"less_info\": true,\r\n        \"tax_upto\": \"2035-12-01\",\r\n        \"tax_paid_upto\": \"2035-12-01\"\r\n    },\r\n    \"permit_details\": {\r\n        \"permit_number\": \"\",\r\n        \"permit_type\": \"\",\r\n        \"national_permit_number\": \"\",\r\n        \"blacklist_status\": \"\",\r\n        \"noc_details\": \"\",\r\n        \"pucc_number\": \"MP02000320001710\",\r\n        \"pucc_upto\": \"2026-05-07\"\r\n    }\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -3755,14 +3285,14 @@
 									}
 								},
 								"url": {
-									"raw": "{{base_url}}/mobile/lessees/occupation",
+									"raw": "{{base_url}}/mobile/lessees/update-occupation",
 									"host": [
 										"{{base_url}}"
 									],
 									"path": [
 										"mobile",
 										"lessees",
-										"occupation"
+										"update-occupation"
 									]
 								}
 							},
@@ -3797,21 +3327,21 @@
 									}
 								},
 								"url": {
-									"raw": "{{base_url}}/mobile/lessees/kyc",
+									"raw": "{{base_url}}/mobile/lessees/update-kyc",
 									"host": [
 										"{{base_url}}"
 									],
 									"path": [
 										"mobile",
 										"lessees",
-										"kyc"
+										"update-kyc"
 									]
 								}
 							},
 							"response": []
 						},
 						{
-							"name": "Update Bank Details",
+							"name": "Update Bank",
 							"id": "8689746-9f7f0753-273c-455d-a6cd-1163d3f40ca2",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -3839,22 +3369,28 @@
 									}
 								},
 								"url": {
-									"raw": "{{base_url}}/mobile/lessees/bank-details",
+									"raw": "{{base_url}}/mobile/lessees/update-bank-details",
 									"host": [
 										"{{base_url}}"
 									],
 									"path": [
 										"mobile",
 										"lessees",
-										"bank-details"
+										"update-bank-details"
 									]
 								}
 							},
 							"response": []
-						},
+						}
+					],
+					"id": "8689746-0a881490-6932-47d6-98b3-ef5618c439a6"
+				},
+				{
+					"name": "lessors",
+					"item": [
 						{
-							"name": "Get Profile",
-							"id": "8689746-6e9898eb-6636-45c2-af62-b9e7567c8873",
+							"name": "Update Gstin Details",
+							"id": "8689746-78920638-1554-4a1b-b48a-cc203f87b771",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -3869,24 +3405,271 @@
 										}
 									]
 								},
-								"method": "GET",
+								"method": "PUT",
 								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"corporate_name\": \"TECHADWIK LLP\",\r\n    \"details\": {\r\n        \"stj_cd\": \"MP048\",\r\n        \"dty\": \"Regular\",\r\n        \"lgnm\": \"TECHADWIK LLP\",\r\n        \"adadr\": [],\r\n        \"cxdt\": \"\",\r\n        \"gstin\": \"23AAQFT9996C1ZI\",\r\n        \"nba\": [\r\n            \"Supplier of Services\",\r\n            \"Works Contract\",\r\n            \"Retail Business\"\r\n        ],\r\n        \"lstupdt\": \"30/01/2024\",\r\n        \"ctb\": \"Limited Liability Partnership\",\r\n        \"rgdt\": \"19/02/2021\",\r\n        \"pradr\": {\r\n            \"addr\": {\r\n                \"bnm\": \"IT TECHNO PARK\",\r\n                \"loc\": \"JABALPUR\",\r\n                \"st\": \"BARGI HILLS\",\r\n                \"bno\": \"0\",\r\n                \"dst\": \"Jabalpur\",\r\n                \"stcd\": \"Madhya Pradesh\",\r\n                \"flno\": \"THIRD FLOOR\",\r\n                \"lt\": \"\",\r\n                \"pncd\": \"482008\",\r\n                \"lg\": \"\"\r\n            },\r\n            \"ntr\": \"Supplier of Services, Works Contract, Retail Business\"\r\n        },\r\n        \"ctj_cd\": \"UK0102\",\r\n        \"trade_nam\": \"TECHADWIK LLP\",\r\n        \"sts\": \"Active\",\r\n        \"ctj\": \"RANGE - II JABALPUR\"\r\n    },\r\n    \"id\": \"GSTD251205173308913MXZQ4KYQKPH8F\",\r\n    \"gstin\": \"23AAQFT9996C1ZI\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
 								"url": {
-									"raw": "{{base_url}}/mobile/lessees/profile",
+									"raw": "{{base_url}}/mobile/lessors/update-gstin",
 									"host": [
 										"{{base_url}}"
 									],
 									"path": [
 										"mobile",
-										"lessees",
-										"profile"
+										"lessors",
+										"update-gstin"
 									]
 								}
 							},
-							"response": []
+							"response": [
+								{
+									"id": "8689746-79410c9d-47a8-4cd3-8a31-38cb20697b00",
+									"name": "Create Gst",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n   \"gstNumber\": \"27ABCDs6234JHhG4f\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url}}/mobile/ownerprofile/gst",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"mobile",
+												"ownerprofile",
+												"gst"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "Text",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "516"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"204-50aYF5Km6DUIIVvbNsnzw2Td3xw\""
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 27 Nov 2025 06:47:14 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": true,\n    \"statusCode\": 200,\n    \"message\": \"GST details updated successfully\",\n    \"result\": {\n        \"_id\": \"6927eaa5923f6235c0640d1e\",\n        \"phone\": \"9876534387\",\n        \"userType\": \"Lessor\",\n        \"contactDetails\": {\n            \"contactPerson\": \"Shital m\",\n            \"mobileNumber\": \"7812345679\",\n            \"email\": \"smd9272@yopmail.com\",\n            \"designation\": \"Developer\",\n            \"financierNoc\": \"/uploads/1764226000032-72170140.jpeg\"\n        },\n        \"gstDetails\": {\n            \"gstNumber\": \"27ABCDs6234JHhG4f\",\n            \"legalName\": \"Heroo\",\n            \"tradeName\": \"Hero\",\n            \"businessAddress\": \"LKO Private Limited Company\"\n        },\n        \"userId\": \"691c434ce146fd599e5916d6\"\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Update Contact Details",
+							"id": "8689746-b1fe16c1-7ff4-4c7b-98e3-8ef5a61e62ee",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {},
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "contactPerson",
+											"value": "Samba d",
+											"type": "text"
+										},
+										{
+											"key": "mobileNumber",
+											"value": "7812345679",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "smd9272@yopmail.com",
+											"type": "text"
+										},
+										{
+											"key": "designation",
+											"value": "6932ea28ed2450f67e8f532f",
+											"description": "// Fetch id from mdm master data",
+											"type": "text"
+										},
+										{
+											"key": "financierNoc",
+											"type": "file",
+											"src": "/C:/Users/ikram/Downloads/Finance Issues (04-12-2025).xlsx"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/mobile/lessors/update-contact",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"mobile",
+										"lessors",
+										"update-contact"
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "8689746-034c330e-a496-4cd8-964d-cdfd359126d7",
+									"name": "Contact",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "contactPerson",
+													"value": "Shital m",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "mobileNumber",
+													"value": "7812345679",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "email",
+													"value": "smd9272@yopmail.com",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "designation",
+													"value": "Developer",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "financierNoc",
+													"type": "file",
+													"src": [
+														"/C:/Users/DELL/Downloads/Pi7_Passport_Photo (3).jpeg"
+													]
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/mobile/ownerprofile/contact",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"mobile",
+												"ownerprofile",
+												"contact"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "Text",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "520"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"208-w7xN6u4L8jOGqB9tE+cfNrnY43E\""
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 27 Nov 2025 06:46:40 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": true,\n    \"statusCode\": 200,\n    \"message\": \"Contact details updated successfully\",\n    \"result\": {\n        \"_id\": \"6927eaa5923f6235c0640d1e\",\n        \"phone\": \"9876534387\",\n        \"userType\": \"Lessor\",\n        \"contactDetails\": {\n            \"contactPerson\": \"Shital m\",\n            \"mobileNumber\": \"7812345679\",\n            \"email\": \"smd9272@yopmail.com\",\n            \"designation\": \"Developer\",\n            \"financierNoc\": \"/uploads/1764226000032-72170140.jpeg\"\n        },\n        \"gstDetails\": {\n            \"gstNumber\": \"27ABCDs6234JHAG4f\",\n            \"legalName\": \"Heroo\",\n            \"tradeName\": \"Hero\",\n            \"businessAddress\": \"LKO Private Limited Company\"\n        },\n        \"userId\": \"691c434ce146fd599e5916d6\"\n    }\n}"
+								}
+							]
 						}
 					],
-					"id": "8689746-0a881490-6932-47d6-98b3-ef5618c439a6"
+					"id": "8689746-3ece3c6c-05c9-4036-a6c5-822f94679d30"
 				}
 			],
 			"id": "8689746-5b8985bc-0fa9-4627-8893-4f017cdacd32",
