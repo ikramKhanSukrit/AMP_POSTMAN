@@ -2213,7 +2213,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"phone\": \"9876534675\",\r\n    \"userType\": \"Lessor\",\r\n    \"otp\": \"707065\"\r\n}",
+									"raw": "{\r\n    \"phone\": \"9876534636\",\r\n    \"userType\": \"Lessee\",\r\n    \"otp\": \"539558\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
