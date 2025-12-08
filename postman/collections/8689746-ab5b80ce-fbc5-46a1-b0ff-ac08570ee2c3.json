@@ -2178,7 +2178,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"phone\": \"9876534636\",\r\n  \"userType\": \"Lessee\" // Lessor or Lessee\r\n}",
+									"raw": "{\r\n  \"phone\": \"9876534636\",\r\n  \"userType\": \"Lessor\" // Lessor or Lessee\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -3020,7 +3020,7 @@
 					"name": "lessees",
 					"item": [
 						{
-							"name": "Update Occupation",
+							"name": "Update Occupation details",
 							"id": "8689746-eb4e5736-01b1-465c-9a26-e501b91aa1b9",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -3062,7 +3062,7 @@
 							"response": []
 						},
 						{
-							"name": "Update Kyc",
+							"name": "Update Kyc details",
 							"id": "8689746-a12754cc-ec5a-4a5a-a0b1-cc4dfd842ef1",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -3104,7 +3104,7 @@
 							"response": []
 						},
 						{
-							"name": "Update Bank",
+							"name": "Update Bank details",
 							"id": "8689746-9f7f0753-273c-455d-a6cd-1163d3f40ca2",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -3451,24 +3451,49 @@
 								"method": "PUT",
 								"header": [],
 								"body": {
-									"mode": "raw",
-									"raw": "{\r\n  \"bankName\": \"SBI Bank\",\r\n  \"accountHolderName\": \"John Doe\",\r\n  \"accountNumber\": \"1234567890\",\r\n  \"ifscCode\": \"HDFC0001234\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "bankName",
+											"value": "SBI Bank",
+											"type": "text",
+											"uuid": "aa78f41e-0d3e-408d-a3da-01b49fac13f9"
+										},
+										{
+											"key": "accountHolderName",
+											"value": "John Doe",
+											"type": "text",
+											"uuid": "4b683d62-f8f0-4456-b998-576b7b982956"
+										},
+										{
+											"key": "accountNumber",
+											"value": "1234567890",
+											"type": "text",
+											"uuid": "00a36589-051f-4da5-b9ed-dc5fcb5f8151"
+										},
+										{
+											"key": "ifscCode",
+											"value": "HDFC0001234",
+											"type": "text",
+											"uuid": "b0cc58a0-c1a6-4827-94b7-57d8f1384e39"
+										},
+										{
+											"key": "cancelledCheque",
+											"type": "file",
+											"uuid": "b89cd3a1-ce17-40a8-8142-4d3deea8e29e",
+											"src": "/C:/Users/DELL/Downloads/meetbanner.jpg"
 										}
-									}
+									]
 								},
 								"url": {
-									"raw": "{{base_url}}/mobile/vehicles/bank-details/692d9b999b2f6a87f079e378",
+									"raw": "{{base_url}}/mobile/lessors/update-bank",
 									"host": [
 										"{{base_url}}"
 									],
 									"path": [
 										"mobile",
-										"vehicles",
-										"bank-details",
-										"692d9b999b2f6a87f079e378"
+										"lessors",
+										"update-bank"
 									]
 								}
 							},
