@@ -2612,7 +2612,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"expectedRent\": 303200,\r\n  \"tentativeLeaseDate\": \"2025-08-01\",\r\n  \"maxKmPerMonth\": 1000,\r\n  \"lockInPeriod\": \"1 - 3 Years\",\r\n  \"cities\": [\"Delhi\", \"Bengaluru\"]\r\n}",
+									"raw": "{\r\n  \"expectedRent\": 303200,\r\n  \"tentativeLeaseDate\": \"2025-08-01\",\r\n  \"maxKmPerMonth\": 1000,\r\n  \"lockInPeriod\": \"1 - 3 Years\",\r\n  \"cities\": [\"68c29d906498144505609067\", \"68c29d90649814450560906c\"] // Fetch id from mdm value - category:cities\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
