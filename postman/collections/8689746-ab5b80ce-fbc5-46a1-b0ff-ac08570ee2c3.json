@@ -2620,7 +2620,7 @@
 									}
 								},
 								"url": {
-									"raw": "{{base_url}}/mobile/vehicles/expected-lease/692d9b999b2f6a87f079e378",
+									"raw": "{{base_url}}/mobile/vehicles/expected-lease/{{vehicleId}}",
 									"host": [
 										"{{base_url}}"
 									],
@@ -2628,7 +2628,7 @@
 										"mobile",
 										"vehicles",
 										"expected-lease",
-										"692d9b999b2f6a87f079e378"
+										"{{vehicleId}}"
 									]
 								}
 							},
