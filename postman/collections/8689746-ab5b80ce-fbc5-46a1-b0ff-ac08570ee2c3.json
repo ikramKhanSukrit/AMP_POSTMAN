@@ -3042,6 +3042,29 @@
 								},
 								"method": "PUT",
 								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "insurance",
+											"type": "file",
+											"uuid": "2cc50852-5a27-4208-a67e-dc62d12981fb",
+											"value": null
+										},
+										{
+											"key": "puc",
+											"type": "file",
+											"uuid": "b592f363-e897-4442-aa47-2efda8cbc855",
+											"value": null
+										},
+										{
+											"key": "fitness",
+											"type": "file",
+											"uuid": "aab876fd-8321-41a6-9221-8044a157e77d",
+											"value": null
+										}
+									]
+								},
 								"url": {
 									"raw": "{{base_url}}/mobile/vehicles/upload-documents/6936f63e48abc9c34d145776",
 									"host": [
