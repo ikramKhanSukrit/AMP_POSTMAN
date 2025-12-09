@@ -2566,7 +2566,7 @@
 										}
 									]
 								},
-								"method": "PATCH",
+								"method": "PUT",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -2683,7 +2683,7 @@
 										}
 									]
 								},
-								"method": "PATCH",
+								"method": "PUT",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -2873,7 +2873,7 @@
 							]
 						},
 						{
-							"name": "Get Vehicle By Lessor Id",
+							"name": "Get Vehicles",
 							"id": "8689746-04ae3e6b-a8e2-4c50-abec-a23be17f6ca6",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
