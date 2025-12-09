@@ -2578,14 +2578,14 @@
 									}
 								},
 								"url": {
-									"raw": "{{base_url}}/mobile/vehicles/digio",
+									"raw": "{{base_url}}/mobile/vehicles/add-vehicle-from-digio",
 									"host": [
 										"{{base_url}}"
 									],
 									"path": [
 										"mobile",
 										"vehicles",
-										"digio"
+										"add-vehicle-from-digio"
 									]
 								}
 							},
