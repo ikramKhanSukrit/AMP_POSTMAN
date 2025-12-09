@@ -2550,6 +2550,48 @@
 							"response": []
 						},
 						{
+							"name": "Add Vehicle Via Digio",
+							"id": "8689746-93c7ca9a-9cab-495f-8a06-3f201e300ba5",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"user_details\": {\r\n        \"owner_name\": \"UJYARE LAL  KACHHI\",\r\n        \"father_name\": \"\",\r\n        \"mobile_number\": \"\",\r\n        \"owner_number\": \"1\",\r\n        \"present_address\": \"VILLAGE MAJHGWAN NEAR, KALI MANDIR MAJHAGWAN, , , Madhya Pradesh,\",\r\n        \"permanent_address\": \"VILLAGE MAJHGWAN NEAR, KALI MANDIR MAJHAGWAN, , , Madhya Pradesh,\"\r\n    },\r\n    \"vehicle_details\": {\r\n        \"rc_number\": \"MP2VCON1Mp\",\r\n        \"registration_date\": \"2020-12-02\",\r\n        \"vehicle_category\": \"LMV\",\r\n        \"vehicle_chassis_number\": \"MAMB4pp290LMK1229\",\r\n        \"vehicle_engine_number\": \"REANZNFppMuXK2404\",\r\n        \"maker_description\": \"TATAA MOTORS\",\r\n        \"maker_model\": \"TIAGOO XZ 1.2RTN\",\r\n        \"fuel_type\": \"PETROOL\",\r\n        \"color\": \"DAYTONA GREY\",\r\n        \"norms_type\": \"BHARAT STAGE VI\",\r\n        \"fit_up_to\": \"2035-12-01\",\r\n        \"vehicle_gross_weight\": \"1373\",\r\n        \"number_of_cylinders\": \"3\",\r\n        \"seat_capacity\": \"5\",\r\n        \"sleeper_capacity\": \"0\",\r\n        \"wheelbase\": \"2400\",\r\n        \"unladen_weight\": \"973\",\r\n        \"vehicle_category_description\": \"Motor Car(LMV)\",\r\n        \"rc_status\": \"ACTIVE\",\r\n        \"masked_name\": false,\r\n        \"registered_at\": \"JABALPUR RTO, Madhya Pradesh\",\r\n        \"cubic_capacity\": \"1199.00\",\r\n        \"rto_code\": \"\"\r\n    },\r\n    \"finance_details\": {\r\n        \"financier\": \"\",\r\n        \"financed\": false,\r\n        \"insurance_company\": \"Universal Sompo General Insurance  Co. Ltd.\",\r\n        \"insurance_policy_number\": \"2311/80216840/00/000\",\r\n        \"insurance_upto\": \"2026-11-05\",\r\n        \"manufacturing_date\": \"10/2020\",\r\n        \"manufacturing_date_formatted\": \"2020-10\",\r\n        \"latest_by\": \"2025-12-03\",\r\n        \"less_info\": true,\r\n        \"tax_upto\": \"2035-12-01\",\r\n        \"tax_paid_upto\": \"2035-12-01\"\r\n    },\r\n    \"permit_details\": {\r\n        \"permit_number\": \"\",\r\n        \"permit_type\": \"\",\r\n        \"national_permit_number\": \"\",\r\n        \"blacklist_status\": \"\",\r\n        \"noc_details\": \"\",\r\n        \"pucc_number\": \"MP02000320001710\",\r\n        \"pucc_upto\": \"2026-05-07\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/mobile/vehicles/digio",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"mobile",
+										"vehicles",
+										"digio"
+									]
+								}
+							},
+							"response": []
+						},
+						{
 							"name": "Update Expected Lease",
 							"id": "8689746-6ab581a2-7d69-4907-90e6-c17a9a375b4b",
 							"protocolProfileBehavior": {
@@ -2970,48 +3012,6 @@
 									"body": "{\n    \"status\": true,\n    \"statusCode\": 200,\n    \"message\": \"Vehicles retrieved successfully\",\n    \"result\": []\n}"
 								}
 							]
-						},
-						{
-							"name": "Add Vehicle Via Digio",
-							"id": "8689746-93c7ca9a-9cab-495f-8a06-3f201e300ba5",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{auth_token}}",
-											"type": "string"
-										}
-									]
-								},
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"user_details\": {\r\n        \"owner_name\": \"UJYARE LAL  KACHHI\",\r\n        \"father_name\": \"\",\r\n        \"mobile_number\": \"\",\r\n        \"owner_number\": \"1\",\r\n        \"present_address\": \"VILLAGE MAJHGWAN NEAR, KALI MANDIR MAJHAGWAN, , , Madhya Pradesh,\",\r\n        \"permanent_address\": \"VILLAGE MAJHGWAN NEAR, KALI MANDIR MAJHAGWAN, , , Madhya Pradesh,\"\r\n    },\r\n    \"vehicle_details\": {\r\n        \"rc_number\": \"MP2VCON1Mp\",\r\n        \"registration_date\": \"2020-12-02\",\r\n        \"vehicle_category\": \"LMV\",\r\n        \"vehicle_chassis_number\": \"MAMB4pp290LMK1229\",\r\n        \"vehicle_engine_number\": \"REANZNFppMuXK2404\",\r\n        \"maker_description\": \"TATAA MOTORS\",\r\n        \"maker_model\": \"TIAGOO XZ 1.2RTN\",\r\n        \"fuel_type\": \"PETROOL\",\r\n        \"color\": \"DAYTONA GREY\",\r\n        \"norms_type\": \"BHARAT STAGE VI\",\r\n        \"fit_up_to\": \"2035-12-01\",\r\n        \"vehicle_gross_weight\": \"1373\",\r\n        \"number_of_cylinders\": \"3\",\r\n        \"seat_capacity\": \"5\",\r\n        \"sleeper_capacity\": \"0\",\r\n        \"wheelbase\": \"2400\",\r\n        \"unladen_weight\": \"973\",\r\n        \"vehicle_category_description\": \"Motor Car(LMV)\",\r\n        \"rc_status\": \"ACTIVE\",\r\n        \"masked_name\": false,\r\n        \"registered_at\": \"JABALPUR RTO, Madhya Pradesh\",\r\n        \"cubic_capacity\": \"1199.00\",\r\n        \"rto_code\": \"\"\r\n    },\r\n    \"finance_details\": {\r\n        \"financier\": \"\",\r\n        \"financed\": false,\r\n        \"insurance_company\": \"Universal Sompo General Insurance  Co. Ltd.\",\r\n        \"insurance_policy_number\": \"2311/80216840/00/000\",\r\n        \"insurance_upto\": \"2026-11-05\",\r\n        \"manufacturing_date\": \"10/2020\",\r\n        \"manufacturing_date_formatted\": \"2020-10\",\r\n        \"latest_by\": \"2025-12-03\",\r\n        \"less_info\": true,\r\n        \"tax_upto\": \"2035-12-01\",\r\n        \"tax_paid_upto\": \"2035-12-01\"\r\n    },\r\n    \"permit_details\": {\r\n        \"permit_number\": \"\",\r\n        \"permit_type\": \"\",\r\n        \"national_permit_number\": \"\",\r\n        \"blacklist_status\": \"\",\r\n        \"noc_details\": \"\",\r\n        \"pucc_number\": \"MP02000320001710\",\r\n        \"pucc_upto\": \"2026-05-07\"\r\n    }\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{base_url}}/mobile/vehicles/digio",
-									"host": [
-										"{{base_url}}"
-									],
-									"path": [
-										"mobile",
-										"vehicles",
-										"digio"
-									]
-								}
-							},
-							"response": []
 						}
 					],
 					"id": "8689746-673648b5-3963-4899-8337-900ca16dc55b"
