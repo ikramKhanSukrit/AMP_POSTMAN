@@ -2972,7 +2972,7 @@
 							]
 						},
 						{
-							"name": "Create vehicle by Digio Response",
+							"name": "Add Vehicle Via Digio",
 							"id": "8689746-93c7ca9a-9cab-495f-8a06-3f201e300ba5",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
