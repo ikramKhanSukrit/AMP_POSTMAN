@@ -2178,7 +2178,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"phone\": \"8178150752\",\r\n  \"userType\": \"Lessor\" // Lessor or Lessee\r\n}\r\n\r\n// {\r\n//   \"phone\": \"9876534356\",\r\n//   \"userType\": \"Lessor\" // Lessor or Lessee\r\n// }",
+									"raw": "{\r\n  \"phone\": \"7878787878\",\r\n  \"userType\": \"Lessor\" // Lessor or Lessee\r\n}\r\n\r\n// {\r\n//   \"phone\": \"9876534356\",\r\n//   \"userType\": \"Lessor\" // Lessor or Lessee\r\n// }",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -2213,7 +2213,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"phone\": \"8178150752\",\r\n    \"userType\": \"Lessor\",\r\n    \"otp\": \"897011\"\r\n}",
+									"raw": "{\r\n    \"phone\": \"7878787878\",\r\n    \"userType\": \"Lessor\",\r\n    \"otp\": \"992464\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
