@@ -2178,7 +2178,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"phone\": \"9876534636\",\r\n  \"userType\": \"Lessor\" // Lessor or Lessee\r\n}",
+									"raw": "{\r\n  \"phone\": \"8178150752\",\r\n  \"userType\": \"Lessor\" // Lessor or Lessee\r\n}\r\n\r\n// {\r\n//   \"phone\": \"9876534356\",\r\n//   \"userType\": \"Lessor\" // Lessor or Lessee\r\n// }",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -2528,7 +2528,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"registrationNumber\": \"MH12CX33332\",\r\n  \"vin\": \"1HGCM82633AC23X544\",\r\n  \"chassisNumber\":\"CHACSXS153511\",\r\n  \"engineNumber\":\"ENGINEX8C6535321\",\r\n  \"make\": \"68b84ac38030551cb4ca2aa3\",\r\n  \"model\": \"68b84ac38030551cb4ca29a3\",\r\n  \"variant\": \"68b84ac38030551cb4ca27a3\",\r\n  \"fuelType\": \"68b84ac38030551cb4ca96a3\",\r\n  \"manufacturingYear\": 2021,\r\n  \"registrationDate\": \"2024-03-15\",\r\n  \"seatingCapacity\": 5,\r\n  \"color\": \"White\",\r\n  \"currentOdometer\":12500,\r\n  \"status\": \"listed\"\r\n}",
+									"raw": "{\r\n  \"registrationNumber\": \"Xd12CCX33332\", // Please add temp\r\n  \"vin\": \"1HGCM82633ACX3XX4C\", // Please add temp\r\n  \"chassisNumber\":\"CAXCS3QX1535C1\", // Please add temp\r\n  \"engineNumber\":\"ENAXNEQXXC6535C21\", // Please add temp\r\n  \"brand\": \"68c29d906498144505609011\", // Fetch id from mdm value - category:vehicle_brands\r\n  \"model\": \"68d55fcd53a3d09ea4500dab\", // Fetch id from mdm value - category:vehicle_types\r\n  \"variant\": \"6936768d8a1976d95baa3e61\",  // Fetch id from mdm value - category:vehicle_variants\r\n  \"fuelType\": \"68c29d906498144505609020\", // Fetch id from mdm value - category:fuel_types\r\n  \"manufacturingYear\": 2021,\r\n  \"registrationDate\": \"2024-03-15\",\r\n  \"seatingCapacity\": 5,\r\n  \"color\": \"White\",\r\n  \"currentOdometer\":12500,\r\n  \"status\": \"68c29d9064981445056090b2\" // Fetch id from mdm value - category:vehicle_statuses\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -3191,80 +3191,7 @@
 									]
 								}
 							},
-							"response": [
-								{
-									"id": "8689746-79410c9d-47a8-4cd3-8a31-38cb20697b00",
-									"name": "Create Gst",
-									"originalRequest": {
-										"method": "PUT",
-										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": "{\r\n   \"gstNumber\": \"27ABCDs6234JHhG4f\"\r\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": {
-											"raw": "{{base_url}}/mobile/ownerprofile/gst",
-											"host": [
-												"{{base_url}}"
-											],
-											"path": [
-												"mobile",
-												"ownerprofile",
-												"gst"
-											]
-										}
-									},
-									"status": "OK",
-									"code": 200,
-									"_postman_previewlanguage": "Text",
-									"header": [
-										{
-											"key": "X-Powered-By",
-											"value": "Express"
-										},
-										{
-											"key": "Access-Control-Allow-Origin",
-											"value": "*"
-										},
-										{
-											"key": "Access-Control-Allow-Credentials",
-											"value": "true"
-										},
-										{
-											"key": "Content-Type",
-											"value": "application/json; charset=utf-8"
-										},
-										{
-											"key": "Content-Length",
-											"value": "516"
-										},
-										{
-											"key": "ETag",
-											"value": "W/\"204-50aYF5Km6DUIIVvbNsnzw2Td3xw\""
-										},
-										{
-											"key": "Date",
-											"value": "Thu, 27 Nov 2025 06:47:14 GMT"
-										},
-										{
-											"key": "Connection",
-											"value": "keep-alive"
-										},
-										{
-											"key": "Keep-Alive",
-											"value": "timeout=5"
-										}
-									],
-									"cookie": [],
-									"responseTime": null,
-									"body": "{\n    \"status\": true,\n    \"statusCode\": 200,\n    \"message\": \"GST details updated successfully\",\n    \"result\": {\n        \"_id\": \"6927eaa5923f6235c0640d1e\",\n        \"phone\": \"9876534387\",\n        \"userType\": \"Lessor\",\n        \"contactDetails\": {\n            \"contactPerson\": \"Shital m\",\n            \"mobileNumber\": \"7812345679\",\n            \"email\": \"smd9272@yopmail.com\",\n            \"designation\": \"Developer\",\n            \"financierNoc\": \"/uploads/1764226000032-72170140.jpeg\"\n        },\n        \"gstDetails\": {\n            \"gstNumber\": \"27ABCDs6234JHhG4f\",\n            \"legalName\": \"Heroo\",\n            \"tradeName\": \"Hero\",\n            \"businessAddress\": \"LKO Private Limited Company\"\n        },\n        \"userId\": \"691c434ce146fd599e5916d6\"\n    }\n}"
-								}
-							]
+							"response": []
 						},
 						{
 							"name": "Update Contact Details",
