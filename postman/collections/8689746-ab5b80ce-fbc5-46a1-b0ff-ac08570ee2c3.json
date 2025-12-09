@@ -2934,7 +2934,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{base_url}}/mobile/vehicles/lessorId/692d9b619b2f6a87f079e36a",
+									"raw": "{{base_url}}/mobile/vehicles/lessorId/{{lessorId}}",
 									"host": [
 										"{{base_url}}"
 									],
@@ -2942,7 +2942,7 @@
 										"mobile",
 										"vehicles",
 										"lessorId",
-										"692d9b619b2f6a87f079e36a"
+										"{{lessorId}}"
 									]
 								}
 							},
