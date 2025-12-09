@@ -2832,6 +2832,16 @@
 								"disableBodyPruning": true
 							},
 							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth_token}}",
+											"type": "string"
+										}
+									]
+								},
 								"method": "GET",
 								"header": [],
 								"url": {
@@ -3012,6 +3022,18 @@
 									"body": "{\n    \"status\": true,\n    \"statusCode\": 200,\n    \"message\": \"Vehicles retrieved successfully\",\n    \"result\": []\n}"
 								}
 							]
+						},
+						{
+							"name": "New Request",
+							"id": "8689746-1df7e356-10eb-4a33-bbce-6ad09ed62eaa",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
 						}
 					],
 					"id": "8689746-673648b5-3963-4899-8337-900ca16dc55b"
