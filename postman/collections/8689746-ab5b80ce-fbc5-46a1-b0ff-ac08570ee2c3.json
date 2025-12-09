@@ -2784,7 +2784,7 @@
 							]
 						},
 						{
-							"name": "Get Vehicle By Id",
+							"name": "Get Vehicle",
 							"id": "8689746-07fceaf8-f96b-40ce-84c8-70f15eba3060",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -3499,6 +3499,18 @@
 									"body": "{\n    \"status\": true,\n    \"statusCode\": 200,\n    \"message\": \"Bank details updated successfully\",\n    \"result\": {\n        \"bankDetails\": {\n            \"bankName\": \"SBI Bank\",\n            \"accountHolderName\": \"John Doe\",\n            \"accountNumber\": \"1234567890\",\n            \"ifscCode\": \"HDFC0001234\"\n        },\n        \"_id\": \"691c7361e146fd599e5916e5\",\n        \"lessorId\": \"691c434ce146fd599e5916d6\",\n        \"registrationNumber\": \"MH12CX13332\",\n        \"chassisNumber\": \"CHACSXS123511\",\n        \"engineNumber\": \"ENGINEX8C6532321\",\n        \"vin\": \"1HGCM82633AC23X534\",\n        \"make\": \"68b84ac38030551cb4ca2aa3\",\n        \"variant\": \"68b84ac38030551cb4ca27a3\",\n        \"fuelType\": \"68b84ac38030551cb4ca96a3\",\n        \"manufacturingYear\": 2021,\n        \"registrationDate\": \"2024-03-15T00:00:00.000Z\",\n        \"seatingCapacity\": 5,\n        \"color\": \"White\",\n        \"status\": \"listed\",\n        \"currentOdometer\": 12500,\n        \"expectedLease\": {\n            \"cities\": []\n        },\n        \"images\": [],\n        \"documents\": [],\n        \"createdAt\": \"2025-11-18T13:23:46.001Z\",\n        \"updatedAt\": \"2025-11-18T13:26:23.400Z\",\n        \"__v\": 0,\n        \"paymentDetails\": {\n            \"platformFee\": 5800,\n            \"onboardingCharge\": 1500,\n            \"tax\": 18,\n            \"discount\": 500,\n            \"expectedRent\": 25000\n        }\n    }\n}"
 								}
 							]
+						},
+						{
+							"name": "New Request",
+							"id": "8689746-336fed3d-d6e5-44ef-88ee-3701a9be5d93",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
 						}
 					],
 					"id": "8689746-3ece3c6c-05c9-4036-a6c5-822f94679d30"
