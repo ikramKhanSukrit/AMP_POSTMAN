@@ -2620,14 +2620,14 @@
 									}
 								},
 								"url": {
-									"raw": "{{base_url}}/mobile/vehicles/expected-lease/{{vehicleId}}",
+									"raw": "{{base_url}}/mobile/vehicles/update-expected-lease/{{vehicleId}}",
 									"host": [
 										"{{base_url}}"
 									],
 									"path": [
 										"mobile",
 										"vehicles",
-										"expected-lease",
+										"update-expected-lease",
 										"{{vehicleId}}"
 									]
 								}
