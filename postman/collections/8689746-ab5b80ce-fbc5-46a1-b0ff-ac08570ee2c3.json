@@ -2737,7 +2737,7 @@
 									}
 								},
 								"url": {
-									"raw": "{{base_url}}/mobile/vehicles/payment-details/692d9b999b2f6a87f079e378",
+									"raw": "{{base_url}}/mobile/vehicles/payment-details/{{vehicleId}}",
 									"host": [
 										"{{base_url}}"
 									],
@@ -2745,7 +2745,7 @@
 										"mobile",
 										"vehicles",
 										"payment-details",
-										"692d9b999b2f6a87f079e378"
+										"{{vehicleId}}"
 									]
 								}
 							},
@@ -2835,7 +2835,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{base_url}}/mobile/vehicles/vehicleId/692d9b619b2f6a87f079e36a",
+									"raw": "{{base_url}}/mobile/vehicles/vehicleId/{{vehicleId}}",
 									"host": [
 										"{{base_url}}"
 									],
@@ -2843,7 +2843,7 @@
 										"mobile",
 										"vehicles",
 										"vehicleId",
-										"692d9b619b2f6a87f079e36a"
+										"{{vehicleId}}"
 									]
 								}
 							},
