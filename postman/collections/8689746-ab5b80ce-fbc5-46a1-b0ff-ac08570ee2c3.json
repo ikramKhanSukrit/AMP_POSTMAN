@@ -2737,14 +2737,14 @@
 									}
 								},
 								"url": {
-									"raw": "{{base_url}}/mobile/vehicles/payment-details/{{vehicleId}}",
+									"raw": "{{base_url}}/mobile/vehicles/update-payment/{{vehicleId}}",
 									"host": [
 										"{{base_url}}"
 									],
 									"path": [
 										"mobile",
 										"vehicles",
-										"payment-details",
+										"update-payment",
 										"{{vehicleId}}"
 									]
 								}
