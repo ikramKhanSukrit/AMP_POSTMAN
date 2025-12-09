@@ -2826,6 +2826,63 @@
 							]
 						},
 						{
+							"name": "Upload Documents",
+							"id": "8689746-1df7e356-10eb-4a33-bbce-6ad09ed62eaa",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "insurance",
+											"type": "file",
+											"uuid": "2cc50852-5a27-4208-a67e-dc62d12981fb",
+											"value": null
+										},
+										{
+											"key": "puc",
+											"type": "file",
+											"uuid": "b592f363-e897-4442-aa47-2efda8cbc855",
+											"value": null
+										},
+										{
+											"key": "fitness",
+											"type": "file",
+											"uuid": "aab876fd-8321-41a6-9221-8044a157e77d",
+											"value": null
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/mobile/vehicles/upload-documents/{{vehicleId}}",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"mobile",
+										"vehicles",
+										"upload-documents",
+										"{{vehicleId}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
 							"name": "Get Vehicle",
 							"id": "8689746-07fceaf8-f96b-40ce-84c8-70f15eba3060",
 							"protocolProfileBehavior": {
@@ -3022,63 +3079,6 @@
 									"body": "{\n    \"status\": true,\n    \"statusCode\": 200,\n    \"message\": \"Vehicles retrieved successfully\",\n    \"result\": []\n}"
 								}
 							]
-						},
-						{
-							"name": "Upload Documents",
-							"id": "8689746-1df7e356-10eb-4a33-bbce-6ad09ed62eaa",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{auth_token}}",
-											"type": "string"
-										}
-									]
-								},
-								"method": "PUT",
-								"header": [],
-								"body": {
-									"mode": "formdata",
-									"formdata": [
-										{
-											"key": "insurance",
-											"type": "file",
-											"uuid": "2cc50852-5a27-4208-a67e-dc62d12981fb",
-											"value": null
-										},
-										{
-											"key": "puc",
-											"type": "file",
-											"uuid": "b592f363-e897-4442-aa47-2efda8cbc855",
-											"value": null
-										},
-										{
-											"key": "fitness",
-											"type": "file",
-											"uuid": "aab876fd-8321-41a6-9221-8044a157e77d",
-											"value": null
-										}
-									]
-								},
-								"url": {
-									"raw": "{{base_url}}/mobile/vehicles/upload-documents/6936f63e48abc9c34d145776",
-									"host": [
-										"{{base_url}}"
-									],
-									"path": [
-										"mobile",
-										"vehicles",
-										"upload-documents",
-										"6936f63e48abc9c34d145776"
-									]
-								}
-							},
-							"response": []
 						}
 					],
 					"id": "8689746-673648b5-3963-4899-8337-900ca16dc55b"
