@@ -2184,16 +2184,15 @@
 								"disableBodyPruning": true
 							},
 							"request": {
-								"method": "GET",
+								"method": "POST",
 								"header": [],
 								"url": {
-									"raw": "{{base_url}}admin/mdm/categories/create",
+									"raw": "{{base_url}}admin/languages/create",
 									"host": [
 										"{{base_url}}admin"
 									],
 									"path": [
-										"mdm",
-										"categories",
+										"languages",
 										"create"
 									]
 								}
