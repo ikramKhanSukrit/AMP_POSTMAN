@@ -2206,11 +2206,12 @@
 									}
 								},
 								"url": {
-									"raw": "{{base_url}}admin/languages/create",
+									"raw": "{{base_url}}/admin/languages/create",
 									"host": [
-										"{{base_url}}admin"
+										"{{base_url}}"
 									],
 									"path": [
+										"admin",
 										"languages",
 										"create"
 									]
