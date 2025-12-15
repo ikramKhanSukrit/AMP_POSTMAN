@@ -2288,14 +2288,15 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{base_url}}/admin/contents/export",
+									"raw": "{{base_url}}/admin/contents/export/en",
 									"host": [
 										"{{base_url}}"
 									],
 									"path": [
 										"admin",
 										"contents",
-										"export"
+										"export",
+										"en"
 									]
 								}
 							},
