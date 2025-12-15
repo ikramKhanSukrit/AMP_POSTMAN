@@ -2242,7 +2242,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"key\": \"login.header.title\",\r\n    \"value\": \"Welcome Back\",\r\n    \"languageCode\": \"en\",\r\n    \"screen\": \"login\",\r\n    \"type\": \"text\",\r\n    \"description\":\"Welcome Back\",\r\n    \"contentId\":\"\" //  Empty = add | Exists = Update\r\n}\r\n"
+									"raw": "{\r\n    \"languageCode\": \"en\",\r\n    \"content\": {\r\n        \"login\": {\r\n            \"header\": {\r\n                \"title\": \"Welcome Back\",\r\n                \"subtitle\": \"Sign in to continue\"\r\n            }\r\n        }\r\n    },\r\n    \"overwrite\": true\r\n}"
 								},
 								"url": {
 									"raw": "{{base_url}}/admin/contents/import",
