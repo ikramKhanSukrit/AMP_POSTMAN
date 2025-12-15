@@ -2206,14 +2206,14 @@
 									}
 								},
 								"url": {
-									"raw": "{{base_url}}/admin/languages/create",
+									"raw": "{{base_url}}/admin/languages/add-update-language",
 									"host": [
 										"{{base_url}}"
 									],
 									"path": [
 										"admin",
 										"languages",
-										"create"
+										"add-update-language"
 									]
 								}
 							},
