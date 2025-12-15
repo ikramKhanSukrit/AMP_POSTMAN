@@ -2176,7 +2176,20 @@
 				},
 				{
 					"name": "Languages",
-					"item": [],
+					"item": [
+						{
+							"name": "Add",
+							"id": "8689746-8f4b96c4-43f8-4a51-bc73-4ec096cd563d",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					],
 					"id": "8689746-48205f46-29e6-44c7-b38e-040c7a5cf521"
 				}
 			],
