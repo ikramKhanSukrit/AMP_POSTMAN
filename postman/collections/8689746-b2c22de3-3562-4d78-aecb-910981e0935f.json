@@ -2178,7 +2178,7 @@
 					"name": "Languages",
 					"item": [
 						{
-							"name": "Add",
+							"name": "Add Language",
 							"id": "8689746-8f4b96c4-43f8-4a51-bc73-4ec096cd563d",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
