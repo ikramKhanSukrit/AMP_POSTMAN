@@ -2179,8 +2179,33 @@
 								"disableBodyPruning": true
 							},
 							"request": {
-								"method": "GET",
-								"header": []
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"code\": \"\",\r\n  \"name\": \"\",\r\n  \"languageId\":\"\" //  Empty = add | Exists = Update\r\n\r\n}"
+								},
+								"url": {
+									"raw": "{{base_url}}/admin/contents/add-update-content",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"admin",
+										"contents",
+										"add-update-content"
+									]
+								}
 							},
 							"response": []
 						}
