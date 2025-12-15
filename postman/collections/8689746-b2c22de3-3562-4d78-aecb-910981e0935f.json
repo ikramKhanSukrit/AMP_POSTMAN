@@ -2220,7 +2220,7 @@
 							"response": []
 						},
 						{
-							"name": "New Request",
+							"name": "getall",
 							"id": "8689746-c0ef80f0-3ce1-4283-980e-e5d6efe11538",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
