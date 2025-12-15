@@ -2222,8 +2222,39 @@
 								"disableBodyPruning": true
 							},
 							"request": {
-								"method": "GET",
-								"header": []
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"key\": \"login.header.title\",\r\n    \"value\": \"Welcome Back\",\r\n    \"languageCode\": \"en\",\r\n    \"screen\": \"login\",\r\n    \"type\": \"text\",\r\n    \"description\":\"Welcome Back\",\r\n    \"contentId\":\"\" //  Empty = add | Exists = Update\r\n}\r\n"
+								},
+								"url": {
+									"raw": "{{base_url}}/admin/contents/import",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"admin",
+										"contents",
+										"import"
+									]
+								}
 							},
 							"response": []
 						}
