@@ -2171,7 +2171,20 @@
 				},
 				{
 					"name": "Contents",
-					"item": [],
+					"item": [
+						{
+							"name": "New Request",
+							"id": "8689746-11f273c1-17a1-4ece-8600-bae8089ac291",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					],
 					"id": "8689746-b7ae4711-85c2-4d26-bf9b-fc5481ed55fb"
 				},
 				{
