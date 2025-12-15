@@ -2173,7 +2173,7 @@
 					"name": "Contents",
 					"item": [
 						{
-							"name": "New Request",
+							"name": "Add Update Content",
 							"id": "8689746-11f273c1-17a1-4ece-8600-bae8089ac291",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
