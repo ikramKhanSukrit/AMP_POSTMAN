@@ -2185,7 +2185,18 @@
 							},
 							"request": {
 								"method": "GET",
-								"header": []
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}admin/mdm/categories/create",
+									"host": [
+										"{{base_url}}admin"
+									],
+									"path": [
+										"mdm",
+										"categories",
+										"create"
+									]
+								}
 							},
 							"response": []
 						}
