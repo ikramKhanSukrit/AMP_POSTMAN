@@ -2239,11 +2239,12 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{base_url}}admin/languages/get-all",
+									"raw": "{{base_url}}/admin/languages/get-all",
 									"host": [
-										"{{base_url}}admin"
+										"{{base_url}}"
 									],
 									"path": [
+										"admin",
 										"languages",
 										"get-all"
 									]
