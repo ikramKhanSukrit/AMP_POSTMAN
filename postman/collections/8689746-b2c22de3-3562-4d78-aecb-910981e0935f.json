@@ -2272,7 +2272,7 @@
 								"method": "DELETE",
 								"header": [],
 								"url": {
-									"raw": "{{base_url}}/admin/languages/delete-language/po",
+									"raw": "{{base_url}}/admin/languages/delete-language/fr",
 									"host": [
 										"{{base_url}}"
 									],
@@ -2280,7 +2280,7 @@
 										"admin",
 										"languages",
 										"delete-language",
-										"po"
+										"fr"
 									]
 								}
 							},
