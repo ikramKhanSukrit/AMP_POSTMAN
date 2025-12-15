@@ -2236,7 +2236,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"code\": \"\",\r\n  \"name\": \"\",\r\n  \"languageId\":\"\" //  Empty = add | Exists = Update\r\n\r\n}",
+									"raw": "{\r\n  \"code\": \"hi\",\r\n  \"name\": \"Hindi\",\r\n  \"languageId\":\"\" //  Empty = add | Exists = Update\r\n\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
