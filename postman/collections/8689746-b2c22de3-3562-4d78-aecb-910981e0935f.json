@@ -2259,8 +2259,30 @@
 								"disableBodyPruning": true
 							},
 							"request": {
-								"method": "GET",
-								"header": []
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/admin/languages/delete-language/fr",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"admin",
+										"languages",
+										"delete-language",
+										"fr"
+									]
+								}
 							},
 							"response": []
 						}
