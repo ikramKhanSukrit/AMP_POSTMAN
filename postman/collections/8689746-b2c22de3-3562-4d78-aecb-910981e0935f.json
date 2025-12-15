@@ -2216,7 +2216,7 @@
 							"response": []
 						},
 						{
-							"name": "New Request",
+							"name": "Import Contents",
 							"id": "8689746-828000b2-0c46-4d97-b2a5-77e5df9f9a36",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
