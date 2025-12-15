@@ -2184,8 +2184,27 @@
 								"disableBodyPruning": true
 							},
 							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth_token}}",
+											"type": "string"
+										}
+									]
+								},
 								"method": "POST",
 								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"code\": \"fr\",\r\n  \"name\": \"French\",\r\n  \"nativeName\": \"Français\",\r\n  \"direction\": \"ltr\",\r\n  \"isActive\": true,\r\n  \"isDefault\": false\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
 								"url": {
 									"raw": "{{base_url}}admin/languages/create",
 									"host": [
