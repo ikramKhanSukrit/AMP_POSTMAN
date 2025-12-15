@@ -2220,14 +2220,34 @@
 							"response": []
 						},
 						{
-							"name": "getall",
+							"name": "Get All Launguages",
 							"id": "8689746-c0ef80f0-3ce1-4283-980e-e5d6efe11538",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
 							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth_token}}",
+											"type": "string"
+										}
+									]
+								},
 								"method": "GET",
-								"header": []
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}admin/languages/get-all",
+									"host": [
+										"{{base_url}}admin"
+									],
+									"path": [
+										"languages",
+										"get-all"
+									]
+								}
 							},
 							"response": []
 						}
