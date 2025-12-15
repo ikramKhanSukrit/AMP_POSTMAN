@@ -2198,7 +2198,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"code\": \"fr\",\r\n  \"name\": \"French\",\r\n  \"nativeName\": \"Français\",\r\n  \"direction\": \"ltr\",\r\n  \"isActive\": true,\r\n  \"isDefault\": false\r\n}",
+									"raw": "{\r\n  \"code\": \"fr\",\r\n  \"name\": \"French\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
