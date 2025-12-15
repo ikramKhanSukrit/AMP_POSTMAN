@@ -2251,6 +2251,18 @@
 								}
 							},
 							"response": []
+						},
+						{
+							"name": "Delete Language",
+							"id": "8689746-7014954c-16b4-456f-9559-98bf7dff7b68",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
 						}
 					],
 					"id": "8689746-48205f46-29e6-44c7-b38e-040c7a5cf521"
