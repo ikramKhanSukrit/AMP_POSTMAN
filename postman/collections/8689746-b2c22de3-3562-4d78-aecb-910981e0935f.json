@@ -2190,7 +2190,13 @@
 									]
 								},
 								"method": "POST",
-								"header": [],
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
 								"body": {
 									"mode": "raw",
 									"raw": "{\r\n    \"key\": \"login.header.title\",\r\n    \"value\": \"Welcome Back\",\r\n    \"languageCode\": \"en\",\r\n    \"screen\": \"login\",\r\n    \"type\": \"text\",\r\n    \"description\":\"Welcome Back\",\r\n    \"contentId\":\"\" //  Empty = add | Exists = Update\r\n}\r\n"
