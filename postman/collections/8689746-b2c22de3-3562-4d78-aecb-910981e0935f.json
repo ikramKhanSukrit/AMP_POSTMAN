@@ -2420,7 +2420,7 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{base_url}}/admin/contents/versions/694008be3396c03a75ad7f54/restore",
+									"raw": "{{base_url}}/admin/contents/versions/694008be3396c03a75ad7f5f/restore",
 									"host": [
 										"{{base_url}}"
 									],
@@ -2428,7 +2428,7 @@
 										"admin",
 										"contents",
 										"versions",
-										"694008be3396c03a75ad7f54",
+										"694008be3396c03a75ad7f5f",
 										"restore"
 									]
 								}
