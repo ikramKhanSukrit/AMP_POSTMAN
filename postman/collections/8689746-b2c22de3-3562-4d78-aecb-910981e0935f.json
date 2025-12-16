@@ -2391,7 +2391,7 @@
 							"response": []
 						},
 						{
-							"name": "New Request",
+							"name": "Restore Version",
 							"id": "8689746-725866cb-7831-4871-8ea0-d18649659f71",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
