@@ -2397,8 +2397,41 @@
 								"disableBodyPruning": true
 							},
 							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth_token}}",
+											"type": "string"
+										}
+									]
+								},
 								"method": "GET",
-								"header": []
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{base_url}}/admin/contents/versions/694008be3396c03a75ad7f54/restore",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"admin",
+										"contents",
+										"versions",
+										"694008be3396c03a75ad7f54",
+										"restore"
+									]
+								}
 							},
 							"response": []
 						}
