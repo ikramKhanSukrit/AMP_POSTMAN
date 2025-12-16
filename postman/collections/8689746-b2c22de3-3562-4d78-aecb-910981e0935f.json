@@ -2173,49 +2173,6 @@
 					"name": "Contents",
 					"item": [
 						{
-							"name": "Add Update Content",
-							"id": "8689746-11f273c1-17a1-4ece-8600-bae8089ac291",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{auth_token}}",
-											"type": "string"
-										}
-									]
-								},
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"key\": \"login.header.title\",\r\n    \"value\": \"Welcome Back\",\r\n    \"languageCode\": \"en\",\r\n    \"screen\": \"login\",\r\n    \"type\": \"text\",\r\n    \"description\":\"Welcome Back\",\r\n    \"contentId\":\"\" //  Empty = add | Exists = Update\r\n}\r\n"
-								},
-								"url": {
-									"raw": "{{base_url}}/admin/contents/add-update-content",
-									"host": [
-										"{{base_url}}"
-									],
-									"path": [
-										"admin",
-										"contents",
-										"add-update-content"
-									]
-								}
-							},
-							"response": []
-						},
-						{
 							"name": "Import Contents",
 							"id": "8689746-828000b2-0c46-4d97-b2a5-77e5df9f9a36",
 							"protocolProfileBehavior": {
@@ -2253,6 +2210,49 @@
 										"admin",
 										"contents",
 										"import"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add Update Content",
+							"id": "8689746-11f273c1-17a1-4ece-8600-bae8089ac291",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"key\": \"login.header.title\",\r\n    \"value\": \"Welcome Back\",\r\n    \"languageCode\": \"en\",\r\n    \"screen\": \"login\",\r\n    \"type\": \"text\",\r\n    \"description\":\"Welcome Back\",\r\n    \"contentId\":\"\" //  Empty = add | Exists = Update\r\n}\r\n"
+								},
+								"url": {
+									"raw": "{{base_url}}/admin/contents/add-update-content",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"admin",
+										"contents",
+										"add-update-content"
 									]
 								}
 							},
