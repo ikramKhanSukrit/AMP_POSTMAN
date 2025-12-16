@@ -2347,14 +2347,46 @@
 							"response": []
 						},
 						{
-							"name": "Version Contents",
+							"name": "Versions Contents",
 							"id": "8689746-ba0f8cd6-2b3a-448b-bfd0-eead9b45418b",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
 							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth_token}}",
+											"type": "string"
+										}
+									]
+								},
 								"method": "GET",
-								"header": []
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{base_url}}/admin/contents/versions/en",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"admin",
+										"contents",
+										"versions",
+										"en"
+									]
+								}
 							},
 							"response": []
 						}
