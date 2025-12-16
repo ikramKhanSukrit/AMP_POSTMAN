@@ -2347,7 +2347,7 @@
 							"response": []
 						},
 						{
-							"name": "New Request",
+							"name": "Version Contents",
 							"id": "8689746-ba0f8cd6-2b3a-448b-bfd0-eead9b45418b",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
