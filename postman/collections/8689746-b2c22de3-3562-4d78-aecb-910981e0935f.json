@@ -3190,14 +3190,25 @@
 							]
 						},
 						{
-							"name": "New Request",
+							"name": "GST Verification",
 							"id": "8689746-1efeb037-0657-4681-b005-f67ed685d55c",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
 							"request": {
-								"method": "GET",
-								"header": []
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/mobile/lessors/gst-verification",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"mobile",
+										"lessors",
+										"gst-verification"
+									]
+								}
 							},
 							"response": []
 						}
