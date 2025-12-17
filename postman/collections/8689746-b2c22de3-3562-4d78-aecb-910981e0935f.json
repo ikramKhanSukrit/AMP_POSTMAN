@@ -3188,6 +3188,18 @@
 									"body": "{\n    \"status\": true,\n    \"statusCode\": 200,\n    \"message\": \"Contact details fetched successfully\",\n    \"result\": {\n        \"_id\": \"69186199f428dbbd0b3d1690\",\n        \"contactDetails\": {\n            \"contactPerson\": \"Samba d\",\n            \"mobileNumber\": \"7812345679\",\n            \"email\": \"smd9272@yopmail.com\",\n            \"designation\": \"Developer\",\n            \"financierNoc\": null\n        },\n        \"userId\": \"6916d952c605bdd1ce417803\"\n    }\n}"
 								}
 							]
+						},
+						{
+							"name": "New Request",
+							"id": "8689746-1efeb037-0657-4681-b005-f67ed685d55c",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
 						}
 					],
 					"id": "8689746-e3914fc8-7129-4b73-9c4c-31dc4755f6a8"
